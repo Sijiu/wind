@@ -14,7 +14,7 @@ define("port", default=8888, help="run on the given port", type=int)
 
 class MainHandler(mornado.web.RequestHandler):
     def get(self):
-        self.write("Hello, world")
+        self.write("Hello, world! Happy, Labour day!")
 
 def main():
     print options.port
