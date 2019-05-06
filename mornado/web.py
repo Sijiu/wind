@@ -44,7 +44,6 @@ class RequestHandler(object):
         pass
 
 
-
 class Application(object):
 
     def __init__(self, handlers=None, default_host="", **settings):
@@ -77,13 +76,13 @@ class Application(object):
         for spec in host_handlers:
             if type(spec) is type(()):
                 assert len(spec) in (2, 3)
-                pattern, handlers = spec[0], spec[1]
+                pattern, handler = spec[0], spec[1]
                 if len(spec) == 3:
                     kwargs = spec[2]
                 else:
                     kwargs = {}
                 kwargs = spec[2] if len(spec) == 3 else {}
-                spec = URLSpec(pattern, handlers, kwargs)
+                spec = URLSpec(pattern, handler, kwargs)
             handlers.append(spec)
             if spec.name:
                 if spec.name in self.named_handlers:

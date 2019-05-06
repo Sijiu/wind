@@ -4,7 +4,7 @@
 @author: mxh @time:2019/5/1 12:00
 """
 
-import mornado.web
+import mornado.web, mornado.ioloop
 import mornado.httpserver
 from mornado.options import define, options
 
@@ -16,15 +16,18 @@ class MainHandler(mornado.web.RequestHandler):
     def get(self):
         self.write("Hello, world! Happy, Labour day!")
 
+
 def main():
     print options.port
-    application = mornado.web.Application(
+    application = mornado.web.Application([
         (r'/', MainHandler)
+    ]
     )
 
     http_server = mornado.httpserver.HTTPServer(application)
 
     http_server.listen(options.port)
+    mornado.ioloop.IOLoop.instance().start()
 
 
 if __name__ == '__main__':

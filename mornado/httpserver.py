@@ -3,11 +3,12 @@
 """
 @author: mxh @time:2019/5/1 16:29
 """
+import errno
 import logging
 import os
 import socket
 
-from mornado import ioloop
+from mornado import ioloop, iostream, httputil
 
 try:
     import fcntl
@@ -17,11 +18,20 @@ except ImportError:
     else:
         raise
 
+try:
+    import ssl  # Python 2.6+
+except ImportError:
+    ssl = None
+
+
 class HTTPServer(object):
 
-    def __init__(self, request_callback, io_loop=None):
-        self.request_callback  =request_callback
+    def __init__(self, request_callback, io_loop=None, ssl_options=None):
+        self.ssl_options = ssl_options
+        self.request_callback = request_callback
         self.io_loop = io_loop
+        self._socket = None
+        self._started = False
 
     def listen(self, port, address=""):
         self.bind(port, address)
@@ -51,7 +61,7 @@ class HTTPServer(object):
                 logging.error("Could not get num processors from sysconf;"
                               "running with one process")
                 num_processes = 1
-        if num_processes >1 and ioloop.IOLoop.initialized():
+        if num_processes > 1 and ioloop.IOLoop.initialized():
             logging.error("Cannot run multiple processes: IOLoop instance")
             num_processes = 1
         if num_processes > 1:
@@ -68,3 +78,54 @@ class HTTPServer(object):
             if not self.io_loop:
                 self.io_loop = ioloop.IOLoop.instance()
             self.io_loop.add_handler(self._socket.fileno(), self._handle_events, ioloop.IOLoop.READ)
+
+    def _handle_events(self, fd, events):
+        while True:
+            try:
+                conn, address = self._socket.accept()
+            except socket.error, e:
+                if e[0] in (errno.EWOULDBLOCK, errno.EAGAIN):
+                    return
+                raise
+            if self.ssl_options is not None:
+                assert ssl, "Python 2.6+ and OpenSSL required for SSL"
+                conn = ssl.wrap_socket(conn, server_side=True, **self.ssl_options)
+            try:
+                stream = iostream.IOStream(conn, io_loop=self.io_loop)
+                HTTPConnection(stream, address, self.request_callback, )
+                # self.no_keep_alive, self.xheaders)
+            except:
+                logging.error("Error in connection callback", exc_info=True)
+
+
+class HTTPConnection(object):
+    def __init__(self, stream, address, request_callback):
+        self.stream = stream
+        self.address = address
+        self.request_callback = request_callback
+        self._request = None
+        self._request_finished = False
+        # self.stream.read_until("\r\n\r\n", self._on_headers)
+
+    # def _on_headers(self, data):
+    #     eol = data.find("\r\n")
+    #     start_line = data[:eol]
+    #     method, uri, version = start_line.split(" ")
+    #     if not version.startswith("HTTP/"):
+    #         raise Exception("Malformed HTTP version in HTTP Request-Line")
+    #     headers = httputil.HTTPHeaders.parse(data[eol:])
+    #     self._request = HTTPRequest(
+    #         connection=self, method=method, uri=uri, version=version,
+    #         headers=headers, remote_ip=self.address[0])
+    #
+    #     content_length = headers.get("Content-Length")
+    #     if content_length:
+    #         content_length = int(content_length)
+    #         if content_length > self.stream.max_buffer_size:
+    #             raise Exception("Content-Length too long")
+    #         if headers.get("Expect") == "100-continue":
+    #             self.stream.write("HTTP/1.1 100 (Continue)\r\n\r\n")
+    #         self.stream.read_bytes(content_length, self._on_request_body)
+    #         return
+    #
+    #     self.request_callback(self._request)

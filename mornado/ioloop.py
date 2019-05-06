@@ -3,8 +3,16 @@
 """
 @author: mxh @time:2019/5/1 17:26
 """
+import errno
 import logging
 import select
+import time
+
+
+try:
+    import signal
+except ImportError:
+    signal = None
 
 
 class IOLoop(object):
@@ -25,6 +33,14 @@ class IOLoop(object):
 
     def __init__(self, impl=None):
         self._impl = impl or _poll()
+        self._handlers = {}
+        self._callbacks = set()
+        self._events = {}
+        self._timeouts = []
+        self._running = False
+        self._stopped = False
+        self._blocking_log_threshold = None
+
 
     @classmethod
     def instance(cls):
@@ -49,6 +65,92 @@ class IOLoop(object):
     @classmethod
     def initialized(cls):
         return hasattr(cls, "_instance")
+
+    def add_handler(self, fd, handler, events):
+        self._handlers[fd] = handler
+        self._impl.register(fd, events | self.ERROR)
+
+    def start(self):
+        """Starts the I/O loop
+        The loop will run until one of the I/O handlers call stop(), which will make
+        the loop stop after the current event iteration completes
+        """
+        if self._stopped:
+            self._stopped = False
+            return
+        self._running = True
+        while True:
+            poll_timeout = 0.2
+
+            callbacks = list(self._callbacks)
+
+            for callback in callbacks:
+                print "callback==", callbacks
+                if callback in self._callbacks:
+                    self._callbacks.remove(callback)
+                    self._run_callback(callback)
+
+            if self._callbacks:
+                poll_timeout = 0.0
+
+                if self._timeouts:
+                    now = time.time()
+                    while self._timeouts and self._timeouts[0].deadline <= now:
+                        timeout = self._timeouts.pop(0)
+                        self._run_callback(timeout.callback)
+                    if self._timeouts:
+                        milliseconds = self._timeouts[0].deadline - now
+                        poll_timeout = min(milliseconds, poll_timeout)
+
+            if not self._running:
+                break
+
+            if self._blocking_log_threshold is not None:
+                signal.setitimer(signal.ITIMER_REAL, 0, 0)
+
+            try:
+                event_pairs = self._impl.poll(poll_timeout)
+            except Exception, e:
+                if (getattr(e, 'errno') == errno.EINTR or
+                    (isinstance(getattr(e, 'args'), tuple) and len(e.args)== 2 and e.args[0] == errno.EINTR)):
+                    logging.error("Interrupted system call ", exc_info=1)
+                    continue
+                else:
+                    raise
+            if self._blocking_log_threshold is not None:
+                signal.setitimer(signal.ITIMER_REAL, self._blocking_log_threshold, 0)
+
+            self._events.update(event_pairs)
+            while self._events:
+                fd, events = self._events.popitem()
+                try:
+                    self._handlers[fd](fd, events)
+                except (KeyboardInterrupt, SystemExit):
+                    raise
+                except (OSError, IOError):
+                    if e[0] == errno.EPIPE:
+                        pass
+                    else:
+                        logging.error("Exception in I/O handler for fd %d", fd, exc_info=True)
+
+        self._stopped = False
+        if self._blocking_log_threshold is not None:
+            signal.setitimer(signal.ITIMER_REAL, 0, 0)
+
+
+    def _run_callback(self, callback):
+        try:
+            callback()
+        except (KeyboardInterrupt, SystemExit):
+            raise
+        except:
+            self.handle_callback_exception(callback)
+
+    def handle_callback_exception(self, callback):
+        """This method is called whenever  callback by the IOLoop throws an exception.
+
+        """
+        logging.error("Exception in callback %r ", callback, exc_infp=True)
 
 
 class _KQueue(object):
