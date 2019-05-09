@@ -4,7 +4,9 @@
 @author: mxh @time:2019/5/1 17:26
 """
 import errno
+import fcntl
 import logging
+import os
 import select
 import time
 
@@ -41,6 +43,18 @@ class IOLoop(object):
         self._stopped = False
         self._blocking_log_threshold = None
 
+        # create a pipe that we send bogus data to when we want to wake
+        # the I?O loop when it is idle
+        if os.name != 'nt':
+            r, w = os.pipe()
+            self._set_nonblocking(r)
+            self._set_nonblocking(w)
+            self._set_close_exec(r)
+            self._set_close_exec(w)
+            self._waker_reader = os.fdopen(r, "r", 0)
+            self._waker_writer = os.fdopen(w, "w", 0)
+            print "===", os.name
+        self.add_handler(r, self._read_waker, self.READ)
 
     @classmethod
     def instance(cls):
@@ -137,7 +151,6 @@ class IOLoop(object):
         if self._blocking_log_threshold is not None:
             signal.setitimer(signal.ITIMER_REAL, 0, 0)
 
-
     def _run_callback(self, callback):
         try:
             callback()
@@ -146,11 +159,36 @@ class IOLoop(object):
         except:
             self.handle_callback_exception(callback)
 
+    def remove_handler(self, fd):
+        """Stop listening for events on fd.
+        """
+        self._handlers.pop(fd, None)
+        self._events.pop(fd, None)
+        try:
+            self._impl.unregister(fd)
+        except (OSError, IOError):
+            logging.debug("Error deleting fd from IOLoop", exc_info=True)
+
     def handle_callback_exception(self, callback):
         """This method is called whenever  callback by the IOLoop throws an exception.
-
         """
         logging.error("Exception in callback %r ", callback, exc_infp=True)
+
+    def _read_waker(self, fd, events):
+        try:
+            while True:
+                self._waker_reader.read()
+        except IOError:
+            pass
+
+    def _set_nonblocking(self, fd):
+        flags = fcntl.fcntl(fd, fcntl.F_GETFD)
+        fcntl.fcntl(fd, fcntl.F_SETFD, flags | os.O_NONBLOCK)
+
+    def _set_close_exec(self, fd):
+        flags = fcntl.fcntl(fd, fcntl.F_GETFD)
+        fcntl.fcntl(fd, fcntl.F_SETFD, flags | fcntl.FD_CLOEXEC)
+
 
 
 class _KQueue(object):

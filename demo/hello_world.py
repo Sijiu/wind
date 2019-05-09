@@ -17,10 +17,17 @@ class MainHandler(mornado.web.RequestHandler):
         self.write("Hello, world! Happy, Labour day!")
 
 
+class IndexHandler(mornado.web.RequestHandler):
+
+    def get(self):
+        self.write("Hello, Index Page!")
+
+
 def main():
     print options.port
     application = mornado.web.Application([
-        (r'/', MainHandler)
+        (r'/', MainHandler),
+        (r'/index', IndexHandler)
     ]
     )
 

@@ -10,7 +10,6 @@ import re
 
 class HTTPError(Exception):
 
-
     def __init__(self, status_code, log_message=None, *args):
         self.status_code = status_code
         self.log_message = log_message
@@ -23,17 +22,19 @@ class HTTPError(Exception):
         return message
 
 
-
-
-
 class RequestHandler(object):
     """Subclass this class and define get() or post() to make a handler
     """
     SUPPORTED_METHODS = ("GET", "POST", "HEAD", "PUT")
 
-    def __init__(self, request):
+    def __init__(self, application, request):
         self.request = request
-
+        self._finished = False
+        self._auto_finish = True
+        # self._transforms = transforms or []
+        self._header_written = False
+        self.clear()
+        # Check since connection is not available in WSGI
         if hasattr(self.request, "connection"):
             self.request.connection.stream.set_close_callback(self.on_connection_close)
 
@@ -42,6 +43,25 @@ class RequestHandler(object):
 
     def on_connection_close(self):
         pass
+
+    def clear(self):
+        """Reset all headers and content for this response. """
+        self._headers = {
+            "Server": "MornadoServer/1.0",
+            "Content-Type": "text/html; charset=UTF-8",
+        }
+        if not self.request.supports_http_1_1():
+            pass
+        self._write_buffer = []
+        self._status_code = 200
+
+    def write(self, chunk):
+        assert not self._finished
+        if isinstance(chunk, dict):
+            pass
+            # chunk = escape.json_encode()
+        chunk = _utf8(chunk)
+        self._write_buffer.append(chunk)
 
 
 class Application(object):
@@ -150,11 +170,29 @@ class URLSpec(object):
             return self._path
         return self._path % tuple([str(a) for a in args])
 
+
 url = URLSpec
 
+
+def _utf8(s):
+    if isinstance(s, unicode):
+        return s.encode("utf-8")
+    assert isinstance(s, str)
+    return s
 
 
 class StaticFileHandler(RequestHandler):
     # def __init__(self, application, request, path):
     def __init__(self, request):
         RequestHandler.__init__(request)
+
+
+class _O(dict):
+    def __getattr__(self, name):
+        try:
+            return self(name)
+        except KeyError:
+            raise AttributeError(name)
+
+    def __setattr__(self, name, value):
+        self[name] = value
