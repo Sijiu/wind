@@ -105,7 +105,7 @@ class HTTPConnection(object):
         self.request_callback = request_callback
         self._request = None
         self._request_finished = False
-        # self.stream.read_until("\r\n\r\n", self._on_headers)
+        self.stream.read_until("\r\n\r\n", self._on_headers)
 
     # def _on_headers(self, data):
     #     eol = data.find("\r\n")

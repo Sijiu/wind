@@ -26,9 +26,9 @@ class IndexHandler(mornado.web.RequestHandler):
 def main():
     print options.port
     application = mornado.web.Application([
-        (r'/', MainHandler),
-        (r'/index', IndexHandler)
-    ]
+            (r'/', MainHandler),
+            (r'/index', IndexHandler)
+        ]
     )
 
     http_server = mornado.httpserver.HTTPServer(application)
