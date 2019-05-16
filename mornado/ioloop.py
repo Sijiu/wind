@@ -3,8 +3,18 @@
 """
 @author: mxh @time:2019/5/1 17:26
 """
+import errno
+import fcntl
 import logging
+import os
 import select
+import time
+
+
+try:
+    import signal
+except ImportError:
+    signal = None
 
 
 class IOLoop(object):
@@ -25,6 +35,30 @@ class IOLoop(object):
 
     def __init__(self, impl=None):
         self._impl = impl or _poll()
+        self._handlers = {}
+        self._callbacks = set()
+        self._events = {}
+        # 目前只是一个 list pop
+        # 新版本将是一个最小堆结构，按照超时时间从小到大排列的 fd 的任务堆（ 通常这个任务都会包含一个 callback ）
+        self._timeouts = []
+        self._running = False
+        self._stopped = False
+        self._blocking_log_threshold = None
+
+        # create a pipe that we send bogus data to when we want to wake
+        # the I?O loop when it is idle
+        if os.name != 'nt':
+            r, w = os.pipe()
+            self._set_nonblocking(r)
+            self._set_nonblocking(w)
+            self._set_close_exec(r)
+            self._set_close_exec(w)
+            self._waker_reader = os.fdopen(r, "r", 0)
+            self._waker_writer = os.fdopen(w, "w", 0)
+            print "===", os.name
+        else:
+            print "passsssssss  ", os.name
+        self.add_handler(r, self._read_waker, self.READ)
 
     @classmethod
     def instance(cls):
@@ -49,6 +83,140 @@ class IOLoop(object):
     @classmethod
     def initialized(cls):
         return hasattr(cls, "_instance")
+
+    def add_handler(self, fd, handler, events):
+        self._handlers[fd] = handler
+        self._impl.register(fd, events | self.ERROR)
+
+    def start(self):
+        """Starts the I/O loop
+        The loop will run until one of the I/O handlers call stop(), which will make
+        the loop stop after the current event iteration completes
+        """
+        if self._stopped:
+            self._stopped = False
+            return
+        self._running = True
+        while True:
+            poll_timeout = 0.2
+
+            callbacks = list(self._callbacks)
+
+            for callback in callbacks:
+                print "callback==", callbacks
+                if callback in self._callbacks:
+                    self._callbacks.remove(callback)
+                    self._run_callback(callback)
+
+            if self._callbacks: # _callbacks 里有数据时
+                poll_timeout = 0.0  # 设置 epoll_wait 时间为0（ 立即返回 ）
+                # 判断 _timeouts 里是否有数据
+            if self._timeouts:
+                # 获取当前时间 判断 _timeouts 里的任务有没有超时
+                # _timeouts 有数据时一直循环, _timeouts 是个最小堆，第一个数据永远是最小的， 这里第一个数据永远是最接近超时或已超时的
+                now = time.time()
+                while self._timeouts and self._timeouts[0].deadline <= now:
+                    timeout = self._timeouts.pop(0)  # 直接弹出 最后一个
+                    self._run_callback(timeout.callback)  # 超时就加到已超时列表里。
+                if self._timeouts:
+                    # 取最小过期时间当 epoll_wait 等待时间，这样当第一个任务过期时立即返回
+                    milliseconds = self._timeouts[0].deadline - now
+                    poll_timeout = min(milliseconds, poll_timeout)
+
+            # 检查是否有系统信号中断运行，有则中断，无则继续
+            if not self._running:
+                break
+
+            # 开始 epoll_wait 之前确保 signal alarm 都被清空（ 这样在 epoll_wait 过程中不会被 signal alarm 打断 ）
+            if self._blocking_log_threshold is not None:
+                signal.setitimer(signal.ITIMER_REAL, 0, 0)
+
+            try:
+                event_pairs = self._impl.poll(poll_timeout) # 获取返回的活跃事件队
+            except Exception, e:
+                if (getattr(e, 'errno') == errno.EINTR or
+                    (isinstance(getattr(e, 'args'), tuple) and len(e.args)== 2 and e.args[0] == errno.EINTR)):
+                    logging.error("Interrupted system call ", exc_info=1)
+                    continue
+                else:
+                    raise
+            if self._blocking_log_threshold is not None:
+                #  epoll_wait 结束， 再设置 signal alarm
+                signal.setitimer(signal.ITIMER_REAL, self._blocking_log_threshold, 0)
+
+            self._events.update(event_pairs)
+
+            while self._events:
+                fd, events = self._events.popitem()
+                print "====", fd, events
+                try:
+                    # 处理事件
+                    self._handlers[fd](fd, events)
+                except (KeyboardInterrupt, SystemExit):
+                    raise
+                except (OSError, IOError):
+                    if e[0] == errno.EPIPE:
+                        pass
+                    else:
+                        logging.error("Exception in I/O handler for fd %d", fd, exc_info=True)
+
+        self._stopped = False
+        # 清空 signal alarm
+        if self._blocking_log_threshold is not None:
+            signal.setitimer(signal.ITIMER_REAL, 0, 0)
+
+    def stop(self):
+
+        self._running = False
+        self._stopped = True
+        self._wake()
+
+    def _run_callback(self, callback):
+        try:
+            callback()
+        except (KeyboardInterrupt, SystemExit):
+            raise
+        except:
+            self.handle_callback_exception(callback)
+
+    def remove_handler(self, fd):
+        """Stop listening for events on fd.
+        """
+        self._handlers.pop(fd, None)
+        self._events.pop(fd, None)
+        try:
+            self._impl.unregister(fd)
+        except (OSError, IOError):
+            logging.debug("Error deleting fd from IOLoop", exc_info=True)
+
+    def handle_callback_exception(self, callback):
+        """This method is called whenever  callback by the IOLoop throws an exception.
+        """
+        logging.error("Exception in callback %r ", callback, exc_infp=True)
+
+    def _read_waker(self, fd, events):
+        try:
+            while True:
+                self._waker_reader.read()
+        except IOError:
+            pass
+
+    def _set_nonblocking(self, fd):
+        flags = fcntl.fcntl(fd, fcntl.F_GETFD)
+        fcntl.fcntl(fd, fcntl.F_SETFD, flags | os.O_NONBLOCK)
+
+    def _set_close_exec(self, fd):
+        flags = fcntl.fcntl(fd, fcntl.F_GETFD)
+        fcntl.fcntl(fd, fcntl.F_SETFD, flags | fcntl.FD_CLOEXEC)
+
+    def _wake(self):
+        """
+        向 pipe 写入随意字符唤醒 ioloop 事件循环
+        """
+        try:
+            self._waker_writer.write("x")
+        except IOError:
+            pass
 
 
 class _KQueue(object):

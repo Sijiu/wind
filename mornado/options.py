@@ -5,10 +5,18 @@
 """
 import datetime
 import re
+import sys
 
 
-def define():
-    pass
+def define(name, default=None, type=str, help=None, metavar=None, multiple=False):
+    if name in options:
+        raise Error("OPtion %r already defined in %s", name, options[name].file_name)
+    frame = sys._getframe(0)
+    options_file = frame.f_code.co_filename
+    file_name = frame.f_back.f_code.co_filename
+    if file_name == options_file: file_name = ""
+    options[name] = _Option(name, file_name=file_name, default=default, type=type, help=help, metavar=metavar,
+                            multiple=multiple)
 
 
 class _Option(object):
@@ -29,10 +37,10 @@ class _Option(object):
 
     def parse(self, value):
         _parse = {
-            datetime.datetime : self._parse_datetime,
+            datetime.datetime: self._parse_datetime,
             datetime.timedelta: self._parse_timedelta,
-            bool              : self._parse_bool,
-            str               : self._parse_string,
+            bool: self._parse_bool,
+            str: self._parse_string,
         }.get(self.type, self.type)
         if self.multiple:
             if self._value is None:
