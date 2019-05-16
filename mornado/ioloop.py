@@ -4,7 +4,6 @@
 @author: mxh @time:2019/5/1 17:26
 """
 import errno
-import fcntl
 import logging
 import os
 import select
@@ -66,6 +65,8 @@ class IOLoop(object):
             self._waker_writer = os.fdopen(w, "w", 0)
             print "===", os.name
         else:
+            self._waker_reader = self._waker_writer = win32_support.Pipe()
+            r = self._waker_writer.reader_fd
             print "passsssssss  ", os.name
         self.add_handler(r, self._read_waker, self.READ)
 
@@ -93,9 +94,26 @@ class IOLoop(object):
     def initialized(cls):
         return hasattr(cls, "_instance")
 
+    # epoll_ctl：这个三个方法分别对应 epoll_ctl 中的
+    #  add 、 modify 、 del 参数。 所以这三个方法实现了 epoll 的 epoll_ctl 。
     def add_handler(self, fd, handler, events):
         self._handlers[fd] = handler
         self._impl.register(fd, events | self.ERROR)
+
+    def update_handler(self, fd, events):
+        """ Changes the events we listen for fd
+        """
+        self._impl.modify(fd, events| self.ERROR)
+
+    def remove_handler(self, fd):
+        """Stop listening for events on fd.
+        """
+        self._handlers.pop(fd, None)
+        self._events.pop(fd, None)
+        try:
+            self._impl.unregister(fd)
+        except (OSError, IOError):
+            logging.debug("Error deleting fd from IOLoop", exc_info=True)
 
     def start(self):
         """Starts the I/O loop
@@ -157,7 +175,7 @@ class IOLoop(object):
 
             while self._events:
                 fd, events = self._events.popitem()
-                print "====", fd, events
+                print "fd %s==== events %s" % (fd, events)
                 try:
                     # 处理事件
                     self._handlers[fd](fd, events)
@@ -188,16 +206,6 @@ class IOLoop(object):
         except:
             self.handle_callback_exception(callback)
 
-    def remove_handler(self, fd):
-        """Stop listening for events on fd.
-        """
-        self._handlers.pop(fd, None)
-        self._events.pop(fd, None)
-        try:
-            self._impl.unregister(fd)
-        except (OSError, IOError):
-            logging.debug("Error deleting fd from IOLoop", exc_info=True)
-
     def handle_callback_exception(self, callback):
         """This method is called whenever  callback by the IOLoop throws an exception.
         """
@@ -226,6 +234,31 @@ class IOLoop(object):
             self._waker_writer.write("x")
         except IOError:
             pass
+
+
+class _EPoll(object):
+    """An epoll-based event loop using our C module for Python 2.5 systems"""
+    _EPOLL_CTL_ADD = 1
+    _EPOLL_CTL_DEL = 2
+    _EPOLL_CTL_MOD = 3
+
+    def __init__(self):
+        self._epoll_fd = epoll.epoll_create()
+
+    def fileno(self):
+        return self._epoll_fd
+
+    def register(self, fd, events):
+        epoll.epoll_ctl(self._epoll_fd, self._EPOLL_CTL_ADD, fd, events)
+
+    def modify(self, fd, events):
+        epoll.epoll_ctl(self._epoll_fd, self._EPOLL_CTL_MOD, fd, events)
+
+    def unregister(self, fd):
+        epoll.epoll_ctl(self._epoll_fd, self._EPOLL_CTL_DEL, fd, 0)
+
+    def poll(self, timeout):
+        return epoll.epoll_wait(self._epoll_fd, int(timeout * 1000))
 
 
 class _KQueue(object):
@@ -278,6 +311,41 @@ class _KQueue(object):
         return events.items()
 
 
+class _Select(object):
+    """A simple, select()-based IOLoop implementation for non-Linux systems"""
+    def __init__(self):
+        self.read_fds = set()
+        self.write_fds = set()
+        self.error_fds = set()
+        self.fd_sets = (self.read_fds, self.write_fds, self.error_fds)
+
+    def register(self, fd, events):
+        if events & IOLoop.READ: self.read_fds.add(fd)
+        if events & IOLoop.WRITE: self.write_fds.add(fd)
+        if events & IOLoop.ERROR: self.error_fds.add(fd)
+
+    def modify(self, fd, events):
+        self.unregister(fd)
+        self.register(fd, events)
+
+    def unregister(self, fd):
+        self.read_fds.discard(fd)
+        self.write_fds.discard(fd)
+        self.error_fds.discard(fd)
+
+    def poll(self, timeout):
+        readable, writeable, errors = select.select(
+            self.read_fds, self.write_fds, self.error_fds, timeout)
+        events = {}
+        for fd in readable:
+            events[fd] = events.get(fd, 0) | IOLoop.READ
+        for fd in writeable:
+            events[fd] = events.get(fd, 0) | IOLoop.WRITE
+        for fd in errors:
+            events[fd] = events.get(fd, 0) | IOLoop.ERROR
+        return events.items()
+
+
 if hasattr(select, "epoll"):
     # Python 2.6+ on Linux
     _poll = select.epoll
@@ -288,12 +356,30 @@ else:
     try:
         # Linux systems with our C module installed
         import epoll
-        # _poll = _EPoll
-        _poll = select.epoll
+        _poll = _EPoll
+        # _poll = select.epoll
     except:
         # All other systems
         import sys
         if "linux" in sys.platform:
             logging.warning("epoll module not found; using select()")
-        # _poll = _Select
-        _poll = select.epoll
+        _poll = _Select
+
+
+if hasattr(select, "epoll"):
+    # Python 2.6+ on Linux
+    _poll = select.epoll
+elif hasattr(select, "kqueue"):
+    # Python 2.6+ on BSD or Mac
+    _poll = _KQueue
+else:
+    try:
+        # Linux systems with our C module installed
+        import epoll
+        _poll = _EPoll
+    except:
+        # All other systems
+        import sys
+        if "linux" in sys.platform:
+            logging.warning("epoll module not found; using select()")
+        _poll = _Select

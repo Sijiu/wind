@@ -3,10 +3,13 @@
 """
 @author: mxh @time:2019/5/1 16:29
 """
+import cgi
 import errno
 import logging
 import os
 import socket
+import time
+import urlparse
 
 from mornado import ioloop, iostream, httputil
 
@@ -26,10 +29,13 @@ except ImportError:
 
 class HTTPServer(object):
 
-    def __init__(self, request_callback, io_loop=None, ssl_options=None):
-        self.ssl_options = ssl_options
+    def __init__(self, request_callback, no_keep_alive=False, io_loop=None,
+                 xheaders=False, ssl_options=None):
         self.request_callback = request_callback
+        self.no_keep_alive = no_keep_alive
         self.io_loop = io_loop
+        self.xheaders = xheaders
+        self.ssl_options = ssl_options
         self._socket = None
         self._started = False
 
@@ -99,33 +105,142 @@ class HTTPServer(object):
 
 
 class HTTPConnection(object):
-    def __init__(self, stream, address, request_callback):
+    def __init__(self, stream, address, request_callback, no_keep_alive=False,
+                 xheaders=False):
+
         self.stream = stream
         self.address = address
         self.request_callback = request_callback
+        self.no_keep_alive = no_keep_alive
+        self.xheaders = xheaders
         self._request = None
         self._request_finished = False
         self.stream.read_until("\r\n\r\n", self._on_headers)
 
-    # def _on_headers(self, data):
-    #     eol = data.find("\r\n")
-    #     start_line = data[:eol]
-    #     method, uri, version = start_line.split(" ")
-    #     if not version.startswith("HTTP/"):
-    #         raise Exception("Malformed HTTP version in HTTP Request-Line")
-    #     headers = httputil.HTTPHeaders.parse(data[eol:])
-    #     self._request = HTTPRequest(
-    #         connection=self, method=method, uri=uri, version=version,
-    #         headers=headers, remote_ip=self.address[0])
-    #
-    #     content_length = headers.get("Content-Length")
-    #     if content_length:
-    #         content_length = int(content_length)
-    #         if content_length > self.stream.max_buffer_size:
-    #             raise Exception("Content-Length too long")
-    #         if headers.get("Expect") == "100-continue":
-    #             self.stream.write("HTTP/1.1 100 (Continue)\r\n\r\n")
-    #         self.stream.read_bytes(content_length, self._on_request_body)
-    #         return
-    #
-    #     self.request_callback(self._request)
+    def _on_write_complete(self):
+        if self._request_finished:
+            self._finish_request()
+
+    def _finish_request(self):
+        if self.no_keep_alive:
+            disconnect = True
+        else:
+            connection_header = self._request.headers.get("Connection")
+            if self._request.supports_http_1_1():
+                disconnect = connection_header == "close"
+            elif ("Content-Length" in self._request.headers
+                    or self._request.method in ("HEAD", "GET")):
+                disconnect = connection_header != "Keep-Alive"
+            else:
+                disconnect = True
+        self._request = None
+        self._request_finished = False
+        if disconnect:
+            self.stream.close()
+            return
+        self.stream.read_until("\r\n\r\n", self._on_headers)
+
+    def _on_headers(self, data):
+        eol = data.find("\r\n")
+        start_line = data[:eol]
+        method, uri, version = start_line.split(" ")
+        if not version.startswith("HTTP/"):
+            raise Exception("Malformed HTTP version in HTTP Request-Line")
+        headers = httputil.HTTPHeaders.parse(data[eol:])
+        self._request = HTTPRequest(
+            connection=self, method=method, uri=uri, version=version,
+            headers=headers, remote_ip=self.address[0])
+
+        content_length = headers.get("Content-Length")
+        if content_length:
+            content_length = int(content_length)
+            if content_length > self.stream.max_buffer_size:
+                raise Exception("Content-Length too long")
+            if headers.get("Expect") == "100-continue":
+                self.stream.write("HTTP/1.1 100 (Continue)\r\n\r\n")
+            self.stream.read_bytes(content_length, self._on_request_body)
+            return
+
+        self.request_callback(self._request)
+
+
+class HTTPRequest(object):
+    """A single HTTP request.
+
+    GET/POST arguments are available in the arguments property, which
+    maps arguments names to lists of values (to support multiple values
+    for individual names). Names and values are both unicode always.
+
+    File uploads are available in the files property, which maps file
+    names to list of files. Each file is a dictionary of the form
+    {"filename":..., "content_type":..., "body":...}. The content_type
+    comes from the provided HTTP header and should not be trusted
+    outright given that it can be easily forged.
+
+    An HTTP request is attached to a single HTTP connection, which can
+    be accessed through the "connection" attribute. Since connections
+    are typically kept open in HTTP/1.1, multiple requests can be handled
+    sequentially on a single connection.
+    """
+    def __init__(self, method, uri, version="HTTP/1.0", headers=None,
+                 body=None, remote_ip=None, protocol=None, host=None,
+                 files=None, connection=None):
+        self.method = method
+        self.uri = uri
+        self.version = version
+        self.headers = headers or httputil.HTTPHeaders()
+        self.body = body or ""
+        if connection and connection.xheaders:
+            # Squid uses X-Forwarded-For, others use X-Real-Ip
+            self.remote_ip = self.headers.get(
+                "X-Real-Ip", self.headers.get("X-Forwarded-For", remote_ip))
+            self.protocol = self.headers.get("X-Scheme", protocol) or "http"
+        else:
+            self.remote_ip = remote_ip
+            self.protocol = protocol or "http"
+        self.host = host or self.headers.get("Host") or "127.0.0.1"
+        self.files = files or {}
+        self.connection = connection
+        self._start_time = time.time()
+        self._finish_time = None
+
+        scheme, netloc, path, query, fragment = urlparse.urlsplit(uri)
+        self.path = path
+        self.query = query
+        arguments = cgi.parse_qs(query)
+        self.arguments = {}
+        for name, values in arguments.iteritems():
+            values = [v for v in values if v]
+            if values: self.arguments[name] = values
+
+    def supports_http_1_1(self):
+        """Returns True if this request supports HTTP/1.1 semantics"""
+        return self.version == "HTTP/1.1"
+
+    def write(self, chunk):
+        """Writes the given chunk to the response stream."""
+        assert isinstance(chunk, str)
+        self.connection.write(chunk)
+
+    def finish(self):
+        """Finishes this HTTP request on the open connection."""
+        self.connection.finish()
+        self._finish_time = time.time()
+
+    def full_url(self):
+        """Reconstructs the full URL for this request."""
+        return self.protocol + "://" + self.host + self.uri
+
+    def request_time(self):
+        """Returns the amount of time it took for this request to execute."""
+        if self._finish_time is None:
+            return time.time() - self._start_time
+        else:
+            return self._finish_time - self._start_time
+
+    def __repr__(self):
+        attrs = ("protocol", "host", "method", "uri", "version", "remote_ip",
+                 "remote_ip", "body")
+        args = ", ".join(["%s=%r" % (n, getattr(self, n)) for n in attrs])
+        return "%s(%s, headers=%s)" % (
+            self.__class__.__name__, args, dict(self.headers))
