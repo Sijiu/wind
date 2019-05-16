@@ -3,29 +3,38 @@
 """
 @author: mxh @time:2019/5/1 12:00
 """
-
-import mornado.web
-import mornado.httpserver
-from mornado.options import define, options
-
-
-define("port", default=8888, help="run on the given port", type=int)
-
-
-class MainHandler(mornado.web.RequestHandler):
-    def get(self):
-        self.write("Hello, world! Happy, Labour day!")
-
-def main():
-    print options.port
-    application = mornado.web.Application(
-        (r'/', MainHandler)
-    )
-
-    http_server = mornado.httpserver.HTTPServer(application)
-
-    http_server.listen(options.port)
+#
+# import mornado.web
+# import mornado.httpserver
+# from mornado.options import define, options
+#
+#
+# define("port", default=8888, help="run on the given port", type=int)
+#
+#
+# class MainHandler(mornado.web.RequestHandler):
+#     def get(self):
+#         self.write("Hello, world! Happy, Labour day!")
+#
+# def main():
+#     print options.port
+#     application = mornado.web.Application(
+#         (r'/', MainHandler)
+#     )
+#
+#     http_server = mornado.httpserver.HTTPServer(application)
+#
+#     http_server.listen(options.port)
 
 
 if __name__ == '__main__':
-    main()
+    # main()
+
+    all = [u"房子", u"车子", u"孩子", u"票子"]
+    cut = True
+    if cut:
+        print "pain"
+        pass
+    else:
+        # print "-".join(all[:2]), "-".join(all[2:])
+        print all[:2], "or", all[2:]
