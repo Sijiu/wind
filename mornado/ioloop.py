@@ -16,6 +16,15 @@ try:
 except ImportError:
     signal = None
 
+try:
+    import fcntl
+except ImportError:
+    if os.name == 'nt':
+        import win32_support
+        import win32_support as fcntl
+    else:
+        raise
+
 
 class IOLoop(object):
 
