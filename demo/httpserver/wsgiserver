@@ -1,0 +1,141 @@
+# -*- coding:utf-8 -*-
+from __future__ import unicode_literals
+import socket
+import StringIO
+import sys
+import datetime
+
+
+def application(evniron, start_response):
+    status = '200 OK'
+    response_headers = [('Content-Type', 'text/plain')]
+    start_response =(status, response_headers)
+    return ['Hello Wind!']
+
+
+class WSGIServer(object):
+    socket_family = socket.AF_INET
+    socket_type = socket.SOCK_STREAM
+    request_queue_size = 10
+
+    def __init__(self, address):
+        self.socket = socket.socket(self.socket_family, self.socket_type)
+        self.socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR, 1)
+        self.socket.bind(address)
+        self.socket.listen(self.request_queue_size)
+        host, port = self.socket.getsockname()[:2]
+        self.host = host
+        self.port = port
+
+    def set_application(self, application):
+        self.application = application
+
+    def serve_forever(self):
+        while True:
+            self.connection, client_address = self.socket.accept()
+            self.handle_request()
+
+    def handle_request(self):
+        self.request_data = self.connection.recv(1024)
+        self.request_lines = self.request_data.splitlines()
+        try:
+            self.get_url_parameter()
+            env = self.get_environ()
+            app_data = self.application(env, self.start_response)
+            self.finish_response(app_data)
+            print "[%s, %s, %s]" % (datetime.datetime.now().strftime('%Y-%m-%s: %H:%M:%S'),
+                                    self.request_lines[0], self.status)
+        except Exception as e:
+            pass
+
+    def get_environ(self):
+        env = {
+            'wsgi.version'     : (1, 0),
+            'wsgi.url_scheme'  : 'http',
+            'wsgi.input'       : StringIO.StringIO(self.request_data),
+            'wsgi.errors'      : sys.stderr,
+            'wsgi.multithread' : False,
+            'wsgi.multiprocess': False,
+            'wsgi.run_once'    : False,
+            'REQUEST_METHOD'   : self.request_method,
+            'PATH_INFO'        : self.path,
+            'SERVER_NAME'      : self.host,
+            'SERVER_PORT'      : self.port,
+            'USER_AGENT'       : self.request_dict.get('User-Agent')
+        }
+        return env
+
+    def get_url_parameter(self):
+        self.request_dict = {'Path': self.request_lines[0]}
+        for itm in self.request_lines[:1]:
+            if ':' in itm:
+                self.request_dict[itm.split(':')[0]] = itm.split(':')[1]
+        self.request_method, self.path, self.request_version = self.request_dict.get('Path').split()
+
+    def start_response(self, status, response_header):
+        headers = [
+            ('Date', datetime.datetime.now().strftime('%a, %d %b %Y %H:%M:%S GMT')),
+            ('Server', 'WIND 0.1'),
+        ]
+        self.headers = response_header + headers
+        self.status = status
+
+    def finish_response(self, app_data):
+        try:
+            response = 'HTTP/1.1 %s\r\n' % self.status
+            for hd in self.headers:
+                response += '{0}: {1}\r\n'.format(*hd)
+            response += '\r\n'
+            for data in app_data:
+                response += data
+            self.connection.sendall(response)
+        finally:
+            self.connection.close()
+
+
+def generate_server(address, application):
+    server = WSGIServer(address)
+    server.set_application(application)
+    return server
+
+
+def start(port=8001):
+    # if len(sys.argv) < 2:
+    #     sys.exit('请提供可用的wsgi应用程序， 格式为： 模块名.应用名 端口号')
+    # elif len(sys.argv) > 2:
+    #     port = sys.argv[2]
+    #
+    # app_path = sys.argv[1]
+    # module, application = app_path.split('.')
+    # module = __import__(module)
+    # application = getattr(module, application)
+    app = application("", "")
+    httpd = generate_server(('', int(port)), app)
+    print 'Wind Server HTTP service on port %s' % port
+    print '%s' % datetime.datetime.now().strftime('%a, %d %b %Y %H:%M:%S GMT')
+    httpd.serve_forever()
+
+"""
+首先我们看 WSGIServer 类__init__方法主要是初始化 socket 与服务器地址，绑定并监听端口;
+其次，serve_forever(self): 持续运行 server；
+handle_request(self):处理请求；
+最后，finish_response(self, app_data):返回请求响应。
+再来看__main__里是如何运行 WSGIServer的：
+获得地址和端口后先初始化 WSGIServer：server = WSGIServer(address)，然后设置加载的wsgi app：server.set_application(TestMiddle(application))，接着持续运行 server：httpd.serve_forever()
+那么根据以上信息，可以总结出 wsgi server 应该是这样一个过程：
+
+1、初始化，建立套接字，绑定监听端口；
+2、设置加载的 web app；
+3、开始持续运行 server；
+4、处理访问请求（在这里可以加入你自己的处理过程，比如我加入了打印访问信息，字典化访问头部信息等功能）；
+5、获取请求信息及环境信息（get_environ(self)）；
+6、用environ运行加载的 web app 得到返回信息；
+7、构造返回信息头部；
+8、返回信息；
+只要实现了以上过程，一个标准的 wsgi server 就写好了。仔细观察，其实一个 wsgi server 的重要之处就在于用environ去跑 web app 得到返回结果这一步，这一步和前面的 application 实现相辅相成，然后框架和服务器都根据这套标准，大家就可以愉快的一起工作了。
+现在运行python server.py app.app 8000, 然后浏览器访问localhost:8000
+"""
+
+
+if __name__ == '__main__':
+    start()
