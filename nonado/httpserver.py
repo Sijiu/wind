@@ -3,12 +3,16 @@
 """
 @author: mxh @time:2019/11/27 16:43
 """
+
+import cgi
 import errno
 import logging
 import os
 import socket
+import time
+import urlparse
 
-from nonado import ioloop, iostream
+from nonado import ioloop, iostream, httputil
 
 try:
     import fcntl
@@ -121,7 +125,7 @@ class HTTPServer(object):
                 HTTPConnection(stream, address, self.request_callback,
                                self.no_keep_alive, self.xheaders)
             except:
-                logging.error("Error in connection callback", exc_info=True)
+                logging.error("Error in connection callback", exc_info=True)\
 
 
 class HTTPConnection(object):
@@ -173,3 +177,80 @@ class HTTPConnection(object):
             self.stream.close()
             return
         self.stream.read_until("\r\n\r\n", self._on_headers)
+
+    def _on_headers(self, data):
+        eol = data.find("\r\n")
+        start_time = data[:eol]
+        method, uri, version = start_time.split(" ")
+        if not version.startswith("HTTP:/"):
+            raise Exception("Malformed HTTP version in HTTP Request-Line") # Malformed 格式
+        headers = httputil.HTTPHeaders.parse(data[:eol])
+        self._request = HTTPRequest(connection=self, method=method, uri=uri, version=version, headers=headers,
+                                    remote_ip=self.address[0])
+
+        content_length = headers.get("Content-Length")
+        if content_length:
+            content_length = int(content_length)
+            if content_length > self.stream.max_buffer_size:
+                raise Exception("Content-Length too long")
+            if headers.get("Expec") == "100-continue":
+                self.stream.write("HTTP/1.1 100(Continue)\r\n\r\n")
+            self.stream.read_bytes(content_length, self._on_request_body)
+            return
+
+        self.request_callback(self._request)
+
+    def _on_request_body(self, data):
+        self._request.body = data
+        content_type = self._request.headers.get("Content-Type", "")
+        if self._request.method == "POST":
+            print "execute POST"
+            # TODO
+            pass
+        self.request_callback(self._request)
+
+
+class HTTPRequest(object):
+    """一个HTTP request
+
+    GET/POST 参数可用在 arguments 属性中, 支持多值. 参数名和值都是 unicode 编码的
+    file 属性可以获取上传的文件
+    一个HTTP请求属于一个HTTP连接, 可以通过 "connection" 属性访问该连接
+    """
+
+    def __init__(self, method, uri, version="HTTP/1.0", headers=None,
+                 body=None, remote_ip=None, protocol=None, host=None,
+                 files=None, connection=None):
+        self.method = method
+        self.uri = uri
+        self.version = version
+        self.headers = headers or httputil.HTTPHeaders()
+        self.body = body or ""
+        if connection and connection.xheaders:
+            # Squid uses X-Forwarded-For, others use X-Real-Ip
+            self.remote_ip = self.headers.get(
+                "X-Real-Ip", self.headers.get("X-Forwarded-For", remote_ip))
+            self.protocol = self.headers.get("X-Scheme", protocol) or "http"
+        else:
+            self.remote_ip = remote_ip
+            self.protocol = protocol or "http"
+        self.host = host or self.headers.get("Host") or "127.0.0.1"
+        self.files = files or {}
+        self.connection = connection
+        self._start_time = time.time()
+        self._finish_time = None
+
+        scheme, netloc, path, query, fragment = urlparse.urlsplit(uri)
+        self.path = path
+        self.query = query
+        arguments = cgi.parse_qs(query)
+        self.arguments = {}
+        for name, values in arguments.iteritems():
+            values = [v for v in values if v]
+            if values: self.arguments[name] = values
+
+    def supports_http_1_1(self):
+        """返回True 吐过请求支持 HTTP/1.1 semantics (语义)
+        :return:
+        """
+        return self.version == "HTTP/1.1"
