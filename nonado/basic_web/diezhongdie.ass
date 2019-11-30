@@ -1,0 +1,1581 @@
+[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) yjt
+[Script Info]
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,00:00:48.28,00:00:52.28,Default,,0,0,0,,伊森 愿意娶朱莉娅 为你的合法妻子吗	Do you, Ethan, take Julia to be your lawful wedded wife?
+Dialogue: 0,00:00:52.28,00:00:53.28,Default,,0,0,0,,我愿意	I do.
+Dialogue: 0,00:00:53.28,00:00:58.28,Default,,0,0,0,,不离不弃 爱她 珍惜她 尊重她并保护她	To have, to hold, to love, cherish, honor, and protect?
+Dialogue: 0,00:00:58.28,00:00:59.28,Default,,0,0,0,,我愿意	I do.
+Dialogue: 0,00:01:00.28,00:01:04.28,Default,,0,0,0,,保护她免遭已知和未知的恐惧	To shield from terrors known and unknown?
+Dialogue: 0,00:01:04.28,00:01:07.28,Default,,0,0,0,,-对她说谎 欺骗她 -什么	-To lie, to deceive... -What?
+Dialogue: 0,00:01:07.28,00:01:11.28,Default,,0,0,0,,过双重生活 无法阻止她被人绑架	To live a double life, to fail to prevent her abduction,
+Dialogue: 0,00:01:11.28,00:01:15.28,Default,,0,0,0,,抹去她的身份 逼迫她销声匿迹	erase her identity, force her into hiding,
+Dialogue: 0,00:01:15.28,00:01:17.28,Default,,0,0,0,,夺走她所知的一切	take away all she has known...
+Dialogue: 0,00:01:17.28,00:01:17.28,Default,,0,0,0,,别说了	Stop.
+Dialogue: 0,00:01:17.28,00:01:19.28,Default,,0,0,0,,企图自私 徒劳且快速地	...in a selfish, futile, fleeting attempt...
+Dialogue: 0,00:01:20.28,00:01:20.28,Default,,0,0,0,,别说了	Stop.
+Dialogue: 0,00:01:20.28,00:01:23.28,Default,,0,0,0,,逃避真实的自我	...to escape your own true self?
+Dialogue: 0,00:01:23.28,00:01:24.28,Default,,0,0,0,,拜托 别说了	Please, stop.
+Dialogue: 0,00:01:24.28,00:01:27.28,Default,,0,0,0,,朱莉娅 你愿意选择接受吗	And, Julia, do you choose to accept?
+Dialogue: 0,00:01:27.28,00:01:28.28,Default,,0,0,0,,不要	Don't.
+Dialogue: 0,00:01:28.28,00:01:30.28,Default,,0,0,0,,-我愿意 -不要	-I do. -No.
+Dialogue: 0,00:01:32.28,00:01:34.28,Default,,0,0,0,,你应该杀了我的 伊森	You should have killed me, Ethan.
+Dialogue: 0,00:01:41.28,00:01:45.28,Default,,0,0,0,,（贝尔法斯特）
+Dialogue: 0,00:02:02.28,00:02:05.28,Default,,0,0,0,,命运对勇士低语	Fate whispers to the warrior...
+Dialogue: 0,00:02:05.28,00:02:07.28,Default,,0,0,0,,风暴即将来临	A storm is coming.
+Dialogue: 0,00:02:08.28,00:02:09.28,Default,,0,0,0,,勇士低声回应	And the warrior whispers back...
+Dialogue: 0,00:02:12.28,00:02:13.28,Default,,0,0,0,,我就是风暴	I am the storm.
+Dialogue: 0,00:02:32.28,00:02:37.28,Default,,0,0,0,,（荷马史诗《奥德赛》）
+Dialogue: 0,00:02:44.28,00:02:46.28,Default,,0,0,0,,（身份确认 伊森·马修亨特）
+Dialogue: 0,00:02:48.28,00:02:50.28,Default,,0,0,0,,晚上好 亨特先生	Good evening, Mr. Hunt.
+Dialogue: 0,00:02:50.28,00:02:52.28,Default,,0,0,0,,无政府主义者所罗门连恩	The anarchist Solomon Lane.
+Dialogue: 0,00:02:52.28,00:02:54.28,Default,,0,0,0,,自从你两年前抓到他	Since you captured him 2 years ago,
+Dialogue: 0,00:02:54.28,00:02:58.28,Default,,0,0,0,,他从世界舞台消失 却产生了令人意想不到的后果	his absence from the world stage has had unintended consequences.
+Dialogue: 0,00:02:58.28,00:03:03.28,Default,,0,0,0,,他所创建的辛迪加由叛变的 秘密特工组成 继续在全球肆虐	His Syndicate of rogue covert operatives continues to wreak havoc around the globe.
+Dialogue: 0,00:03:03.28,00:03:05.28,Default,,0,0,0,,中情局的特别行动科	The CIA's Special Activities Division
+Dialogue: 0,00:03:05.28,00:03:08.28,Default,,0,0,0,,一直在不屈不挠地追捕连恩的 敌对分子精英网络	has relentlessly hunted Lane's elite network of hostiles.
+Dialogue: 0,00:03:08.28,00:03:11.28,Default,,0,0,0,,但很多人依然不为人知 逍遥法外	But many remain unknown and at large.
+Dialogue: 0,00:03:11.28,00:03:13.28,Default,,0,0,0,,这个极端主义分化团体的残余分子	The remnants of this extremist splinter cell
+Dialogue: 0,00:03:13.28,00:03:15.28,Default,,0,0,0,,自称为使徒	refer to themselves as "The Apostles."
+Dialogue: 0,00:03:17.28,00:03:19.28,Default,,0,0,0,,从那时起 他们一直采用雇佣恐怖分子政策	They have since adopted a policy of terror-for-hire,
+Dialogue: 0,00:03:19.28,00:03:21.28,Default,,0,0,0,,让他们更具威胁性	making them an even greater threat.
+Dialogue: 0,00:03:22.28,00:03:24.28,Default,,0,0,0,,他们引发了最近爆发的天花疫情	They are responsible for the recent smallpox outbreak
+Dialogue: 0,00:03:24.28,00:03:26.28,Default,,0,0,0,,疫情范围包括印控克什米尔	in Indian-controlled Kashmir,
+Dialogue: 0,00:03:26.28,00:03:28.28,Default,,0,0,0,,和中巴边境	along the borders of China and Pakistan,
+Dialogue: 0,00:03:28.28,00:03:30.28,Default,,0,0,0,,威胁全球三分之一的人口	threatening one-third of the world's population.
+Dialogue: 0,00:03:31.28,00:03:32.28,Default,,0,0,0,,这种流行病的传播目前受到控制	The epidemic is being contained,
+Dialogue: 0,00:03:33.28,00:03:34.28,Default,,0,0,0,,但情报表明	but intelligence would indicate
+Dialogue: 0,00:03:34.28,00:03:38.28,Default,,0,0,0,,一名新客户雇佣了使徒 准备进行一项更具野心的行动	that a new client has hired the Apostles for a more ambitious operation.
+Dialogue: 0,00:03:39.28,00:03:40.28,Default,,0,0,0,,此人联络了他们	They have been contacted by this man,
+Dialogue: 0,00:03:40.28,00:03:44.28,Default,,0,0,0,,一名身份不明的极端主义分子 我们只知道其化名约翰·拉克	an unidentified extremist  known only by the code name John Lark,
+Dialogue: 0,00:03:44.28,00:03:46.28,Default,,0,0,0,,他写下了这份毁灭性的宣言	author of this apocalyptic manifesto
+Dialogue: 0,00:03:46.28,00:03:49.28,Default,,0,0,0,,呼吁摧毁当前的世界秩序	calling for the destruction of the current world order.
+Dialogue: 0,00:03:47.28,00:03:51.28,Default,,0,0,0,,（不经受巨大苦难 绝不会有和平）
+Dialogue: 0,00:03:50.28,00:03:53.28,Default,,0,0,0,,据信挪威核武器专家 尼尔斯德尔布鲁克的失踪	It is believed Lark is responsible for the disappearance
+Dialogue: 0,00:03:53.28,00:03:56.28,Default,,0,0,0,,就是拉克所为	of Norwegian nuclear weapons specialist Nils Delbruuk.
+Dialogue: 0,00:03:56.28,00:03:58.28,Default,,0,0,0,,德尔布鲁克博士 强烈表达了反宗教观点	Dr. Delbruuk's security  clearance was revoked
+Dialogue: 0,00:03:58.28,00:04:01.28,Default,,0,0,0,,此后 他的安全权限被取消了	after he expressed fiercely anti-religious views.
+Dialogue: 0,00:04:01.28,00:04:03.28,Default,,0,0,0,,与此同时 使徒一直	Meanwhile, the Apostles  have been in contact
+Dialogue: 0,00:04:03.28,00:04:05.28,Default,,0,0,0,,与东欧地下组织成员联络	with elements of  the Eastern European underworld,
+Dialogue: 0,00:04:06.28,00:04:08.28,Default,,0,0,0,,他们有三枚钚弹	who are in possession of three plutonium cores
+Dialogue: 0,00:04:08.28,00:04:10.28,Default,,0,0,0,,这些钚弹是从俄罗斯东部的 导弹基地偷来的	stolen from a missile base in eastern Russia.
+Dialogue: 0,00:04:12.28,00:04:14.28,Default,,0,0,0,,这表明约翰拉克和使徒	This would indicate that John Lark and the Apostles
+Dialogue: 0,00:04:14.28,00:04:17.28,Default,,0,0,0,,狼狈为奸 以获得能发挥威力的核武器	are working together to acquire functioning nuclear weapons.
+Dialogue: 0,00:04:18.28,00:04:20.28,Default,,0,0,0,,核应急支援分队估计 拥有德尔布鲁克学识的人	NEST estimates that a man with Delbruuk's knowledge,
+Dialogue: 0,00:04:21.28,00:04:22.28,Default,,0,0,0,,使用相应原料	using the materials in play,
+Dialogue: 0,00:04:22.28,00:04:26.28,Default,,0,0,0,,能在短短72小时内建造三件核武器	could complete three nuclear weapons in as little as 72 hours.
+Dialogue: 0,00:04:26.28,00:04:28.28,Default,,0,0,0,,这些设备便于携带	These devices would be man-portable
+Dialogue: 0,00:04:28.28,00:04:30.28,Default,,0,0,0,,能在一夜之间部署到地球上任何地方	and deployable anywhere on Earth overnight.
+Dialogue: 0,00:04:31.28,00:04:33.28,Default,,0,0,0,,约翰拉克和使徒持有	In the hands of John Lark and the Apostles,
+Dialogue: 0,00:04:33.28,00:04:36.28,Default,,0,0,0,,这些武器 将对数百万人	these weapons represent an unprecedented threat
+Dialogue: 0,00:04:36.28,00:04:37.28,Default,,0,0,0,,造成史无前例的威胁	to countless millions.
+Dialogue: 0,00:04:38.28,00:04:40.28,Default,,0,0,0,,你的任务 如果你选择接受	Your mission,  should you choose to accept it,
+Dialogue: 0,00:04:41.28,00:04:43.28,Default,,0,0,0,,就是不惜采取任何手段	is to prevent the Apostles from acquiring plutonium
+Dialogue: 0,00:04:43.28,00:04:46.28,Default,,0,0,0,,阻止使徒获得钚弹	using any means at your disposal.
+Dialogue: 0,00:04:46.28,00:04:49.28,Default,,0,0,0,,如果你和不可能任务小组的成员 被抓或遇害	If you or any members of your IMF team  are caught or killed,
+Dialogue: 0,00:04:49.28,00:04:52.28,Default,,0,0,0,,秘书长会对你们的行动予以否认	the Secretary will disavow any knowledge of your actions.
+Dialogue: 0,00:04:53.28,00:04:54.28,Default,,0,0,0,,祝你好运 伊森	Good luck, Ethan.
+Dialogue: 0,00:04:54.28,00:04:57.28,Default,,0,0,0,,这段信息将在五秒后自行销毁	This message will self-destruct in five seconds.
+Dialogue: 0,00:05:08.28,00:05:12.28,Default,,0,0,0,,（柏林）
+Dialogue: 0,00:05:12.28,00:05:13.28,Default,,0,0,0,,他来晚了	He's late.
+Dialogue: 0,00:05:14.28,00:05:16.28,Default,,0,0,0,,-他从来不会晚到 -他会来的	-He's never late. -He'll be here.
+Dialogue: 0,00:05:17.28,00:05:18.28,Default,,0,0,0,,我有不祥的预感	I don't like it.
+Dialogue: 0,00:05:18.28,00:05:22.28,Default,,0,0,0,,这家伙很可疑 让我觉得很不安	Something about this guy just really gives me the creeps.
+Dialogue: 0,00:05:22.28,00:05:23.28,Default,,0,0,0,,好吧 放松点	Okay, just relax.
+Dialogue: 0,00:05:24.28,00:05:25.28,Default,,0,0,0,,我很放松	I'm relaxed.
+Dialogue: 0,00:05:25.28,00:05:26.28,Default,,0,0,0,,你听起来一点都不放松	You don't sound relaxed.
+Dialogue: 0,00:05:26.28,00:05:28.28,Default,,0,0,0,,卢瑟 他听起来很放松吗	Luther, does he sound relaxed to you?
+Dialogue: 0,00:05:28.28,00:05:30.28,Default,,0,0,0,,他听起来很害怕	He sounds terrified.
+Dialogue: 0,00:05:30.28,00:05:33.28,Default,,0,0,0,,拜托 我不害怕 我只是有不祥的预感	Please, I'm not terrified. I just have a bad feeling is all.
+Dialogue: 0,00:05:33.28,00:05:34.28,Default,,0,0,0,,我还以为你说你很放松	I thought you said you were relaxed.
+Dialogue: 0,00:05:34.28,00:05:38.28,Default,,0,0,0,,同时感到放松和极度不安完全有可能	It's entirely possible to be relaxed and extremely uneasy at the same time.
+Dialogue: 0,00:05:38.28,00:05:40.28,Default,,0,0,0,,-才不会 -你向来如此	-No, it's not. -You do it all the time.
+Dialogue: 0,00:05:40.28,00:05:42.28,Default,,0,0,0,,-我才没有 -你就是	-No, I don't. -Yes, you do.
+Dialogue: 0,00:05:42.28,00:05:42.28,Default,,0,0,0,,他才不是	No, he doesn't.
+Dialogue: 0,00:05:42.28,00:05:45.28,Default,,0,0,0,,我应该相信你完全放松	I'm supposed to believe that you are perfectly relaxed,
+Dialogue: 0,00:05:45.28,00:05:46.28,Default,,0,0,0,,-此时此刻 -班吉	-right here, now... -Benji.
+Dialogue: 0,00:05:46.28,00:05:49.28,Default,,0,0,0,,在漆黑的通道里 等着 从一个精神变态者那里购买黑市钚弹	...in a dark alleyway, waiting to buy black-market plutonium from a psychopath.
+Dialogue: 0,00:05:49.28,00:05:51.28,Default,,0,0,0,,班吉 我不会让你出事的	Benji, I won't let anything happen to you.
+Dialogue: 0,00:05:51.28,00:05:53.28,Default,,0,0,0,,-好吧 -你瞧 班吉	-Okay. -See, Benji,
+Dialogue: 0,00:05:53.28,00:05:54.28,Default,,0,0,0,,你很安全	you're perfectly safe.
+Dialogue: 0,00:05:54.28,00:05:56.28,Default,,0,0,0,,你说得轻巧 你在面包车里	That's easy for you to say, you're in the van.
+Dialogue: 0,00:05:56.28,00:05:58.28,Default,,0,0,0,,你想做外勤工作 硬汉	Well, you wanted to be in the field, tough guy.
+Dialogue: 0,00:05:58.28,00:06:00.28,Default,,0,0,0,,卢瑟 我今晚想待在面包车里	And tonight, Luther, I would like to be in the van!
+Dialogue: 0,00:06:00.28,00:06:01.28,Default,,0,0,0,,他来了	He's here.
+Dialogue: 0,00:06:02.28,00:06:03.28,Default,,0,0,0,,老天	Oh, God.
+Dialogue: 0,00:06:19.28,00:06:20.28,Default,,0,0,0,,把钱准备好 卢瑟	Have that money ready, Luther.
+Dialogue: 0,00:06:20.28,00:06:21.28,Default,,0,0,0,,收到	Copy.
+Dialogue: 0,00:06:26.28,00:06:27.28,Default,,0,0,0,,伊森 你收到了吗	Ethan, do you copy?
+Dialogue: 0,00:06:28.28,00:06:29.28,Default,,0,0,0,,你收到了吗	Do you copy?
+Dialogue: 0,00:06:42.28,00:06:44.28,Default,,0,0,0,,我们到底要不要交易	Are we finally gonna do this or not?
+Dialogue: 0,00:06:50.28,00:06:54.28,Default,,0,0,0,,我在这一行得以生存 全凭脑子里的一个声音	I have survived in this business with the help of a voice in my head.
+Dialogue: 0,00:06:56.28,00:06:59.28,Default,,0,0,0,,这个声音从来都不会出错 无论我何时跟你见面	This voice is never wrong. And whenever I meet you,
+Dialogue: 0,00:07:00.28,00:07:02.28,Default,,0,0,0,,它都会告诉我同一件事	it tells me the same thing.
+Dialogue: 0,00:07:03.28,00:07:04.28,Default,,0,0,0,,什么	What's that?
+Dialogue: 0,00:07:05.28,00:07:06.28,Default,,0,0,0,,没什么	Nothing.
+Dialogue: 0,00:07:11.28,00:07:14.28,Default,,0,0,0,,我是来做生意的 叫那个声音做决定吧	I'm here to do business. Tell the voice to flip a coin.
+Dialogue: 0,00:07:46.28,00:07:47.28,Default,,0,0,0,,那是怎么回事	What's that?
+Dialogue: 0,00:07:48.28,00:07:50.28,Default,,0,0,0,,这是铍棒 会导致	This is a beryllium rod, which is causing
+Dialogue: 0,00:07:50.28,00:07:53.28,Default,,0,0,0,,钚弹里的钚产生反应	a reaction with the plutonium inside the core.
+Dialogue: 0,00:08:02.28,00:08:03.28,Default,,0,0,0,,货真价实	That's them.
+Dialogue: 0,00:08:06.28,00:08:07.28,Default,,0,0,0,,钱呢	The money?
+Dialogue: 0,00:08:08.28,00:08:09.28,Default,,0,0,0,,钱	The money.
+Dialogue: 0,00:08:12.28,00:08:13.28,Default,,0,0,0,,把钱拿来	Bring the money.
+Dialogue: 0,00:08:26.28,00:08:28.28,Default,,0,0,0,,卢瑟 把钱拿来	Luther, bring the money.
+Dialogue: 0,00:08:37.28,00:08:39.28,Default,,0,0,0,,我们需要那笔钱 卢瑟	We're gonna need that money, Luther.
+Dialogue: 0,00:08:39.28,00:08:40.28,Default,,0,0,0,,干掉他们	Kill them.
+Dialogue: 0,00:08:46.28,00:08:47.28,Default,,0,0,0,,我来拿 	I got it!
+Dialogue: 0,00:08:51.28,00:08:52.28,Default,,0,0,0,,卢瑟 收到了吗	Luther, do you copy?
+Dialogue: 0,00:08:53.28,00:08:54.28,Default,,0,0,0,,卢瑟 	Luther!
+Dialogue: 0,00:08:54.28,00:08:55.28,Default,,0,0,0,,卢瑟 请回答	Luther, come in.
+Dialogue: 0,00:08:55.28,00:08:57.28,Default,,0,0,0,,卢瑟现在不在	Luther's not here right now.
+Dialogue: 0,00:08:57.28,00:09:00.28,Default,,0,0,0,,使徒能为你做什么事 亨特	What can the Apostles do for you, Hunt?
+Dialogue: 0,00:09:01.28,00:09:03.28,Default,,0,0,0,,-你想怎样 -你被包围了 亨特	-What do you want? -You're boxed in, Hunt.
+Dialogue: 0,00:09:04.28,00:09:06.28,Default,,0,0,0,,把钚弹给我们 然后离开	Give us the plutonium and walk away.
+Dialogue: 0,00:09:07.28,00:09:09.28,Default,,0,0,0,,班吉 把车开过来	Benji, get the car.
+Dialogue: 0,00:09:09.28,00:09:10.28,Default,,0,0,0,,-我办不到 -班吉	-I don't think I can do that. -Benji.
+Dialogue: 0,00:09:10.28,00:09:12.28,Default,,0,0,0,,把车开过来	Get the car.
+Dialogue: 0,00:09:32.28,00:09:34.28,Default,,0,0,0,,我们做一笔交易吧 亨特	We'll make you a deal, Hunt.
+Dialogue: 0,00:09:34.28,00:09:38.28,Default,,0,0,0,,把钚弹给我们 我们就不会杀死你的朋友	Give us the plutonium and we won't kill your friend.
+Dialogue: 0,00:09:41.28,00:09:44.28,Default,,0,0,0,,不要 伊森 不要为了我这么做 	Don't you do it, Ethan! Not for me!
+Dialogue: 0,00:09:57.28,00:09:59.28,Default,,0,0,0,,我会数到三	I'm gonna count to three.
+Dialogue: 0,00:10:00.28,00:10:00.28,Default,,0,0,0,,一	One.
+Dialogue: 0,00:10:02.28,00:10:03.28,Default,,0,0,0,,-二 -卢瑟	-Two. -Luther...
+Dialogue: 0,00:10:05.28,00:10:06.28,Default,,0,0,0,,-抱歉 -三	-...I'm sorry. -Three.
+Dialogue: 0,00:10:21.28,00:10:23.28,Default,,0,0,0,,抱歉 我没有别的办法	I'm sorry. I didn't know what else to do.
+Dialogue: 0,00:10:23.28,00:10:24.28,Default,,0,0,0,,我们没事了	We're good.
+Dialogue: 0,00:10:29.28,00:10:31.28,Default,,0,0,0,,-你没事吧 -我应该死了	-You okay? -I should be dead.
+Dialogue: 0,00:10:31.28,00:10:32.28,Default,,0,0,0,,我们都应该死了	We should all be dead.
+Dialogue: 0,00:10:34.28,00:10:36.28,Default,,0,0,0,,我们为何没死	Why aren't we?
+Dialogue: 0,00:10:37.28,00:10:38.28,Default,,0,0,0,,钚弹在哪	Where's the plutonium?
+Dialogue: 0,00:10:50.28,00:10:51.28,Default,,0,0,0,,不见了	It's gone.
+Dialogue: 0,00:10:56.28,00:10:57.28,Default,,0,0,0,,如果你刚收看新闻	If you're just joining us,
+Dialogue: 0,00:10:57.28,00:11:02.28,Default,,0,0,0,,三次大爆炸同时发生	three massive explosions have gone off simultaneously
+Dialogue: 0,00:11:02.28,00:11:04.28,Default,,0,0,0,,看起来像是一次协同攻击	in what appears to be a coordinated attack.
+Dialogue: 0,00:11:05.28,00:11:08.28,Default,,0,0,0,,这是从罗马俯瞰梵蒂冈的现场图像	This image is live in Rome, looking toward the Vatican
+Dialogue: 0,00:11:08.28,00:11:10.28,Default,,0,0,0,,我们的摄像机 最近只能拍摄到这个距离	and is as close as our cameras can get.
+Dialogue: 0,00:11:10.28,00:11:13.28,Default,,0,0,0,,据信爆炸发生当时	It is believed that the Pope was in residence
+Dialogue: 0,00:11:13.28,00:11:15.28,Default,,0,0,0,,教皇正在自己的住宅中	at the time of the blast.
+Dialogue: 0,00:11:15.28,00:11:19.28,Default,,0,0,0,,以下也是现场播报 我们从城郊俯瞰耶路撒冷	Also live, we're looking at Jerusalem from just outside the city.
+Dialogue: 0,00:11:19.28,00:11:21.28,Default,,0,0,0,,以下也是现场播报 麦加圣城	Also live, the holy city of Mecca
+Dialogue: 0,00:11:21.28,00:11:26.28,Default,,0,0,0,,来自位于红海的罗纳德里根号 航空母舰 就在沙特阿拉伯海岸线上	from the USS Ronald Reagan in the Red Sea off the coast of Saudi Arabia.
+Dialogue: 0,00:11:26.28,00:11:28.28,Default,,0,0,0,,已探测到辐射	Radiation has been detected,
+Dialogue: 0,00:11:28.28,00:11:32.28,Default,,0,0,0,,表明核武器被用于	indicating that nuclear weapons were used
+Dialogue: 0,00:11:32.28,00:11:33.28,Default,,0,0,0,,这些惨绝人寰的攻击中	in these unspeakable attacks.
+Dialogue: 0,00:11:33.28,00:11:37.28,Default,,0,0,0,,-伊森 是时候了 -暂时不知道伤亡情况 但我们认为	-Ethan, it's time. -No word on casualties yet,  but we can assume
+Dialogue: 0,00:11:37.28,00:11:39.28,Default,,0,0,0,,死亡人数会大得惊人	the death toll is catastrophic.
+Dialogue: 0,00:11:39.28,00:11:41.28,Default,,0,0,0,,早前的报道表明使用的武器	Early reports suggest the weapons used
+Dialogue: 0,00:11:41.28,00:11:44.28,Default,,0,0,0,,需要高度专业化知识	would require highly specialized knowledge
+Dialogue: 0,00:11:44.28,00:11:46.28,Default,,0,0,0,,极少有人拥有这种知识	that very few people possess.
+Dialogue: 0,00:11:46.28,00:11:51.28,Default,,0,0,0,,现在的问题是 谁会攻击 这三个圣地原因是什么	The question now is who would attack all three of these holy sites? And why?
+Dialogue: 0,00:11:51.28,00:11:54.28,Default,,0,0,0,,攻击恰好发生在同一时刻	The attacks occurred  at precisely the same moment,
+Dialogue: 0,00:11:54.28,00:11:55.28,Default,,0,0,0,,大约一小时前	just over an hour ago,
+Dialogue: 0,00:11:56.28,00:11:57.28,Default,,0,0,0,,东部时间凌晨四点	at 4:00 a.m. Eastern Time.
+Dialogue: 0,00:11:57.28,00:11:59.28,Default,,0,0,0,,攻击发生后 不出几分钟	Within minutes of the attack,
+Dialogue: 0,00:11:59.28,00:12:01.28,Default,,0,0,0,,国会下令紧急休会	Congress ordered an emergency recess
+Dialogue: 0,00:12:01.28,00:12:03.28,Default,,0,0,0,,国会大厦的人员全部撤离	and the Capitol Building was evacuated.
+Dialogue: 0,00:12:03.28,00:12:06.28,Default,,0,0,0,,总统乘坐空军一号离开华府	The President left Washington on Air Force One.
+Dialogue: 0,00:12:06.28,00:12:08.28,Default,,0,0,0,,白宫宣布进入紧急状态	The White House has declared a state of emergency,
+Dialogue: 0,00:12:08.28,00:12:11.28,Default,,0,0,0,,让部队处于高度警戒状态	placing the military on highest alert.
+Dialogue: 0,00:12:11.28,00:12:13.28,Default,,0,0,0,,请让我们单独谈谈	Would you excuse us, please?
+Dialogue: 0,00:12:15.28,00:12:16.28,Default,,0,0,0,,德尔布鲁克博士	Dr. Delbruuk.
+Dialogue: 0,00:12:18.28,00:12:19.28,Default,,0,0,0,,我们知道你是谁	We know who you are.
+Dialogue: 0,00:12:19.28,00:12:22.28,Default,,0,0,0,,我们读了宣言 找到了你的实验室	We read the manifesto, we found your lab.
+Dialogue: 0,00:12:33.28,00:12:34.28,Default,,0,0,0,,不经受巨大苦难	There has never been peace
+Dialogue: 0,00:12:34.28,00:12:36.28,Default,,0,0,0,,绝不会有和平	without first a great suffering.
+Dialogue: 0,00:12:36.28,00:12:38.28,Default,,0,0,0,,苦难越深重 和平就越伟大	The greater the suffering, the greater the peace.
+Dialogue: 0,00:12:39.28,00:12:41.28,Default,,0,0,0,,瞧 这会让他们团结一致	See, this will unite them.
+Dialogue: 0,00:12:42.28,00:12:45.28,Default,,0,0,0,,他们读完这份宣言后 就会明白	When they read this manifesto, they'll all understand.
+Dialogue: 0,00:12:45.28,00:12:47.28,Default,,0,0,0,,永远不会有人读那份宣言	Nobody's gonna read that manifesto, ever.
+Dialogue: 0,00:12:48.28,00:12:49.28,Default,,0,0,0,,我能向你保证	I can promise you that.
+Dialogue: 0,00:12:50.28,00:12:51.28,Default,,0,0,0,,今天是几号	What day is it?
+Dialogue: 0,00:12:51.28,00:12:52.28,Default,,0,0,0,,我在这里多久了	How long have I been here?
+Dialogue: 0,00:12:53.28,00:12:54.28,Default,,0,0,0,,你记得的最后一件事是什么	What's the last thing you remember?
+Dialogue: 0,00:12:55.28,00:12:57.28,Default,,0,0,0,,我在开车	I was driving.
+Dialogue: 0,00:13:00.28,00:13:01.28,Default,,0,0,0,,有人撞到我	Someone hit me.
+Dialogue: 0,00:13:01.28,00:13:02.28,Default,,0,0,0,,那是两周前的事了	That was two weeks ago.
+Dialogue: 0,00:13:03.28,00:13:04.28,Default,,0,0,0,,-两周 -两周	-Two weeks? -Two weeks.
+Dialogue: 0,00:13:05.28,00:13:06.28,Default,,0,0,0,,这是你的手机 对吗	This is yours, isn't it?
+Dialogue: 0,00:13:07.28,00:13:09.28,Default,,0,0,0,,拉克通过它跟你联络	It's how Lark communicated with you.
+Dialogue: 0,00:13:09.28,00:13:11.28,Default,,0,0,0,,-拉克 -约翰拉克	-Lark? -John Lark.
+Dialogue: 0,00:13:11.28,00:13:13.28,Default,,0,0,0,,-我们对他无所不知 -你们一无所知	-We know all about him. -You know nothing.
+Dialogue: 0,00:13:13.28,00:13:16.28,Default,,0,0,0,,这部手机上的信息 可以帮助我们找到他	There's information in this phone that could lead us to him.
+Dialogue: 0,00:13:16.28,00:13:18.28,Default,,0,0,0,,你有密码	And you have the passcode.
+Dialogue: 0,00:13:18.28,00:13:20.28,Default,,0,0,0,,你们认为拉克是敌人	You think Lark is the enemy?
+Dialogue: 0,00:13:21.28,00:13:22.28,Default,,0,0,0,,不过你们	But you,
+Dialogue: 0,00:13:23.28,00:13:26.28,Default,,0,0,0,,无论你们是谁 你们才是敌人	well, whoever you are, you are the enemy.
+Dialogue: 0,00:13:26.28,00:13:28.28,Default,,0,0,0,,你们让体制得以存活	You're why the system survives.
+Dialogue: 0,00:13:28.28,00:13:31.28,Default,,0,0,0,,-苦难持续不断 -闭嘴 	-Why the suffering goes on. -Shut up!
+Dialogue: 0,00:13:31.28,00:13:33.28,Default,,0,0,0,,我们不在乎你 我们想要拉克	We don't care about you. We want Lark.
+Dialogue: 0,00:13:33.28,00:13:34.28,Default,,0,0,0,,我们做笔交易怎么样	What if we make a deal?
+Dialogue: 0,00:13:35.28,00:13:36.28,Default,,0,0,0,,不 不能做交易 卢瑟	No, there's no deal, Luther.
+Dialogue: 0,00:13:36.28,00:13:38.28,Default,,0,0,0,,出去	Step outside.
+Dialogue: 0,00:13:39.28,00:13:40.28,Default,,0,0,0,,让我跟他单独待五分钟	Give me five minutes with this guy.
+Dialogue: 0,00:13:40.28,00:13:43.28,Default,,0,0,0,,伊森 我不能让你这么做 我们不是这样的人	Ethan, I can't let you do that. That's not who we are.
+Dialogue: 0,00:13:43.28,00:13:45.28,Default,,0,0,0,,我们或许需要重新考虑这点	Then maybe we need to reconsider that.
+Dialogue: 0,00:13:46.28,00:13:48.28,Default,,0,0,0,,如果他们在电视上把宣言读出来呢	What if they read the manifesto on the air?
+Dialogue: 0,00:13:48.28,00:13:49.28,Default,,0,0,0,,什么你们能这么做	What? You can do that?
+Dialogue: 0,00:13:49.28,00:13:51.28,Default,,0,0,0,,我们打一通电话就能办到	We can do it with a phone call.
+Dialogue: 0,00:13:52.28,00:13:55.28,Default,,0,0,0,,如果他读出拉克的宣言	Well, if he reads Lark's manifesto...
+Dialogue: 0,00:13:55.28,00:13:56.28,Default,,0,0,0,,不行	No.
+Dialogue: 0,00:13:56.28,00:13:57.28,Default,,0,0,0,,我会告诉你们密码	I'll give you the passcode.
+Dialogue: 0,00:13:58.28,00:14:00.28,Default,,0,0,0,,伊森 	Ethan! Ethan!
+Dialogue: 0,00:14:00.28,00:14:01.28,Default,,0,0,0,,想一想 伊森	Think, Ethan.
+Dialogue: 0,00:14:01.28,00:14:03.28,Default,,0,0,0,,请为大局着想	Think of the greater good, please.
+Dialogue: 0,00:14:04.28,00:14:05.28,Default,,0,0,0,,对 你该这么做	Yeah, you do that.
+Dialogue: 0,00:14:19.28,00:14:20.28,Default,,0,0,0,,长官	Sir.
+Dialogue: 0,00:14:20.28,00:14:22.28,Default,,0,0,0,,不 他不肯合作	No, he won't cooperate.
+Dialogue: 0,00:14:23.28,00:14:26.28,Default,,0,0,0,,是的 长官 如果我们在电视上	Yes, sir. If we read the manifesto
+Dialogue: 0,00:14:27.28,00:14:28.28,Default,,0,0,0,,读出宣言	on the air.
+Dialogue: 0,00:14:31.28,00:14:32.28,Default,,0,0,0,,我很抱歉 长官	I'm sorry, sir.
+Dialogue: 0,00:14:40.28,00:14:42.28,Default,,0,0,0,,贸易和全球市场猛跌	Trading and global markets plummeted.
+Dialogue: 0,00:14:43.28,00:14:47.28,Default,,0,0,0,,请稍后 我获悉我们会收到其他信息	Stand by. I'm told we're about to get some additional information.
+Dialogue: 0,00:14:48.28,00:14:52.28,Default,,0,0,0,,我刚收到来自一份 来自尼尔斯德尔布鲁克的文件	I've just been handed a document from Nils Delbruuk,
+Dialogue: 0,00:14:52.28,00:14:54.28,Default,,0,0,0,,他是一位核武器专家	a nuclear weapons specialist
+Dialogue: 0,00:14:54.28,00:14:58.28,Default,,0,0,0,,他宣称自己建造了 这些攻击中使用的武器	who claims to have built the weapons used in these attacks.
+Dialogue: 0,00:14:58.28,00:15:02.28,Default,,0,0,0,,我受命要将这份宣言完整地读出来	I've been asked to read  this manifesto in its entirety.
+Dialogue: 0,00:15:00.28,00:15:02.28,Default,,0,0,0,,（恐怖分子发表声明）
+Dialogue: 0,00:15:02.28,00:15:04.28,Default,,0,0,0,,不经受巨大苦难	There has never been peace
+Dialogue: 0,00:15:04.28,00:15:05.28,Default,,0,0,0,,绝不会有和平	without first a great suffering.
+Dialogue: 0,00:15:06.28,00:15:08.28,Default,,0,0,0,,苦难越深重 和平就越伟大	The greater the suffering, the greater the peace.
+Dialogue: 0,00:15:09.28,00:15:12.28,Default,,0,0,0,,人类走向自我灭亡	As mankind is drawn to his self-destruction
+Dialogue: 0,00:15:12.28,00:15:14.28,Default,,0,0,0,,就像飞蛾扑火	like a moth to the candle,
+Dialogue: 0,00:15:14.28,00:15:16.28,Default,,0,0,0,,所谓的和平捍卫者	the so-called defenders of peace,
+Dialogue: 0,00:15:16.28,00:15:19.28,Default,,0,0,0,,教堂 政府 执法机构	the church, the government, the law,
+Dialogue: 0,00:15:19.28,00:15:22.28,Default,,0,0,0,,孜孜不倦地工作 以拯救人类毁灭自己	work tirelessly to save humanity from itself.
+Dialogue: 0,00:15:22.28,00:15:23.28,Default,,0,0,0,,现在帮不到你们了	It's not gonna help you now.
+Dialogue: 0,00:15:23.28,00:15:25.28,Default,,0,0,0,,但为了避免这场灾难	But by averting disaster,
+Dialogue: 0,00:15:25.28,00:15:27.28,Default,,0,0,0,,他们的行动延迟了和平的到来	they serve to delay a peace…
+Dialogue: 0,00:15:27.28,00:15:28.28,Default,,0,0,0,,木已成舟	What's done is done.
+Dialogue: 0,00:15:28.28,00:15:31.28,Default,,0,0,0,,和平只能来自 不可避免的烈火洗礼	...that can only come through an inevitable baptism of fire.
+Dialogue: 0,00:15:31.28,00:15:35.28,Default,,0,0,0,,我带给你们的苦难不是末日的开始	The suffering I bring you is not the beginning of the end.
+Dialogue: 0,00:15:35.28,00:15:36.28,Default,,0,0,0,,而是更好的	It is the beginning
+Dialogue: 0,00:15:36.28,00:15:37.28,Default,,0,0,0,,相互理解的开始	of a greater mutual understanding…
+Dialogue: 0,00:15:38.28,00:15:39.28,Default,,0,0,0,,拿到手了吗	Did we get it?
+Dialogue: 0,00:15:40.28,00:15:41.28,Default,,0,0,0,,这是迈向	It is the first step
+Dialogue: 0,00:15:41.28,00:15:42.28,Default,,0,0,0,,终极人类兄弟情谊的第一步	toward the ultimate brotherhood of man.
+Dialogue: 0,00:15:43.28,00:15:44.28,Default,,0,0,0,,拿到手了	We got it.
+Dialogue: 0,00:15:44.28,00:15:45.28,Default,,0,0,0,,我带给你们的苦难	The suffering I bring you
+Dialogue: 0,00:15:45.28,00:15:47.28,Default,,0,0,0,,是终极和平的桥梁	is the bridge to ultimate peace.
+Dialogue: 0,00:15:48.28,00:15:49.28,Default,,0,0,0,,行动	Go.
+Dialogue: 0,00:16:02.28,00:16:04.28,Default,,0,0,0,,拿到手了吗	Did we get it?
+Dialogue: 0,00:16:04.28,00:16:05.28,Default,,0,0,0,,当然拿到手了	Of course we got it.
+Dialogue: 0,00:16:14.28,00:16:15.28,Default,,0,0,0,,我告诉过你 我们会拿到手的	I told you we'd get it.
+Dialogue: 0,00:16:16.28,00:16:18.28,Default,,0,0,0,,我不明白	I don't understand.
+Dialogue: 0,00:16:18.28,00:16:20.28,Default,,0,0,0,,攻击没发生	The attacks didn't happen?
+Dialogue: 0,00:16:20.28,00:16:24.28,Default,,0,0,0,,你遭遇的车祸发生在一小时前	The car accident you were in, that was an hour ago.
+Dialogue: 0,00:16:24.28,00:16:26.28,Default,,0,0,0,,当时开另一辆车的人是我	I was driving the other car.
+Dialogue: 0,00:16:27.28,00:16:28.28,Default,,0,0,0,,木已成舟	What's done is done,
+Dialogue: 0,00:16:29.28,00:16:30.28,Default,,0,0,0,,我们说了算	when we say it's done.
+Dialogue: 0,00:17:14.28,00:17:17.28,Default,,0,0,0,,碟中谍6：全面瓦解
+Dialogue: 0,00:17:30.28,00:17:36.28,Default,,0,0,0,,（德国拉姆施泰因空军基地）
+Dialogue: 0,00:17:44.28,00:17:45.28,Default,,0,0,0,,长官	Sir.
+Dialogue: 0,00:17:46.28,00:17:48.28,Default,,0,0,0,,你解锁的手机让我们找到了 一个位于冰岛的服务器	That phone you unlocked led us to a server in Iceland
+Dialogue: 0,00:17:48.28,00:17:50.28,Default,,0,0,0,,我们设法解密了 约翰拉克和这个女人之间的	where we managed to decrypt a communiqué
+Dialogue: 0,00:17:50.28,00:17:52.28,Default,,0,0,0,,一次谈话	between John Lark and this woman:
+Dialogue: 0,00:17:53.28,00:17:56.28,Default,,0,0,0,,阿拉娜米萨珀拉斯 她是一位活跃分子和慈善家	Alana Mitsopolis, activist and philanthropist,
+Dialogue: 0,00:17:56.28,00:17:56.28,Default,,0,0,0,,她所做的慈善工作	whose charity work
+Dialogue: 0,00:17:57.28,00:17:58.28,Default,,0,0,0,,为她赢得了 白寡妇 这一绰号	has earned her the nickname the White Widow.
+Dialogue: 0,00:17:58.28,00:18:02.28,Default,,0,0,0,,这是她从事真正生意的幌子 军火贸易 洗钱	It's all a front for her real trade: arms dealing, money laundering.
+Dialogue: 0,00:18:02.28,00:18:04.28,Default,,0,0,0,,广泛的政治人脉为她提供了保护	Extensive political connections provide her with protection.
+Dialogue: 0,00:18:04.28,00:18:06.28,Default,,0,0,0,,拉克和白寡妇今晚会碰面	Lark and the Widow are meeting tonight
+Dialogue: 0,00:18:06.28,00:18:09.28,Default,,0,0,0,,商讨一个不明包裹的递送事宜	to negotiate delivery of an unspecified package,
+Dialogue: 0,00:18:09.28,00:18:12.28,Default,,0,0,0,,我们只能认为这就是我们丢失的钚弹	which we can only assume is our missing plutonium.
+Dialogue: 0,00:18:12.28,00:18:15.28,Default,,0,0,0,,他们会在巴黎大皇宫的 一个私人会所见面	They'll make contact in a private lounge at the Grand Palais in Paris
+Dialogue: 0,00:18:15.28,00:18:16.28,Default,,0,0,0,,她届时会举行她的年度集资募捐活动	during her annual fundraising event.
+Dialogue: 0,00:18:17.28,00:18:18.28,Default,,0,0,0,,档案里面有相关详情	The details are in the file.
+Dialogue: 0,00:18:18.28,00:18:19.28,Default,,0,0,0,,如果拉克到午夜时分还不出现	If Lark isn't there by midnight,
+Dialogue: 0,00:18:19.28,00:18:21.28,Default,,0,0,0,,白寡妇会离开	the Widow will leave
+Dialogue: 0,00:18:21.28,00:18:23.28,Default,,0,0,0,,把包裹卖给出价最高的人	and sell the package to the highest bidder.
+Dialogue: 0,00:18:23.28,00:18:27.28,Default,,0,0,0,,从现在起 你有两小时的时间 可以找到拉克	Which gives you two hours from now to find Lark.
+Dialogue: 0,00:18:27.28,00:18:29.28,Default,,0,0,0,,长官 我需要告诉你一件事	Sir, I think there's something you need to know.
+Dialogue: 0,00:18:29.28,00:18:31.28,Default,,0,0,0,,你不用说了	I'm gonna stop you right there.
+Dialogue: 0,00:18:31.28,00:18:33.28,Default,,0,0,0,,你在柏林不得不做出艰难选择	You had a terrible choice to make in Berlin:
+Dialogue: 0,00:18:33.28,00:18:35.28,Default,,0,0,0,,拿到钚弹还是拯救你的团队成员	Recover the plutonium or save your team.
+Dialogue: 0,00:18:35.28,00:18:38.28,Default,,0,0,0,,你选择拯救你的团队成员 现在全世界都处于危险之中	You chose your team, and now the world is at risk.
+Dialogue: 0,00:18:38.28,00:18:41.28,Default,,0,0,0,,你内心深处的缺陷	Some flaw deep in your core being
+Dialogue: 0,00:18:41.28,00:18:45.28,Default,,0,0,0,,让你无法选择要拯救一条性命 还是数百万条性命	simply won't allow you to choose between one life and millions.
+Dialogue: 0,00:18:45.28,00:18:46.28,Default,,0,0,0,,你认为那是软弱的表现	You see that as a sign of weakness.
+Dialogue: 0,00:18:47.28,00:18:49.28,Default,,0,0,0,,我认为这是你最大的优势	To me, that's your greatest strength.
+Dialogue: 0,00:18:49.28,00:18:52.28,Default,,0,0,0,,这也告诉我 我能信任你 会保护我的性命	It also tells me I can count on you to cover my ass.
+Dialogue: 0,00:18:52.28,00:18:55.28,Default,,0,0,0,,因为从中情局转来这里是平级调动 有人说这是降职	Because coming over here from the CIA was a lateral move, some say a step down.
+Dialogue: 0,00:18:55.28,00:18:56.28,Default,,0,0,0,,但我因为你	But I did it
+Dialogue: 0,00:18:57.28,00:18:58.28,Default,,0,0,0,,这么做了	because of you.
+Dialogue: 0,00:18:59.28,00:19:01.28,Default,,0,0,0,,别让我后悔	Don't make me regret it.
+Dialogue: 0,00:19:13.28,00:19:14.28,Default,,0,0,0,,打电话吧	Make the call.
+Dialogue: 0,00:19:18.28,00:19:19.28,Default,,0,0,0,,让飞机熄火	Shut 'em down.
+Dialogue: 0,00:19:30.28,00:19:31.28,Default,,0,0,0,,你以为自己在做什么 艾丽卡	What do you think you're doing, Erika?
+Dialogue: 0,00:19:31.28,00:19:33.28,Default,,0,0,0,,这或许是你的任务	It may be your mission,
+Dialogue: 0,00:19:33.28,00:19:35.28,Default,,0,0,0,,但这是中情局的飞机	but this is the CIA's plane.
+Dialogue: 0,00:19:35.28,00:19:37.28,Default,,0,0,0,,没有我的允许 它不能起飞	It doesn't take off without my say-so.
+Dialogue: 0,00:19:37.28,00:19:38.28,Default,,0,0,0,,我们没时间玩这一套	We don't have time for this.
+Dialogue: 0,00:19:38.28,00:19:42.28,Default,,0,0,0,,我们在巴黎有一队人 拉克一离开大皇宫 他们就会抓住他	I have a team in Paris ready to grab Lark as soon as he leaves the Palais.
+Dialogue: 0,00:19:42.28,00:19:45.28,Default,,0,0,0,,一架湾流G550飞机会原地待命 准备把他送往关塔那摩湾海军基地	A G5 standing by to rendition him to Gitmo,
+Dialogue: 0,00:19:45.28,00:19:46.28,Default,,0,0,0,,他将在那里接受水刑	where a waterboard is waiting.
+Dialogue: 0,00:19:46.28,00:19:50.28,Default,,0,0,0,,我们本来就没时间 花24小时 从一个尚未确认身份的人那里	Spend 24 hours we don't have to pull a confession we can't trust
+Dialogue: 0,00:19:50.28,00:19:53.28,Default,,0,0,0,,获取一份不可信的供词不行	from a man we haven't positively identified? No.
+Dialogue: 0,00:19:53.28,00:19:55.28,Default,,0,0,0,,我们迫切需要可靠的情报	We need reliable intelligence, and we need it now.
+Dialogue: 0,00:19:56.28,00:19:58.28,Default,,0,0,0,,正因为这种情况 不可能任务小组才会存在 	This scenario is precisely why the IMF exists!
+Dialogue: 0,00:19:58.28,00:20:01.28,Default,,0,0,0,,不可能任务小组是万圣节闹剧 阿伦	The IMF is Halloween, Alan.
+Dialogue: 0,00:20:01.28,00:20:04.28,Default,,0,0,0,,一群戴着橡胶面具的成年人 玩讨糖果游戏	A bunch of grown men in rubber masks playing trick-or-treat.
+Dialogue: 0,00:20:05.28,00:20:07.28,Default,,0,0,0,,如果他在柏林没弄丢钚弹	And if he had held on to the plutonium in Berlin,
+Dialogue: 0,00:20:07.28,00:20:09.28,Default,,0,0,0,,我们就不会进行此番谈话	we wouldn't be having this conversation.
+Dialogue: 0,00:20:09.28,00:20:11.28,Default,,0,0,0,,他的团队成员就会死	And his team would be dead.
+Dialogue: 0,00:20:11.28,00:20:13.28,Default,,0,0,0,,是的 他们会死	Yes. They would.
+Dialogue: 0,00:20:13.28,00:20:14.28,Default,,0,0,0,,那是他们的本职工作	That's the job.
+Dialogue: 0,00:20:14.28,00:20:17.28,Default,,0,0,0,,所以我希望我的手下人参与行动	And that's why I want one of my own men on the scene
+Dialogue: 0,00:20:18.28,00:20:19.28,Default,,0,0,0,,对情况作出评估	to appraise the situation.
+Dialogue: 0,00:20:20.28,00:20:22.28,Default,,0,0,0,,特别行动科的沃克探员	Agent Walker, Special Activities.
+Dialogue: 0,00:20:23.28,00:20:25.28,Default,,0,0,0,,他名声在外	His reputation precedes.
+Dialogue: 0,00:20:25.28,00:20:26.28,Default,,0,0,0,,你使用微妙手法	You use a scalpel.
+Dialogue: 0,00:20:28.28,00:20:29.28,Default,,0,0,0,,我更喜欢暴力	I prefer a hammer.
+Dialogue: 0,00:20:29.28,00:20:31.28,Default,,0,0,0,,不行	The answer is no.
+Dialogue: 0,00:20:31.28,00:20:34.28,Default,,0,0,0,,我有直接来自总统的行动指挥权	I have operational authority here, direct from the President.
+Dialogue: 0,00:20:34.28,00:20:35.28,Default,,0,0,0,,如果你对此有异议 可以去问他	You have a problem with that, you take it up with him.
+Dialogue: 0,00:20:35.28,00:20:38.28,Default,,0,0,0,,我已经问过了 他认同我的观点 我的人去参加任务	I have already, and he agrees with me. My man goes
+Dialogue: 0,00:20:38.28,00:20:40.28,Default,,0,0,0,,否则谁都不能去	or no one goes.
+Dialogue: 0,00:20:48.28,00:20:50.28,Default,,0,0,0,,不能让任何人从中作梗 妨碍你拿到钚弹	No one comes between you and that plutonium.
+Dialogue: 0,00:20:51.28,00:20:54.28,Default,,0,0,0,,亨特 他的团队 或其他其任何人都不行	Not Hunt, not his team, not anyone.
+Dialogue: 0,00:21:12.28,00:21:15.28,Default,,0,0,0,,白寡妇在政府的每个层级 都安置了间谍	The White Widow has spies at every level of government.
+Dialogue: 0,00:21:15.28,00:21:17.28,Default,,0,0,0,,这架飞机会假充商务班机	This plane is posing as a commercial airliner
+Dialogue: 0,00:21:18.28,00:21:20.28,Default,,0,0,0,,这样我们就能从法国领空跳下去 而不被人发现	so we can jump into France undetected.
+Dialogue: 0,00:21:20.28,00:21:23.28,Default,,0,0,0,,白寡妇会在午夜时分 跟拉克在贵宾会所见面	The Widow's meeting Lark in the VIP lounge at midnight.
+Dialogue: 0,00:21:23.28,00:21:26.28,Default,,0,0,0,,没有事先颁发的电子身份手环 任何人都不能进去	No one will be admitted without a pre-issued electronic I.D. band.
+Dialogue: 0,00:21:27.28,00:21:29.28,Default,,0,0,0,,我们获得了拉克手环的	We have acquired the unique RFID number
+Dialogue: 0,00:21:29.28,00:21:31.28,Default,,0,0,0,,唯一射频识别码 我们可以通过这些设备	for Lark's band, allowing us to locate it
+Dialogue: 0,00:21:31.28,00:21:32.28,Default,,0,0,0,,来确认它的位置	with these.
+Dialogue: 0,00:21:33.28,00:21:35.28,Default,,0,0,0,,找到那个身份手环 就会找到拉克	Find that I.D. band, you find Lark.
+Dialogue: 0,00:21:36.28,00:21:37.28,Default,,0,0,0,,然后怎么办	Then what?
+Dialogue: 0,00:21:39.28,00:21:40.28,Default,,0,0,0,,然后	Then...
+Dialogue: 0,00:21:42.28,00:21:46.28,Default,,0,0,0,,我会假扮成他 去跟白寡妇见面	I assume his identity and make contact with the Widow.
+Dialogue: 0,00:21:46.28,00:21:47.28,Default,,0,0,0,,她带我们去拿包裹	She takes us to the package.
+Dialogue: 0,00:21:48.28,00:21:50.28,Default,,0,0,0,,真的有人会相信这玩意	People actually fall for this shit?
+Dialogue: 0,00:21:51.28,00:21:53.28,Default,,0,0,0,,你打算如何让拉克乖乖就范	How do you intend to make Lark cooperate?
+Dialogue: 0,00:21:56.28,00:21:57.28,Default,,0,0,0,,我在人群中撞他一下	I bump him in the crowd.
+Dialogue: 0,00:21:58.28,00:22:01.28,Default,,0,0,0,,十秒钟后 他就会跟派对上 其他的醉鬼一样	In ten seconds he'll look like any other drunk at the party,
+Dialogue: 0,00:22:01.28,00:22:03.28,Default,,0,0,0,,语无伦次 百依百顺	incoherent and completely pliable.
+Dialogue: 0,00:22:03.28,00:22:04.28,Default,,0,0,0,,我借用他的脸之后	After I borrow his face,
+Dialogue: 0,00:22:04.28,00:22:07.28,Default,,0,0,0,,你带他走出前门 把他交给斯隆的撤离小队	you walk him out the front door and hand him to Sloane's extraction team.
+Dialogue: 0,00:22:07.28,00:22:09.28,Default,,0,0,0,,你没法轻易摆脱我 亨特	You're not getting rid of me that easily, Hunt.
+Dialogue: 0,00:22:09.28,00:22:11.28,Default,,0,0,0,,不是这么回事	That's not what this is about.
+Dialogue: 0,00:22:11.28,00:22:12.28,Default,,0,0,0,,就是这么回事	Sure it is.
+Dialogue: 0,00:22:13.28,00:22:15.28,Default,,0,0,0,,我知道你不想我参加本次特别任务	I know you don't want me on this detail.
+Dialogue: 0,00:22:16.28,00:22:17.28,Default,,0,0,0,,但我们面对现实吧	But let's face it:
+Dialogue: 0,00:22:17.28,00:22:19.28,Default,,0,0,0,,如果你在柏林做出艰难选择	If you'd made the hard choice in Berlin,
+Dialogue: 0,00:22:19.28,00:22:21.28,Default,,0,0,0,,我根本不会在这里	I wouldn't be here.
+Dialogue: 0,00:22:21.28,00:22:22.28,Default,,0,0,0,,他们派你去追杀辛迪加探员	And if you hadn't gunned down
+Dialogue: 0,00:22:22.28,00:22:24.28,Default,,0,0,0,,如果你没把这些人统统干掉	every Syndicate agent they sent you to find,
+Dialogue: 0,00:22:25.28,00:22:26.28,Default,,0,0,0,,我也不会在这里	I wouldn't be here.
+Dialogue: 0,00:22:26.28,00:22:28.28,Default,,0,0,0,,没错 我对你无所不知	That's right, I know all about you.
+Dialogue: 0,00:22:28.28,00:22:31.28,Default,,0,0,0,,就是因为你 我们才没有活着的 目击证人 可以确认约翰拉克	You're why we don't have a living witness who can identify John Lark
+Dialogue: 0,00:22:31.28,00:22:33.28,Default,,0,0,0,,或使徒们的身份	or the Apostles.
+Dialogue: 0,00:22:33.28,00:22:36.28,Default,,0,0,0,,如果你对我的办事方法有意见	If you have a problem with my methods,
+Dialogue: 0,00:22:36.28,00:22:37.28,Default,,0,0,0,,随时可以选择留下来	you can always stay behind.
+Dialogue: 0,00:22:38.28,00:22:41.28,Default,,0,0,0,,你的任务 如果你选择接受	Your mission, should you choose to accept it.
+Dialogue: 0,00:22:42.28,00:22:43.28,Default,,0,0,0,,难道不是这样吗	Isn't that the thing?
+Dialogue: 0,00:22:45.28,00:22:47.28,Default,,0,0,0,,距离减压还有两分钟	Two minutes to decompression.
+Dialogue: 0,00:22:47.28,00:22:51.28,Default,,0,0,0,,穿好装备 白寡妇将于30分钟后跟拉克见面	Suit up. The Widow is meeting Lark in 30 minutes.
+Dialogue: 0,00:23:07.28,00:23:09.28,Default,,0,0,0,,距离减压还有十秒钟	Ten seconds to decompression.
+Dialogue: 0,00:23:13.28,00:23:14.28,Default,,0,0,0,,你打开氧气瓶了吗	Is your oxygen on?
+Dialogue: 0,00:23:16.28,00:23:18.28,Default,,0,0,0,,处于这种海拔高度 没有大气	There is no atmosphere at this altitude.
+Dialogue: 0,00:23:18.28,00:23:20.28,Default,,0,0,0,,你最好不要晕死	I don't need you blacking out on me.
+Dialogue: 0,00:23:23.28,00:23:26.28,Default,,0,0,0,,嘿 你的平视显示器上 有内置引导系统	Hey, your heads-up display has a built-in guidance system.
+Dialogue: 0,00:23:26.28,00:23:27.28,Default,,0,0,0,,要严格遵循	Follow it to the target.
+Dialogue: 0,00:23:27.28,00:23:29.28,Default,,0,0,0,,系统通知你以后 才能打开降落伞	Open your chute when the system says,
+Dialogue: 0,00:23:29.28,00:23:31.28,Default,,0,0,0,,之前不行 之后更加不行	not before and definitely not after,
+Dialogue: 0,00:23:31.28,00:23:33.28,Default,,0,0,0,,否则你脑中闪过的最后一件事	or the last thing that goes through your mind
+Dialogue: 0,00:23:33.28,00:23:34.28,Default,,0,0,0,,将是你的膝盖骨 明白吗	will be your kneecaps. Is that clear?
+Dialogue: 0,00:23:34.28,00:23:35.28,Default,,0,0,0,,很清楚	Crystal.
+Dialogue: 0,00:23:58.28,00:24:00.28,Default,,0,0,0,,我们得谈谈 我们要重新考虑一下	We got to talk. We need to rethink this.
+Dialogue: 0,00:24:00.28,00:24:01.28,Default,,0,0,0,,让开 亨特	Out of my way, Hunt.
+Dialogue: 0,00:24:01.28,00:24:03.28,Default,,0,0,0,,沃克 我们遇到麻烦了 现在有风暴 我们需要	Walker, we've got a problem. There's a storm. We need to...
+Dialogue: 0,00:24:04.28,00:24:05.28,Default,,0,0,0,,别再说话了	Enough talk.
+Dialogue: 0,00:24:05.28,00:24:07.28,Default,,0,0,0,,巴黎见	I'll see you in Paris.
+Dialogue: 0,00:24:13.28,00:24:15.28,Default,,0,0,0,,快点	Come on, come on, come on.
+Dialogue: 0,00:24:28.28,00:24:31.28,Default,,0,0,0,,海拔高度：7620米	Altitude: 25,000 feet.
+Dialogue: 0,00:24:37.28,00:24:38.28,Default,,0,0,0,,沃克	Walker?
+Dialogue: 0,00:24:38.28,00:24:41.28,Default,,0,0,0,,怎么了 亨特害怕小小的闪电吗	What's the matter, Hunt? You afraid of a little lightning?
+Dialogue: 0,00:24:50.28,00:24:53.28,Default,,0,0,0,,海拔高度：6096米	Altitude: 20,000 feet.
+Dialogue: 0,00:24:53.28,00:24:54.28,Default,,0,0,0,,混蛋	Son of a bitch.
+Dialogue: 0,00:24:55.28,00:24:56.28,Default,,0,0,0,,沃克	Walker?
+Dialogue: 0,00:24:59.28,00:25:00.28,Default,,0,0,0,,你收到了吗	Do you copy?
+Dialogue: 0,00:25:02.28,00:25:03.28,Default,,0,0,0,,沃克	Walker?
+Dialogue: 0,00:25:08.28,00:25:09.28,Default,,0,0,0,,沃克	Walker?
+Dialogue: 0,00:25:16.28,00:25:16.28,Default,,0,0,0,,来吧	Come on.
+Dialogue: 0,00:25:16.28,00:25:19.28,Default,,0,0,0,,海拔高度：4572米	Altitude: 15,000 feet.
+Dialogue: 0,00:25:23.28,00:25:24.28,Default,,0,0,0,,沃克	Walker.
+Dialogue: 0,00:25:25.28,00:25:26.28,Default,,0,0,0,,沃克 	Walker!
+Dialogue: 0,00:25:37.28,00:25:38.28,Default,,0,0,0,,沃克 	Walker!
+Dialogue: 0,00:25:39.28,00:25:40.28,Default,,0,0,0,,沃克 	Walker!
+Dialogue: 0,00:25:41.28,00:25:43.28,Default,,0,0,0,,海拔高度：3048米	Altitude: 10,000 feet.
+Dialogue: 0,00:25:46.28,00:25:48.28,Default,,0,0,0,,2743米	9,000.
+Dialogue: 0,00:25:48.28,00:25:49.28,Default,,0,0,0,,惨了	Oh, shit.
+Dialogue: 0,00:25:51.28,00:25:53.28,Default,,0,0,0,,2438米	8,000.
+Dialogue: 0,00:25:56.28,00:25:57.28,Default,,0,0,0,,2134米	7,000.
+Dialogue: 0,00:26:01.28,00:26:02.28,Default,,0,0,0,,1829米	6,000.
+Dialogue: 0,00:26:05.28,00:26:07.28,Default,,0,0,0,,1524米	5,000.
+Dialogue: 0,00:26:10.28,00:26:11.28,Default,,0,0,0,,1219米	4,000.
+Dialogue: 0,00:26:11.28,00:26:12.28,Default,,0,0,0,,沃克 	Walker!
+Dialogue: 0,00:26:13.28,00:26:14.28,Default,,0,0,0,,沃克 	Walker!
+Dialogue: 0,00:26:15.28,00:26:16.28,Default,,0,0,0,,914米	3,000.
+Dialogue: 0,00:26:16.28,00:26:18.28,Default,,0,0,0,,打开降落伞	Deploy. Deploy. Deploy.
+Dialogue: 0,00:26:18.28,00:26:21.28,Default,,0,0,0,,打开降落伞	Deploy. Deploy. Deploy.
+Dialogue: 0,00:26:21.28,00:26:23.28,Default,,0,0,0,,打开降落伞	Deploy. Deploy.
+Dialogue: 0,00:26:36.28,00:26:37.28,Default,,0,0,0,,天哪	Oh, God.
+Dialogue: 0,00:26:59.28,00:27:00.28,Default,,0,0,0,,你好像没氧气了	Looks like you lost your oxygen.
+Dialogue: 0,00:27:24.28,00:27:25.28,Default,,0,0,0,,白寡妇会在那里跟拉克见面	That's where the Widow is meeting Lark.
+Dialogue: 0,00:28:08.28,00:28:09.28,Default,,0,0,0,,伊森	Ethan.
+Dialogue: 0,00:28:10.28,00:28:11.28,Default,,0,0,0,,-沃克 -伊森 如果你能听见我	-Walker. -Ethan, if you can hear me,
+Dialogue: 0,00:28:11.28,00:28:12.28,Default,,0,0,0,,我找到他了	I've got him.
+Dialogue: 0,00:28:14.28,00:28:15.28,Default,,0,0,0,,再说一次 在哪里	Say again. Where?
+Dialogue: 0,00:28:16.28,00:28:17.28,Default,,0,0,0,,他正朝洗手间走去	He's headed for the bathroom.
+Dialogue: 0,00:30:12.28,00:30:14.28,Default,,0,0,0,,-注射器呢 -不需要了	-Where's the needle? -Didn't need it.
+Dialogue: 0,00:30:16.28,00:30:17.28,Default,,0,0,0,,把他扶起来	Get him up.
+Dialogue: 0,00:30:45.28,00:30:47.28,Default,,0,0,0,,嘿	Hey, hey.
+Dialogue: 0,00:31:06.28,00:31:08.28,Default,,0,0,0,,别害羞 人越多越好	Don't be shy, the more the merrier.
+Dialogue: 0,00:31:08.28,00:31:10.28,Default,,0,0,0,,别这样 我们又不凶	Come on, we're not mean.
+Dialogue: 0,00:31:10.28,00:31:13.28,Default,,0,0,0,,我们可以加入吗 我们又不会咬人的 各位	Can we join you? We won't bite, guys.
+Dialogue: 0,00:33:09.28,00:33:10.28,Default,,0,0,0,,可恶	Shit.
+Dialogue: 0,00:33:29.28,00:33:32.28,Default,,0,0,0,,-你还能做面具吗 -我需要脸才能做面具	-Can you still make a mask? -I need a face to make a mask.
+Dialogue: 0,00:33:33.28,00:33:36.28,Default,,0,0,0,,抱歉 我瞄准的是他的胸部	Sorry. I was aiming for his chest.
+Dialogue: 0,00:33:37.28,00:33:40.28,Default,,0,0,0,,-你来这里干什么 -我也很高兴见到你	-What are you doing here? -It's good to see you, too.
+Dialogue: 0,00:33:40.28,00:33:42.28,Default,,0,0,0,,抱歉 我有点不明白 你是	I'm sorry, I'm confused. You are...
+Dialogue: 0,00:33:44.28,00:33:46.28,Default,,0,0,0,,老朋友	An old friend.
+Dialogue: 0,00:33:59.28,00:34:01.28,Default,,0,0,0,,取消撤离行动 目标死亡	Cancel extraction. We're code blue.
+Dialogue: 0,00:34:02.28,00:34:03.28,Default,,0,0,0,,派清洁队过来	Send sanitation.
+Dialogue: 0,00:34:04.28,00:34:05.28,Default,,0,0,0,,北边的男性洗手间	North men's room.
+Dialogue: 0,00:34:08.28,00:34:10.28,Default,,0,0,0,,你没回答我的问题 你来这里干什么	You didn't answer my question. What are you doing here?
+Dialogue: 0,00:34:14.28,00:34:16.28,Default,,0,0,0,,这就对了 放轻松 这就对了	That's it. Just take it easy. That's it.
+Dialogue: 0,00:34:16.28,00:34:18.28,Default,,0,0,0,,保持头部后仰 直到不出血为止	Just keep your head back until the bleeding stops.
+Dialogue: 0,00:34:18.28,00:34:19.28,Default,,0,0,0,,怎么了	What is it?
+Dialogue: 0,00:34:19.28,00:34:21.28,Default,,0,0,0,,你们也想要一些吗	You want some, too?
+Dialogue: 0,00:34:23.28,00:34:25.28,Default,,0,0,0,,你不是碰巧来这里的 谁派你来的	You're not here by accident. Who sent you?
+Dialogue: 0,00:34:25.28,00:34:27.28,Default,,0,0,0,,我不能告诉你	I can't tell you that.
+Dialogue: 0,00:34:27.28,00:34:28.28,Default,,0,0,0,,你在干什么	What are you doing?
+Dialogue: 0,00:34:28.28,00:34:29.28,Default,,0,0,0,,我跟白寡妇有约	I have a date with the White Widow.
+Dialogue: 0,00:34:29.28,00:34:32.28,Default,,0,0,0,,他跟白寡妇有约 你跟他一点都不像	He had a date with the Widow. You look nothing like him.
+Dialogue: 0,00:34:32.28,00:34:34.28,Default,,0,0,0,,现在我们得希望他们素未谋面	And now we have to hope they never met.
+Dialogue: 0,00:34:34.28,00:34:37.28,Default,,0,0,0,,-希望算不上策略  -你肯定是新来的	-Hope is not a strategy! -Oh, you must be new.
+Dialogue: 0,00:34:37.28,00:34:38.28,Default,,0,0,0,,我没得选	I have no other choice.
+Dialogue: 0,00:34:38.28,00:34:40.28,Default,,0,0,0,,白寡妇是我们唯一的线索	The White Widow's our only lead.
+Dialogue: 0,00:34:40.28,00:34:42.28,Default,,0,0,0,,我得假扮这家伙五分钟时间	I got to be this guy for five minutes.
+Dialogue: 0,00:34:42.28,00:34:43.28,Default,,0,0,0,,-别这样做 -什么	-Don't do it. -What?
+Dialogue: 0,00:34:44.28,00:34:47.28,Default,,0,0,0,,怎么了你有什么没告诉我	What is it? What aren't you telling me?
+Dialogue: 0,00:34:47.28,00:34:48.28,Default,,0,0,0,,你不懂自己卷入了什么	You don't understand what you're involved in.
+Dialogue: 0,00:34:48.28,00:34:50.28,Default,,0,0,0,,我不懂自己卷入了什么	I don't understand what I'm involved in.
+Dialogue: 0,00:34:50.28,00:34:53.28,Default,,0,0,0,,我不懂自己卷入了什么	I don't understand what I'm involved in?
+Dialogue: 0,00:34:55.28,00:34:56.28,Default,,0,0,0,,我卷入了什么	What am I involved in?
+Dialogue: 0,00:34:56.28,00:34:58.28,Default,,0,0,0,,如果你要跟白寡妇见面 她三分钟后就离开了	If you're meeting the Widow, she leaves in three minutes.
+Dialogue: 0,00:35:01.28,00:35:03.28,Default,,0,0,0,,-伊森  -我会成功的	-Ethan! -I'll make it work.
+Dialogue: 0,00:35:03.28,00:35:05.28,Default,,0,0,0,,-伊森  -我会成功的	-Ethan! -I'll make it work.
+Dialogue: 0,00:35:07.28,00:35:08.28,Default,,0,0,0,,我叫沃克	The name's Walker.
+Dialogue: 0,00:35:08.28,00:35:11.28,Default,,0,0,0,,是吗 不客气	Yeah? You're welcome.
+Dialogue: 0,00:35:30.28,00:35:31.28,Default,,0,0,0,,你以为自己在做什么	What do you think you're doing?
+Dialogue: 0,00:35:31.28,00:35:32.28,Default,,0,0,0,,-我跟你一起去 -绝对不行	-I'm going with you. -Like hell you are.
+Dialogue: 0,00:35:33.28,00:35:34.28,Default,,0,0,0,,有很多人被派来这里杀拉克	People have been sent here to kill Lark.
+Dialogue: 0,00:35:34.28,00:35:35.28,Default,,0,0,0,,明摆着嘛	No shit.
+Dialogue: 0,00:35:35.28,00:35:38.28,Default,,0,0,0,,不 不是我 合约杀手 受雇的刺客	No, not me. Contractors. Paid assassins.
+Dialogue: 0,00:35:38.28,00:35:39.28,Default,,0,0,0,,他们不知道拉克的长相	They don't know what he looks like,
+Dialogue: 0,00:35:39.28,00:35:41.28,Default,,0,0,0,,只知道他跟白寡妇在午夜碰面	they only know he's meeting the Widow at midnight.
+Dialogue: 0,00:35:41.28,00:35:42.28,Default,,0,0,0,,如果你要把这件事进行到底	If you go through with this,
+Dialogue: 0,00:35:42.28,00:35:44.28,Default,,0,0,0,,他们会认为你就是拉克 然后杀了你	they're gonna believe you're Lark and they're gonna kill you.
+Dialogue: 0,00:35:45.28,00:35:46.28,Default,,0,0,0,,你怎么知道这一切	How do you know all this?
+Dialogue: 0,00:35:47.28,00:35:49.28,Default,,0,0,0,,我不能告诉你	I can't tell you that.
+Dialogue: 0,00:35:52.28,00:35:53.28,Default,,0,0,0,,你应该远离谍报工作	You should've stayed out of the game.
+Dialogue: 0,00:35:56.28,00:35:57.28,Default,,0,0,0,,你应该跟我一起走	You should've come with me.
+Dialogue: 0,00:36:06.28,00:36:09.28,Default,,0,0,0,,本慈善活动 是为了纪念我母亲而发起的	This charity was started in honor of my mother.
+Dialogue: 0,00:36:10.28,00:36:13.28,Default,,0,0,0,,认识她的人都了解她的力量	Those of you who knew her understood her strength,
+Dialogue: 0,00:36:13.28,00:36:16.28,Default,,0,0,0,,她的坚韧 她的足智多谋	her tenacity, her resourcefulness.
+Dialogue: 0,00:36:17.28,00:36:19.28,Default,,0,0,0,,但她还有另外一面	But there was another side to her,
+Dialogue: 0,00:36:20.28,00:36:22.28,Default,,0,0,0,,大多数人从未看到的一面	a side most people never saw.
+Dialogue: 0,00:36:22.28,00:36:26.28,Default,,0,0,0,,她精神中的那个部分让我们	It is that part of her spirit that has brought us
+Dialogue: 0,00:36:26.28,00:36:27.28,Default,,0,0,0,,今晚聚集一堂	all together tonight.
+Dialogue: 0,00:36:28.28,00:36:31.28,Default,,0,0,0,,马克欣是个矛盾人物	Max was something of a paradox.
+Dialogue: 0,00:36:34.28,00:36:36.28,Default,,0,0,0,,她喜欢自相矛盾的东西	She had a fascination for paradoxes,
+Dialogue: 0,00:36:37.28,00:36:39.28,Default,,0,0,0,,她把这一点遗传给了我	a fascination she passed on to me.
+Dialogue: 0,00:36:42.28,00:36:45.28,Default,,0,0,0,,对于我们如今居住的这个世界 马克欣不存在幻想	Max had no illusions about the world we live in today.
+Dialogue: 0,00:36:46.28,00:36:49.28,Default,,0,0,0,,但她梦想着打造不一样的未来	But she had dreams of a very different future.
+Dialogue: 0,00:36:51.28,00:36:54.28,Default,,0,0,0,,在这样的未来里 将不再需要她的独特天赋	One in which her unique talents were no longer required.
+Dialogue: 0,00:36:55.28,00:36:57.28,Default,,0,0,0,,她从现今的世界运转方式中 所赢得的一切	All she earned from the way the world is
+Dialogue: 0,00:36:58.28,00:37:01.28,Default,,0,0,0,,都最终奉献给了 打造未来世界这一事业	went ultimately to making it what it could someday be.
+Dialogue: 0,00:37:02.28,00:37:04.28,Default,,0,0,0,,那个未来尚未来临	That future isn't here yet.
+Dialogue: 0,00:37:06.28,00:37:10.28,Default,,0,0,0,,今夜 你们的捐款让它距离我们 更近了一步	Tonight, your contributions have brought it just a little closer.
+Dialogue: 0,00:37:14.28,00:37:16.28,Default,,0,0,0,,谢谢各位前来	Thank you all for coming.
+Dialogue: 0,00:37:16.28,00:37:17.28,Default,,0,0,0,,畅享派对吧	Enjoy the party.
+Dialogue: 0,00:37:38.28,00:37:41.28,Default,,0,0,0,,你不可能是约翰拉克	You can't possibly be John Lark.
+Dialogue: 0,00:37:45.28,00:37:46.28,Default,,0,0,0,,事实上 我不是	I'm not, actually.
+Dialogue: 0,00:37:48.28,00:37:49.28,Default,,0,0,0,,那是化名	It's an alias.
+Dialogue: 0,00:37:52.28,00:37:53.28,Default,,0,0,0,,我想这个化名比无名氏要好	I suppose it's better than John Doe.
+Dialogue: 0,00:37:54.28,00:37:55.28,Default,,0,0,0,,你更喜欢别的名字吗	Is there another name you prefer?
+Dialogue: 0,00:37:55.28,00:37:57.28,Default,,0,0,0,,有地方可以让我们私下谈谈吗	Is there somewhere we could talk privately?
+Dialogue: 0,00:37:57.28,00:37:59.28,Default,,0,0,0,,事实上 我喜欢拉克 听起来很响亮	In fact I like "Lark." It does have a certain ring.
+Dialogue: 0,00:38:00.28,00:38:01.28,Default,,0,0,0,,时间不多了	We don't have a lot of time.
+Dialogue: 0,00:38:01.28,00:38:01.28,Default,,0,0,0,,因为我会对你很坦白	'Cause I'll be honest.
+Dialogue: 0,00:38:01.28,00:38:04.28,Default,,0,0,0,,你名声在外 我还以为	A man of your reputation, I was expecting someone
+Dialogue: 0,00:38:05.28,00:38:06.28,Default,,0,0,0,,你会更难看一些	uglier.
+Dialogue: 0,00:38:07.28,00:38:10.28,Default,,0,0,0,,别被外表所欺骗 我很残忍	Don't let looks deceive. I'm as ugly as they come.
+Dialogue: 0,00:38:10.28,00:38:13.28,Default,,0,0,0,,恕我直言 你有生命危险	And I'll be honest with you. Your life is in danger.
+Dialogue: 0,00:38:14.28,00:38:15.28,Default,,0,0,0,,不准碰她	Don't you touch her.
+Dialogue: 0,00:38:15.28,00:38:17.28,Default,,0,0,0,,放轻松 他是我哥哥	Relax. It's my brother.
+Dialogue: 0,00:38:19.28,00:38:20.28,Default,,0,0,0,,你对我们的客人很没礼貌 泽拉	You're being rude to our guest, Zola.
+Dialogue: 0,00:38:21.28,00:38:22.28,Default,,0,0,0,,该走了	It's time to go.
+Dialogue: 0,00:38:22.28,00:38:24.28,Default,,0,0,0,,别惹事	Don't turn this into a scene.
+Dialogue: 0,00:38:26.28,00:38:28.28,Default,,0,0,0,,你最好别跟这家伙在一起	You don't want to be with this one.
+Dialogue: 0,00:38:35.28,00:38:37.28,Default,,0,0,0,,-你刚才说什么来着 -你有生命危险	-You were saying? -Your life is in danger.
+Dialogue: 0,00:38:38.28,00:38:40.28,Default,,0,0,0,,谁想杀我	And who would want to kill me?
+Dialogue: 0,00:38:40.28,00:38:41.28,Default,,0,0,0,,首先 是美国人	The Americans, for starters.
+Dialogue: 0,00:38:41.28,00:38:43.28,Default,,0,0,0,,如果真有其事 我会知道	If that were true, I would know it.
+Dialogue: 0,00:38:43.28,00:38:45.28,Default,,0,0,0,,你以为你是唯一 在政府里安置间谍的人	You think you're the only one with spies in the government?
+Dialogue: 0,00:38:46.28,00:38:49.28,Default,,0,0,0,,这里有人不希望我们见面	There are people here who don't want this meeting to happen.
+Dialogue: 0,00:38:49.28,00:38:50.28,Default,,0,0,0,,不相信我	Don't believe me?
+Dialogue: 0,00:38:51.28,00:38:52.28,Default,,0,0,0,,环顾四周	Look around.
+Dialogue: 0,00:39:05.28,00:39:06.28,Default,,0,0,0,,我知道你在想什么	I know what you're thinking.
+Dialogue: 0,00:39:07.28,00:39:08.28,Default,,0,0,0,,或许他们的目标不是你	Maybe they're not here for you.
+Dialogue: 0,00:39:09.28,00:39:10.28,Default,,0,0,0,,或许他们的目标只是我	Maybe they're just here for me.
+Dialogue: 0,00:39:11.28,00:39:13.28,Default,,0,0,0,,你愿意冒险吗	Are you willing to take that chance?
+Dialogue: 0,00:39:14.28,00:39:15.28,Default,,0,0,0,,你有我想要的东西	You have something I want.
+Dialogue: 0,00:39:16.28,00:39:19.28,Default,,0,0,0,,此时此刻 这让我成为 你唯一可以信任的人	Right now, that makes me the only person you can trust
+Dialogue: 0,00:39:19.28,00:39:20.28,Default,,0,0,0,,能安全带你离开	to get you out of here alive.
+Dialogue: 0,00:39:21.28,00:39:23.28,Default,,0,0,0,,抑或你想让你哥哥来处理此事	Or would you rather leave that to your brother?
+Dialogue: 0,00:39:28.28,00:39:31.28,Default,,0,0,0,,我现在想回家了 拉克先生	I think I'd like to go home now, Mr. Lark.
+Dialogue: 0,00:41:46.28,00:41:49.28,Default,,0,0,0,,法国政府今日中午接收了犯人	The French government took receipt of the asset at noon today.
+Dialogue: 0,00:41:49.28,00:41:51.28,Default,,0,0,0,,将于明早八点通过空运	Delivery will be via air to the Finance Ministry
+Dialogue: 0,00:41:52.28,00:41:53.28,Default,,0,0,0,,递送到财政部	at 8:00 a.m. tomorrow morning.
+Dialogue: 0,00:41:53.28,00:41:55.28,Default,,0,0,0,,一支受警方严密保护的装甲车队	An armored motorcade under heavy police escort
+Dialogue: 0,00:41:55.28,00:41:57.28,Default,,0,0,0,,将经由这条路线运送他	will transport him via this route.
+Dialogue: 0,00:41:58.28,00:42:00.28,Default,,0,0,0,,我们会在这个十字路口使用障眼法 就是这里	We'll create a diversion at this intersection, here.
+Dialogue: 0,00:42:01.28,00:42:04.28,Default,,0,0,0,,车队将自动采用预先安排的替代路线 行进到这里	The motorcade will automatically take the preplanned alternate route here,
+Dialogue: 0,00:42:05.28,00:42:06.28,Default,,0,0,0,,我们会在那里劫走犯人	where we'll extract the asset.
+Dialogue: 0,00:42:08.28,00:42:10.28,Default,,0,0,0,,劫走犯人	Extract the asset?
+Dialogue: 0,00:42:21.28,00:42:22.28,Default,,0,0,0,,犯人	The asset.
+Dialogue: 0,00:42:25.28,00:42:27.28,Default,,0,0,0,,我们花了大价钱才买到这份情报	We paid a great deal of money for this information.
+Dialogue: 0,00:42:28.28,00:42:30.28,Default,,0,0,0,,除了此人的姓名 他们把其他情况都告诉了我们	They gave us everything but this man's name.
+Dialogue: 0,00:42:31.28,00:42:32.28,Default,,0,0,0,,你不会碰巧知道他是谁吧	You don't happen to know who he is, do you?
+Dialogue: 0,00:42:34.28,00:42:36.28,Default,,0,0,0,,他叫所罗门连恩	His name is Solomon Lane.
+Dialogue: 0,00:42:36.28,00:42:38.28,Default,,0,0,0,,前英国特别探员 后来变成了无政府主义者	British Special Agent turned anarchist.
+Dialogue: 0,00:42:40.28,00:42:42.28,Default,,0,0,0,,他利用叛变的秘密特工	He used rogue covert operatives
+Dialogue: 0,00:42:42.28,00:42:44.28,Default,,0,0,0,,建立了一个叫辛迪加的恐怖网络	to create a terror network called the Syndicate.
+Dialogue: 0,00:42:45.28,00:42:48.28,Default,,0,0,0,,蓄意破坏 暗杀 大屠杀	Sabotage, assassination, mass murder.
+Dialogue: 0,00:42:48.28,00:42:50.28,Default,,0,0,0,,十恶不赦	As ugly as they come.
+Dialogue: 0,00:42:51.28,00:42:54.28,Default,,0,0,0,,两年前 他被美国探员抓获	He was captured by American agents two years ago.
+Dialogue: 0,00:42:55.28,00:42:57.28,Default,,0,0,0,,从那时起 他受到永无休止的审讯	Since then, he's been in a never-ending interrogation,
+Dialogue: 0,00:42:58.28,00:43:00.28,Default,,0,0,0,,在政府之间来回辗转	passed around from one government to another
+Dialogue: 0,00:43:01.28,00:43:03.28,Default,,0,0,0,,为他的罪行付出代价	to answer for his crimes.
+Dialogue: 0,00:43:06.28,00:43:08.28,Default,,0,0,0,,你看起来很不开心 拉克	You seem displeased, Lark.
+Dialogue: 0,00:43:09.28,00:43:11.28,Default,,0,0,0,,或许我没把话说清楚	Perhaps I didn't make myself clear.
+Dialogue: 0,00:43:12.28,00:43:15.28,Default,,0,0,0,,我来巴黎是为了钚弹	I came to Paris for plutonium.
+Dialogue: 0,00:43:15.28,00:43:17.28,Default,,0,0,0,,肯定是个误会	Well, there must be a misunderstanding.
+Dialogue: 0,00:43:18.28,00:43:19.28,Default,,0,0,0,,我只是中间人	I'm just a broker.
+Dialogue: 0,00:43:20.28,00:43:22.28,Default,,0,0,0,,我帮买家和卖家搭桥	I connect a buyer and a seller.
+Dialogue: 0,00:43:22.28,00:43:26.28,Default,,0,0,0,,我的卖家对现金不感兴趣 所以如果你想要钚弹	My seller's not interested in cash, so if you want the plutonium...
+Dialogue: 0,00:43:27.28,00:43:28.28,Default,,0,0,0,,截获连恩	Extract Lane
+Dialogue: 0,00:43:29.28,00:43:30.28,Default,,0,0,0,,做交易	and make a trade.
+Dialogue: 0,00:43:31.28,00:43:32.28,Default,,0,0,0,,没错	That's right.
+Dialogue: 0,00:43:37.28,00:43:39.28,Default,,0,0,0,,我如何知道卖家手上有我的东西	How do I know the seller has what I want?
+Dialogue: 0,00:43:59.28,00:44:00.28,Default,,0,0,0,,这是定金 为表诚意	A down payment in good faith.
+Dialogue: 0,00:44:02.28,00:44:04.28,Default,,0,0,0,,送货人会在48小时内 递送剩下两枚钚弹	A courier will deliver two more within 48 hours
+Dialogue: 0,00:44:05.28,00:44:07.28,Default,,0,0,0,,以交换他	in exchange for him.
+Dialogue: 0,00:44:16.28,00:44:17.28,Default,,0,0,0,,好	All right.
+Dialogue: 0,00:44:18.28,00:44:19.28,Default,,0,0,0,,使用障眼法之后怎么办	What happens after the diversion?
+Dialogue: 0,00:45:53.28,00:45:54.28,Default,,0,0,0,,杀了所有人	Kill everyone?
+Dialogue: 0,00:45:55.28,00:45:56.28,Default,,0,0,0,,这是你的计划	That's your plan?
+Dialogue: 0,00:45:57.28,00:45:58.28,Default,,0,0,0,,不能有目击证人	There will be no witnesses.
+Dialogue: 0,00:45:59.28,00:46:02.28,Default,,0,0,0,,你凭什么可以保证连恩的安全	What's my guarantee that Lane walks out of this thing alive?
+Dialogue: 0,00:46:02.28,00:46:03.28,Default,,0,0,0,,他在装甲车里	He's in an armored box.
+Dialogue: 0,00:46:04.28,00:46:06.28,Default,,0,0,0,,安全之后 我们才会把他弄出来	We'll pull him out when it's safe.
+Dialogue: 0,00:46:07.28,00:46:08.28,Default,,0,0,0,,你想要你的钚弹	You want your plutonium,
+Dialogue: 0,00:46:09.28,00:46:10.28,Default,,0,0,0,,这就是代价	this is the price.
+Dialogue: 0,00:46:12.28,00:46:14.28,Default,,0,0,0,,抑或你不愿意跨越杀警察这一底线	Or do you draw the line at killing cops?
+Dialogue: 0,00:46:15.28,00:46:17.28,Default,,0,0,0,,你的说话对象是约翰拉克	That's John Lark you're talking to.
+Dialogue: 0,00:46:20.28,00:46:23.28,Default,,0,0,0,,我用天花杀害妇孺	I murder women and children with smallpox.
+Dialogue: 0,00:46:26.28,00:46:27.28,Default,,0,0,0,,我没有底线	I have no line.
+Dialogue: 0,00:46:32.28,00:46:32.28,Default,,0,0,0,,对	Right.
+Dialogue: 0,00:46:33.28,00:46:36.28,Default,,0,0,0,,各位睡个好觉 明天会很忙	Sleep well, everyone. Busy day tomorrow.
+Dialogue: 0,00:46:56.28,00:46:58.28,Default,,0,0,0,,开什么玩笑	You have got to be kidding me.
+Dialogue: 0,00:46:59.28,00:47:01.28,Default,,0,0,0,,如果你想让连恩出狱 只能这么办	If you want Lane out of prison, this is how it gets done.
+Dialogue: 0,00:47:01.28,00:47:04.28,Default,,0,0,0,,我希望拉克帮他越狱 不是伊森亨特	I wanted Lark to break him out, not Ethan Hunt.
+Dialogue: 0,00:47:04.28,00:47:08.28,Default,,0,0,0,,我希望交换时拉克在场 不是伊森亨特	I wanted Lark at the exchange, not Ethan Hunt.
+Dialogue: 0,00:47:09.28,00:47:11.28,Default,,0,0,0,,我希望拉克带我们找到钚弹	I wanted Lark to lead us to the plutonium
+Dialogue: 0,00:47:11.28,00:47:13.28,Default,,0,0,0,,和使徒们	and the Apostles.
+Dialogue: 0,00:47:13.28,00:47:14.28,Default,,0,0,0,,你或许依然有机会	You may still get your chance.
+Dialogue: 0,00:47:15.28,00:47:17.28,Default,,0,0,0,,你忘了我们从大皇宫的男性洗手间里	Have you forgotten about the corpse we pulled
+Dialogue: 0,00:47:17.28,00:47:18.28,Default,,0,0,0,,拉出来那具男尸	out of the men's room at the Grand Palais?
+Dialogue: 0,00:47:18.28,00:47:20.28,Default,,0,0,0,,我猜那不是拉克	I'm guessing that wasn't Lark.
+Dialogue: 0,00:47:20.28,00:47:21.28,Default,,0,0,0,,很有可能是拉克的手下人	More likely one of Lark's recruits.
+Dialogue: 0,00:47:22.28,00:47:24.28,Default,,0,0,0,,根据我们的情报 不是的	Not according to our intelligence.
+Dialogue: 0,00:47:24.28,00:47:26.28,Default,,0,0,0,,谁收集的情报	Intelligence gathered by whom?
+Dialogue: 0,00:47:28.28,00:47:29.28,Default,,0,0,0,,亨特	Hunt.
+Dialogue: 0,00:47:31.28,00:47:34.28,Default,,0,0,0,,你一直怀疑拉克是美国探员	You've long held suspicions that Lark was an American agent.
+Dialogue: 0,00:47:34.28,00:47:36.28,Default,,0,0,0,,此人知道我们的所有行动	Someone who knew our every move.
+Dialogue: 0,00:47:36.28,00:47:38.28,Default,,0,0,0,,来去无踪	Someone who could come and go like a ghost.
+Dialogue: 0,00:47:40.28,00:47:42.28,Default,,0,0,0,,你暗示亨特就是约翰拉克	You're suggesting Hunt is John Lark.
+Dialogue: 0,00:47:43.28,00:47:47.28,Default,,0,0,0,,你未免太牵强了 沃克 为了自保	You're reaching, Walker. Trying to save your ass.
+Dialogue: 0,00:47:48.28,00:47:49.28,Default,,0,0,0,,不会起作用的	It won't work.
+Dialogue: 0,00:47:49.28,00:47:52.28,Default,,0,0,0,,想一想 像拉克这样谨慎的人	Think about it. Would a man as careful as Lark
+Dialogue: 0,00:47:53.28,00:47:54.28,Default,,0,0,0,,真的会冒那样的险	really stick his neck out like that?
+Dialogue: 0,00:47:55.28,00:47:57.28,Default,,0,0,0,,就为了跟白寡妇见面	For a face-to-face with the White Widow?
+Dialogue: 0,00:47:57.28,00:47:59.28,Default,,0,0,0,,-他会派替身去 -一个诱饵	-He'd send a proxy. -A decoy.
+Dialogue: 0,00:48:00.28,00:48:01.28,Default,,0,0,0,,如果他真的很聪明	And if he was really smart,
+Dialogue: 0,00:48:01.28,00:48:04.28,Default,,0,0,0,,他会让他的女朋友 在一个可靠的目击证人面前	he'd have his lady friend kill that decoy
+Dialogue: 0,00:48:04.28,00:48:06.28,Default,,0,0,0,,杀掉那个诱饵	in front of a reliable witness.
+Dialogue: 0,00:48:06.28,00:48:07.28,Default,,0,0,0,,就是我	Me.
+Dialogue: 0,00:48:08.28,00:48:11.28,Default,,0,0,0,,天网恢恢 步步逼近他的恐怖分子化身	The dragnet is closing in on his terrorist alter ego.
+Dialogue: 0,00:48:11.28,00:48:14.28,Default,,0,0,0,,所以他花钱请人假扮拉克	So he pays a man to play the part of Lark
+Dialogue: 0,00:48:14.28,00:48:15.28,Default,,0,0,0,,然后找人干掉那个人	and has him killed.
+Dialogue: 0,00:48:16.28,00:48:18.28,Default,,0,0,0,,利用他为国效命的伪装	And under the guise of serving his country...
+Dialogue: 0,00:48:18.28,00:48:21.28,Default,,0,0,0,,使用他的秘密身份	Assumes his own secret identity.
+Dialogue: 0,00:48:21.28,00:48:22.28,Default,,0,0,0,,在美国政府的	Free to operate at will
+Dialogue: 0,00:48:23.28,00:48:24.28,Default,,0,0,0,,全力支持下 为所欲为	with the full support of the U.S. government.
+Dialogue: 0,00:48:24.28,00:48:25.28,Default,,0,0,0,,为什么	Why?
+Dialogue: 0,00:48:26.28,00:48:28.28,Default,,0,0,0,,亨特为什么会这样做	Why would Hunt turn?
+Dialogue: 0,00:48:28.28,00:48:31.28,Default,,0,0,0,,连恩为什么这样做 他手下的使徒为什么会这么做	Why did Lane do it? Why did any of his Apostles?
+Dialogue: 0,00:48:32.28,00:48:35.28,Default,,0,0,0,,他们相信一个目标	They were believers in a cause.
+Dialogue: 0,00:48:35.28,00:48:37.28,Default,,0,0,0,,当那个目标变成谎言	And when that cause turned out to be a lie,
+Dialogue: 0,00:48:37.28,00:48:40.28,Default,,0,0,0,,他们与自己的主人反目	they turned against their masters.
+Dialogue: 0,00:48:40.28,00:48:43.28,Default,,0,0,0,,亨特的政府背叛 否认和抛弃他	How many times has Hunt's government betrayed him,
+Dialogue: 0,00:48:44.28,00:48:46.28,Default,,0,0,0,,多少次了	disavowed him, cast him aside?
+Dialogue: 0,00:48:46.28,00:48:48.28,Default,,0,0,0,,这样的人多久之后	And how long before a man like that
+Dialogue: 0,00:48:49.28,00:48:50.28,Default,,0,0,0,,会忍无可忍	has had enough?
+Dialogue: 0,00:48:51.28,00:48:53.28,Default,,0,0,0,,这是一项严厉的指控	That is a serious accusation.
+Dialogue: 0,00:48:55.28,00:48:57.28,Default,,0,0,0,,你能证明吗	Can you prove it?
+Dialogue: 0,00:49:01.28,00:49:02.28,Default,,0,0,0,,这是我们从大皇宫那具男尸身上	This is the phone we pulled off the dead body
+Dialogue: 0,00:49:02.28,00:49:04.28,Default,,0,0,0,,拿来的手机	at the Grand Palais.
+Dialogue: 0,00:49:09.28,00:49:11.28,Default,,0,0,0,,我猜想这上面有你需要的所有证据	I'm guessing it has all the proof you need.
+Dialogue: 0,00:51:16.28,00:51:18.28,Default,,0,0,0,,连恩对一个有两千人口的村子 释放毒气 此事属实吗	Is it true Lane gassed a village of 2,000 people?
+Dialogue: 0,00:51:21.28,00:51:22.28,Default,,0,0,0,,是的	Yes.
+Dialogue: 0,00:51:22.28,00:51:25.28,Default,,0,0,0,,为了杀害一个人 他不惜让整座客机坠毁	Is it true he brought down an entire passenger plane
+Dialogue: 0,00:51:25.28,00:51:26.28,Default,,0,0,0,,此事属实吗	just to kill one man?
+Dialogue: 0,00:51:27.28,00:51:28.28,Default,,0,0,0,,是的	Yes.
+Dialogue: 0,00:51:30.28,00:51:32.28,Default,,0,0,0,,-此事属实吗他 -嘿 沃克	-Is it true that he... -Hey, Walker.
+Dialogue: 0,00:51:32.28,00:51:35.28,Default,,0,0,0,,你听到的任何事 如果让你毛骨悚然	Whatever you heard, if it makes your skin crawl,
+Dialogue: 0,00:51:35.28,00:51:36.28,Default,,0,0,0,,很有可能是真的	it's probably true.
+Dialogue: 0,00:51:43.28,00:51:44.28,Default,,0,0,0,,老天	Holy shit.
+Dialogue: 0,00:51:46.28,00:51:48.28,Default,,0,0,0,,他是被你抓到的 对吗	You're the guy that caught him, aren't you?
+Dialogue: 0,00:51:50.28,00:51:51.28,Default,,0,0,0,,你认为	How long do you think
+Dialogue: 0,00:51:51.28,00:51:52.28,Default,,0,0,0,,他对此事会隐瞒多久呢	he's gonna keep that to himself?
+Dialogue: 0,00:51:57.28,00:51:59.28,Default,,0,0,0,,到时候再说	We'll burn that bridge when we get to it.
+Dialogue: 0,00:54:27.28,00:54:29.28,Default,,0,0,0,,他到底在干什么	What the hell is he doing?
+Dialogue: 0,00:56:00.28,00:56:02.28,Default,,0,0,0,,（没有信号）
+Dialogue: 0,00:56:42.28,00:56:44.28,Default,,0,0,0,,亨特你在哪	Hunt? Where are you?
+Dialogue: 0,00:56:44.28,00:56:45.28,Default,,0,0,0,,别等我 	Don't wait for me!
+Dialogue: 0,00:56:46.28,00:56:47.28,Default,,0,0,0,,怎么了出什么事了	What is it? What's wrong?
+Dialogue: 0,00:56:48.28,00:56:50.28,Default,,0,0,0,,我会在车库等你	I'll meet you at the garage.
+Dialogue: 0,00:57:00.28,00:57:01.28,Default,,0,0,0,,班吉 你收到了吗	Benji, do you copy?
+Dialogue: 0,00:57:02.28,00:57:03.28,Default,,0,0,0,,我们收到了 快走	We copy. Go.
+Dialogue: 0,00:57:03.28,00:57:06.28,Default,,0,0,0,,改变计划 我曝光了 需要撤离	Change of plan. I'm blown. Need extraction.
+Dialogue: 0,00:57:06.28,00:57:07.28,Default,,0,0,0,,我们马上过来	We're on our way.
+Dialogue: 0,00:57:22.28,00:57:24.28,Default,,0,0,0,,他从巴黎圣母院驶往圣路易斯桥	He's heading from Notre Dame to the St. Louis bridge.
+Dialogue: 0,00:57:24.28,00:57:25.28,Default,,0,0,0,,各单位在追捕	Units are in pursuit...
+Dialogue: 0,01:01:48.28,01:01:49.28,Default,,0,0,0,,停下	STOP.
+Dialogue: 0,01:01:49.28,01:01:50.28,Default,,0,0,0,,不许动	Stay where you are.
+Dialogue: 0,01:01:52.28,01:01:53.28,Default,,0,0,0,,上车	Get in the car.
+Dialogue: 0,01:01:54.28,01:01:55.28,Default,,0,0,0,,谁都不许动	Nobody move.
+Dialogue: 0,01:01:58.28,01:01:59.28,Default,,0,0,0,,举起手来	Show me your hands.
+Dialogue: 0,01:02:02.28,01:02:04.28,Default,,0,0,0,,请走开	Walk away...please.
+Dialogue: 0,01:02:04.28,01:02:05.28,Default,,0,0,0,,所有人举起手来	Everyone...show me your hands.
+Dialogue: 0,01:02:12.28,01:02:13.28,Default,,0,0,0,,请走开	Just walk away...
+Dialogue: 0,01:02:13.28,01:02:14.28,Default,,0,0,0,,拜托	please.
+Dialogue: 0,01:02:23.28,01:02:25.28,Default,,0,0,0,,泽拉想跟你谈谈	Zola wants a word with you.
+Dialogue: 0,01:02:29.28,01:02:30.28,Default,,0,0,0,,她怎么办	What about her?
+Dialogue: 0,01:02:31.28,01:02:32.28,Default,,0,0,0,,干掉她	Finish her.
+Dialogue: 0,01:03:02.28,01:03:03.28,Default,,0,0,0,,你会没事的	You'll be all right.
+Dialogue: 0,01:03:12.28,01:03:13.28,Default,,0,0,0,,我们得走了	We got to go.
+Dialogue: 0,01:03:15.28,01:03:16.28,Default,,0,0,0,,真的很抱歉	I'm so sorry.
+Dialogue: 0,01:03:16.28,01:03:17.28,Default,,0,0,0,,来吧	Come on.
+Dialogue: 0,01:03:54.28,01:03:55.28,Default,,0,0,0,,对了 我叫沃克	The name's Walker, by the way.
+Dialogue: 0,01:03:56.28,01:03:58.28,Default,,0,0,0,,用这辆小车是你的主意	Was the little car your idea?
+Dialogue: 0,01:04:08.28,01:04:10.28,Default,,0,0,0,,老天爷 	Jesus Christ!
+Dialogue: 0,01:04:10.28,01:04:12.28,Default,,0,0,0,,刚才是怎么回事	What the hell was that?
+Dialogue: 0,01:04:18.28,01:04:20.28,Default,,0,0,0,,-大家马上下车  -快 	-Everybody out. -Go, go, go!
+Dialogue: 0,01:06:57.28,01:06:59.28,Default,,0,0,0,,那是艾尔莎	That was Ilsa.
+Dialogue: 0,01:06:59.28,01:07:00.28,Default,,0,0,0,,闭嘴	Shut up.
+Dialogue: 0,01:07:01.28,01:07:03.28,Default,,0,0,0,,真有意思	Very interesting.
+Dialogue: 0,01:07:06.28,01:07:08.28,Default,,0,0,0,,很高兴再次见到你 伊森	It's good to see you again, Ethan.
+Dialogue: 0,01:07:45.28,01:07:48.28,Default,,0,0,0,,哦 看看谁还活着	Oh, look who's still alive.
+Dialogue: 0,01:07:52.28,01:07:54.28,Default,,0,0,0,,他的脖子里有个微波追踪器	There's a microwave tracker in his neck.
+Dialogue: 0,01:07:54.28,01:07:56.28,Default,,0,0,0,,明白了 你知道该怎么办	Got it. You know what to do.
+Dialogue: 0,01:07:56.28,01:07:58.28,Default,,0,0,0,,我跟你保证 这不会	Let me just assure you, this won't hurt
+Dialogue: 0,01:07:58.28,01:07:59.28,Default,,0,0,0,,太痛	enough.
+Dialogue: 0,01:08:02.28,01:08:03.28,Default,,0,0,0,,90秒	Ninety seconds.
+Dialogue: 0,01:08:04.28,01:08:06.28,Default,,0,0,0,,你和你的使徒们认为 我们会用你	You and your Apostles think we're gonna trade you
+Dialogue: 0,01:08:06.28,01:08:08.28,Default,,0,0,0,,来交换丢失的钚弹	for the missing plutonium.
+Dialogue: 0,01:08:08.28,01:08:10.28,Default,,0,0,0,,我在此告诉你 这件事绝不可能发生	I'm here to tell you that's never gonna happen.
+Dialogue: 0,01:08:11.28,01:08:14.28,Default,,0,0,0,,你的任务 如果你选择接受	Your mission, should you choose to accept it.
+Dialogue: 0,01:08:15.28,01:08:16.28,Default,,0,0,0,,我想知道 伊森	I wonder, Ethan,
+Dialogue: 0,01:08:17.28,01:08:18.28,Default,,0,0,0,,你是否曾经选择过不接受	did you ever choose not to?
+Dialogue: 0,01:08:19.28,01:08:21.28,Default,,0,0,0,,你是否曾经停下来 扪心自问	Did you ever stop and ask yourself
+Dialogue: 0,01:08:21.28,01:08:23.28,Default,,0,0,0,,谁给你命令或是为什么	who it was giving you the orders or why?
+Dialogue: 0,01:08:24.28,01:08:29.28,Default,,0,0,0,,每一天 你为之效命的主人 都距离毁灭世界更近一步	While every day the master you serve moves one step closer to ending the world.
+Dialogue: 0,01:08:29.28,01:08:31.28,Default,,0,0,0,,恐怖分子做出的怪异指控	Strange accusation coming from a terrorist.
+Dialogue: 0,01:08:31.28,01:08:32.28,Default,,0,0,0,,60秒	Sixty seconds.
+Dialogue: 0,01:08:32.28,01:08:35.28,Default,,0,0,0,,恐怖分子是极度渴望关注的年轻学生	Terrorists are schoolboys desperate for attention,
+Dialogue: 0,01:08:35.28,01:08:38.28,Default,,0,0,0,,希望通过恐惧来塑造公众观点	hoping to shape public opinion through fear.
+Dialogue: 0,01:08:38.28,01:08:41.28,Default,,0,0,0,,我根本不在乎人们的想法和感受	I don't care in the least what people think or feel.
+Dialogue: 0,01:08:42.28,01:08:45.28,Default,,0,0,0,,就我的经验来说 他们的想法和感受都不会持续很久	In my experience, they don't do either for very long.
+Dialogue: 0,01:08:45.28,01:08:47.28,Default,,0,0,0,,我猜想这能为你轰炸工厂 和炸毁民航飞机的罪行	Oh, and I suppose that justifies bombing factories
+Dialogue: 0,01:08:47.28,01:08:48.28,Default,,0,0,0,,做出开脱	or bringing down civilian aircraft.
+Dialogue: 0,01:08:48.28,01:08:51.28,Default,,0,0,0,,或是给我绑上装有炸药的背心 	Or strapping me into an explosive vest!
+Dialogue: 0,01:08:51.28,01:08:54.28,Default,,0,0,0,,就当这是未了之事吧 我滑稽的小朋友	Consider it unfinished business, my funny little friend.
+Dialogue: 0,01:08:54.28,01:08:56.28,Default,,0,0,0,,-卢瑟 -马上就好了	-Luther? -Almost there.
+Dialogue: 0,01:08:56.28,01:08:58.28,Default,,0,0,0,,关于结局 你看得跟我一样清楚 伊森	You see the end as clearly as I do, Ethan.
+Dialogue: 0,01:08:58.28,01:09:01.28,Default,,0,0,0,,世界各地的政府正陷入疯狂	Governments the world over are descending into madness.
+Dialogue: 0,01:09:02.28,01:09:05.28,Default,,0,0,0,,辛迪加的创建目的 是为了一砖一瓦地将其摧毁	The Syndicate was created to tear them down, brick by brick.
+Dialogue: 0,01:09:05.28,01:09:07.28,Default,,0,0,0,,辛迪加是一群杀人成性的懦夫	The Syndicate was a pack of murdering cowards.
+Dialogue: 0,01:09:07.28,01:09:11.28,Default,,0,0,0,,辛迪加是文明的最后希望 	The Syndicate was civilization's last hope!
+Dialogue: 0,01:09:11.28,01:09:14.28,Default,,0,0,0,,摧毁老旧世界秩序的机会	A chance to smash the old world order.
+Dialogue: 0,01:09:15.28,01:09:17.28,Default,,0,0,0,,现在这份希望破灭了 因为你	That hope is gone now because of you
+Dialogue: 0,01:09:17.28,01:09:20.28,Default,,0,0,0,,和你可悲的道德观	and your pathetic morality.
+Dialogue: 0,01:09:22.28,01:09:24.28,Default,,0,0,0,,你应该杀了我的 伊森	You should have killed me, Ethan.
+Dialogue: 0,01:09:26.28,01:09:28.28,Default,,0,0,0,,你向来惧怕的结局	The end you've always feared
+Dialogue: 0,01:09:29.28,01:09:30.28,Default,,0,0,0,,即将来临	is coming.
+Dialogue: 0,01:09:33.28,01:09:33.28,Default,,0,0,0,,即将来临 	It's coming!
+Dialogue: 0,01:09:36.28,01:09:38.28,Default,,0,0,0,,一切都是你的罪过	And the blood will be on your hands.
+Dialogue: 0,01:09:41.28,01:09:42.28,Default,,0,0,0,,你美好企图	The fallout
+Dialogue: 0,01:09:43.28,01:09:46.28,Default,,0,0,0,,的附带后果	of all your good intentions.
+Dialogue: 0,01:09:53.28,01:09:54.28,Default,,0,0,0,,-时间到了 -搞定了	-Time. -Got it.
+Dialogue: 0,01:10:19.28,01:10:20.28,Default,,0,0,0,,把他拉起来	Get him up.
+Dialogue: 0,01:10:23.28,01:10:24.28,Default,,0,0,0,,你现在归我所有了	You're mine now.
+Dialogue: 0,01:10:34.28,01:10:36.28,Default,,0,0,0,,你真是充满惊喜 拉克	You're just full of surprises, Lark.
+Dialogue: 0,01:10:36.28,01:10:38.28,Default,,0,0,0,,你哥哥的计划从一开始起就很烂	Your brother's plan was bad from the word go.
+Dialogue: 0,01:10:39.28,01:10:40.28,Default,,0,0,0,,你的手下人可能都会没命	You'd have lost all your men
+Dialogue: 0,01:10:41.28,01:10:43.28,Default,,0,0,0,,连恩在交火中也有可能丧命	and Lane would've been killed in the crossfire.
+Dialogue: 0,01:10:43.28,01:10:45.28,Default,,0,0,0,,我得随机应变	I had to improvise.
+Dialogue: 0,01:10:46.28,01:10:48.28,Default,,0,0,0,,为何最开始不说	Well, why not say that in the first place?
+Dialogue: 0,01:10:48.28,01:10:50.28,Default,,0,0,0,,因为我不信任你的人	Because I don't trust your people.
+Dialogue: 0,01:10:50.28,01:10:52.28,Default,,0,0,0,,特别是你哥哥	Especially not your brother.
+Dialogue: 0,01:10:56.28,01:10:59.28,Default,,0,0,0,,家人 能怎么办	Family. What can you do?
+Dialogue: 0,01:11:02.28,01:11:03.28,Default,,0,0,0,,那么 连恩在哪	So, where's Lane?
+Dialogue: 0,01:11:04.28,01:11:06.28,Default,,0,0,0,,肯定不在塞纳河底	Certainly not at the bottom of the Seine.
+Dialogue: 0,01:11:06.28,01:11:08.28,Default,,0,0,0,,他在我手上 他很安全	I have him. He's safe.
+Dialogue: 0,01:11:09.28,01:11:10.28,Default,,0,0,0,,我在哪里跟送货人见面	Where do I meet the courier?
+Dialogue: 0,01:11:12.28,01:11:14.28,Default,,0,0,0,,我们来谈谈那个女人吧	Let's talk about the woman.
+Dialogue: 0,01:11:16.28,01:11:17.28,Default,,0,0,0,,女人	Woman?
+Dialogue: 0,01:11:17.28,01:11:19.28,Default,,0,0,0,,你在大皇宫时 她跟你在一起	She was with you at the Palais.
+Dialogue: 0,01:11:19.28,01:11:20.28,Default,,0,0,0,,泽拉今天又看到她了	Zola saw her again today.
+Dialogue: 0,01:11:21.28,01:11:22.28,Default,,0,0,0,,她企图杀死连恩	She tried to kill Lane.
+Dialogue: 0,01:11:22.28,01:11:24.28,Default,,0,0,0,,她有机会杀你 却没下手	She had the chance to kill you, but she didn't.
+Dialogue: 0,01:11:25.28,01:11:26.28,Default,,0,0,0,,为什么	Why?
+Dialogue: 0,01:11:30.28,01:11:31.28,Default,,0,0,0,,我们曾经有过一段	We have a past.
+Dialogue: 0,01:11:33.28,01:11:34.28,Default,,0,0,0,,很复杂	It's complicated.
+Dialogue: 0,01:11:36.28,01:11:38.28,Default,,0,0,0,,好吧 我会让事情变得更复杂	Well, I'll make it more complicated for you.
+Dialogue: 0,01:11:39.28,01:11:40.28,Default,,0,0,0,,我的价码刚刚涨了	My price just went up.
+Dialogue: 0,01:11:41.28,01:11:43.28,Default,,0,0,0,,今天有人杀了我四个手下人	Someone killed four of my men today.
+Dialogue: 0,01:11:43.28,01:11:44.28,Default,,0,0,0,,我猜想是她干的	I'm assuming it was her.
+Dialogue: 0,01:11:51.28,01:11:53.28,Default,,0,0,0,,我想要她 拉克	I want her, Lark.
+Dialogue: 0,01:11:54.28,01:11:55.28,Default,,0,0,0,,你要把她带给我	And you're gonna bring her to me.
+Dialogue: 0,01:11:57.28,01:11:58.28,Default,,0,0,0,,否则 你不会跟送货人见面	Otherwise, you don't meet the courier
+Dialogue: 0,01:11:58.28,01:12:00.28,Default,,0,0,0,,钚弹会卖给出价最高的人	and the plutonium goes to the highest bidder.
+Dialogue: 0,01:12:02.28,01:12:04.28,Default,,0,0,0,,我可不想她坏了我们的好事	I'd hate for her to come between us.
+Dialogue: 0,01:12:09.28,01:12:10.28,Default,,0,0,0,,我会把她交给你	She's yours.
+Dialogue: 0,01:12:11.28,01:12:14.28,Default,,0,0,0,,在见面时 之前不行	At the meeting. Not before.
+Dialogue: 0,01:12:26.28,01:12:27.28,Default,,0,0,0,,去伦敦	Go to London.
+Dialogue: 0,01:12:28.28,01:12:30.28,Default,,0,0,0,,遵照指示	Instructions will follow.
+Dialogue: 0,01:14:12.28,01:14:14.28,Default,,0,0,0,,我知道如果我跟踪她 你最终会现身	I knew if I followed her, you'd show up eventually.
+Dialogue: 0,01:14:15.28,01:14:16.28,Default,,0,0,0,,你没事吧	Are you okay?
+Dialogue: 0,01:14:19.28,01:14:20.28,Default,,0,0,0,,艾尔莎 我从未想过要伤害你	Ilsa, I never wanted to hurt you.
+Dialogue: 0,01:14:20.28,01:14:22.28,Default,,0,0,0,,我知道你有自己的理由	I know you have your reasons.
+Dialogue: 0,01:14:23.28,01:14:24.28,Default,,0,0,0,,我知道	I know.
+Dialogue: 0,01:14:28.28,01:14:29.28,Default,,0,0,0,,你需要放弃这项任务	You need to walk away.
+Dialogue: 0,01:14:30.28,01:14:31.28,Default,,0,0,0,,办不到	I can't do that.
+Dialogue: 0,01:14:33.28,01:14:35.28,Default,,0,0,0,,你去大皇宫不是为了杀拉克	You weren't at the Palais to kill Lark.
+Dialogue: 0,01:14:35.28,01:14:36.28,Default,,0,0,0,,对	No.
+Dialogue: 0,01:14:38.28,01:14:40.28,Default,,0,0,0,,你去那里保护他	You were there to protect him.
+Dialogue: 0,01:14:40.28,01:14:41.28,Default,,0,0,0,,是的	Yes.
+Dialogue: 0,01:14:42.28,01:14:44.28,Default,,0,0,0,,你杀了他是为了保护我	And you killed him to protect me.
+Dialogue: 0,01:14:46.28,01:14:48.28,Default,,0,0,0,,你希望拉克帮连恩越狱	You wanted Lark to break Lane out.
+Dialogue: 0,01:14:50.28,01:14:53.28,Default,,0,0,0,,不 你需要他帮连恩越狱	No. You needed him to break Lane out.
+Dialogue: 0,01:14:54.28,01:14:55.28,Default,,0,0,0,,因为你必须杀死连恩	Because you have to kill Lane.
+Dialogue: 0,01:14:57.28,01:14:59.28,Default,,0,0,0,,谁逼你这么做	Who's making you do this?
+Dialogue: 0,01:15:01.28,01:15:02.28,Default,,0,0,0,,军情六处	MI6.
+Dialogue: 0,01:15:05.28,01:15:06.28,Default,,0,0,0,,为什么	Why?
+Dialogue: 0,01:15:06.28,01:15:08.28,Default,,0,0,0,,我们在伦敦抓到他之后	After we captured him in London,
+Dialogue: 0,01:15:08.28,01:15:11.28,Default,,0,0,0,,他们试图通过外交渠道 把连恩送回英国	they tried to bring Lane home through diplomatic channels.
+Dialogue: 0,01:15:12.28,01:15:14.28,Default,,0,0,0,,但很多国家都想复仇	But too many countries want their pound of flesh.
+Dialogue: 0,01:15:14.28,01:15:16.28,Default,,0,0,0,,那样的人 对于英国情报	A man like that, what he's seen,
+Dialogue: 0,01:15:16.28,01:15:18.28,Default,,0,0,0,,他的所见和所知	what he knows about British Intelligence,
+Dialogue: 0,01:15:18.28,01:15:21.28,Default,,0,0,0,,他们绝不能让他跟外国政府交谈	they can't have him talking to a foreign government ever.
+Dialogue: 0,01:15:21.28,01:15:23.28,Default,,0,0,0,,我问的不是这个问题	That's not what I'm asking.
+Dialogue: 0,01:15:24.28,01:15:26.28,Default,,0,0,0,,他们为何派你来	Why did they send you?
+Dialogue: 0,01:15:26.28,01:15:28.28,Default,,0,0,0,,我通过这种方式证明我的忠诚	This is how I prove my loyalty.
+Dialogue: 0,01:15:30.28,01:15:31.28,Default,,0,0,0,,这样我才可以回家	This is how I come home.
+Dialogue: 0,01:15:31.28,01:15:32.28,Default,,0,0,0,,但你退役了	But you were out.
+Dialogue: 0,01:15:33.28,01:15:34.28,Default,,0,0,0,,你自由了	You were free.
+Dialogue: 0,01:15:35.28,01:15:36.28,Default,,0,0,0,,我们永远不会自由	We are never free.
+Dialogue: 0,01:15:37.28,01:15:40.28,Default,,0,0,0,,我花了两年时间 跟连恩做卧底工作	I spent two years undercover with Lane.
+Dialogue: 0,01:15:40.28,01:15:42.28,Default,,0,0,0,,对他们来说 我跟他的威胁度一样大	To them, I'm as much of a threat as he is.
+Dialogue: 0,01:15:44.28,01:15:47.28,Default,,0,0,0,,我要杀死他 否则我会永远逃亡	I kill him, or I never stop running.
+Dialogue: 0,01:15:50.28,01:15:52.28,Default,,0,0,0,,现在 告诉我他在哪里	Now tell me where he is.
+Dialogue: 0,01:15:57.28,01:15:58.28,Default,,0,0,0,,我没法帮你	I can't help you.
+Dialogue: 0,01:15:59.28,01:16:01.28,Default,,0,0,0,,无论如何 我都会抓到他	I will get to him one way or another.
+Dialogue: 0,01:16:02.28,01:16:04.28,Default,,0,0,0,,请别逼我跟你作对	Please don't make me go through you.
+Dialogue: 0,01:17:01.28,01:17:02.28,Default,,0,0,0,,是的	Yes.
+Dialogue: 0,01:17:02.28,01:17:04.28,Default,,0,0,0,,你在伦敦吗	Are you here in London?
+Dialogue: 0,01:17:04.28,01:17:05.28,Default,,0,0,0,,是的	I am.
+Dialogue: 0,01:17:05.28,01:17:07.28,Default,,0,0,0,,你准备好跟送货人见面了吗	Are you ready to meet the courier?
+Dialogue: 0,01:17:08.28,01:17:10.28,Default,,0,0,0,,是的 我要去哪里	Yes. Where do I go?
+Dialogue: 0,01:17:11.28,01:17:12.28,Default,,0,0,0,,你想在哪里见面	Where would you like to meet?
+Dialogue: 0,01:17:15.28,01:17:17.28,Default,,0,0,0,,（查找来电者位置）
+Dialogue: 0,01:17:51.28,01:17:52.28,Default,,0,0,0,,秘书长先生	Mr. Secretary.
+Dialogue: 0,01:17:53.28,01:17:55.28,Default,,0,0,0,,我对天祈祷 但愿这不是真的	I prayed to God that it wasn't true.
+Dialogue: 0,01:17:55.28,01:17:57.28,Default,,0,0,0,,长官 以伊森的立场来说	Well, in his defense, sir,
+Dialogue: 0,01:17:57.28,01:17:58.28,Default,,0,0,0,,如果他没有干预	if Ethan hadn't intervened,
+Dialogue: 0,01:17:58.28,01:17:59.28,Default,,0,0,0,,很多人会送命	a great many people would have been killed.
+Dialogue: 0,01:17:59.28,01:18:02.28,Default,,0,0,0,,对 邓恩 我确信巴黎的好市民	Yes, Dunn, I'm sure that the good people of Paris
+Dialogue: 0,01:18:02.28,01:18:04.28,Default,,0,0,0,,和法国整个国家会考虑到这一点	and the nation of France as a whole will take that into account.
+Dialogue: 0,01:18:06.28,01:18:07.28,Default,,0,0,0,,所以到底发生了什么事	So what the hell happened?
+Dialogue: 0,01:18:27.28,01:18:29.28,Default,,0,0,0,,当时 我们被告知要来伦敦	...at which point, we were told to come to London
+Dialogue: 0,01:18:30.28,01:18:32.28,Default,,0,0,0,,等待进一步指示	and await further instructions.
+Dialogue: 0,01:18:32.28,01:18:33.28,Default,,0,0,0,,现在怎么办	And what happens now?
+Dialogue: 0,01:18:34.28,01:18:35.28,Default,,0,0,0,,现在	Now,
+Dialogue: 0,01:18:36.28,01:18:38.28,Default,,0,0,0,,我们20分钟后跟白寡妇见面	we meet the Widow in 20 minutes.
+Dialogue: 0,01:18:38.28,01:18:39.28,Default,,0,0,0,,她会带我们去见送货人	She'll take us to a courier
+Dialogue: 0,01:18:39.28,01:18:43.28,Default,,0,0,0,,送货人会用我们丢失的钚弹 来交换所罗门连恩	who'll hand over our missing plutonium in exchange for Solomon Lane.
+Dialogue: 0,01:18:43.28,01:18:44.28,Default,,0,0,0,,或者根据我们的行动方案	Or, in our scenario,
+Dialogue: 0,01:18:45.28,01:18:46.28,Default,,0,0,0,,班吉	Benji.
+Dialogue: 0,01:18:47.28,01:18:48.28,Default,,0,0,0,,老天	Jesus.
+Dialogue: 0,01:18:48.28,01:18:50.28,Default,,0,0,0,,抱歉 你说什么	I'm sorry, what?
+Dialogue: 0,01:18:50.28,01:18:51.28,Default,,0,0,0,,卢瑟和我会带你去见送货人	Luther and I are gonna take you to the courier.
+Dialogue: 0,01:18:51.28,01:18:53.28,Default,,0,0,0,,沃克留在这里 看守真正的连恩	Walker stays here and guards the real Lane.
+Dialogue: 0,01:18:53.28,01:18:54.28,Default,,0,0,0,,绝对不行	Absolutely not.
+Dialogue: 0,01:18:54.28,01:18:56.28,Default,,0,0,0,,等等 为何一定要我假扮连恩	Wait, wait. Why do I have to be Lane?
+Dialogue: 0,01:18:56.28,01:18:56.28,Default,,0,0,0,,班吉	Benji.
+Dialogue: 0,01:18:57.28,01:19:00.28,Default,,0,0,0,,我们的任务 我的任务 是重新拿回钚弹	Our mission, my mission, is to recover that plutonium,
+Dialogue: 0,01:19:00.28,01:19:02.28,Default,,0,0,0,,我会不惜一切达成目的	and I will do so at any cost.
+Dialogue: 0,01:19:02.28,01:19:03.28,Default,,0,0,0,,就算我得用连恩来交换	Even if I have to trade Lane.
+Dialogue: 0,01:19:04.28,01:19:05.28,Default,,0,0,0,,真正的连恩	The real Lane.
+Dialogue: 0,01:19:05.28,01:19:07.28,Default,,0,0,0,,我绝不会放他走	And I will never let him go.
+Dialogue: 0,01:19:07.28,01:19:10.28,Default,,0,0,0,,当使徒们意识到你在玩游戏	When the Apostles realize that you're playing games,
+Dialogue: 0,01:19:10.28,01:19:13.28,Default,,0,0,0,,你会再次失去钚弹	you'll lose the plutonium. Again.
+Dialogue: 0,01:19:13.28,01:19:15.28,Default,,0,0,0,,你让我们来操心使徒吧	You let us worry about the Apostles.
+Dialogue: 0,01:19:15.28,01:19:17.28,Default,,0,0,0,,就目前的情况来说 我们面临一个更大的问题	As it stands, we have a bigger problem.
+Dialogue: 0,01:19:17.28,01:19:18.28,Default,,0,0,0,,更大的问题	A bigger problem?
+Dialogue: 0,01:19:19.28,01:19:21.28,Default,,0,0,0,,-艾尔莎 -艾尔莎	-Ilsa. -Ilsa?
+Dialogue: 0,01:19:21.28,01:19:22.28,Default,,0,0,0,,我们的艾尔莎艾尔莎浮士德	Our Ilsa? Ilsa Faust Ilsa?
+Dialogue: 0,01:19:23.28,01:19:24.28,Default,,0,0,0,,她怎么会卷入此事	How is she mixed up in all of this?
+Dialogue: 0,01:19:24.28,01:19:26.28,Default,,0,0,0,,她受命要杀死连恩 直接来自军情六处的命令	She's been ordered to kill Lane. Direct from MI6.
+Dialogue: 0,01:19:26.28,01:19:30.28,Default,,0,0,0,,听着 等等 在巴黎那个人是她 骑摩托车那个	Look, wait. So that was her in Paris? On the bike.
+Dialogue: 0,01:19:30.28,01:19:30.28,Default,,0,0,0,,对	Yeah.
+Dialogue: 0,01:19:31.28,01:19:32.28,Default,,0,0,0,,伊森 她企图杀死我们 	Ethan, she tried to kill us!
+Dialogue: 0,01:19:32.28,01:19:33.28,Default,,0,0,0,,-不 不是我们 -对	-No, not us. Not us. -Yeah.
+Dialogue: 0,01:19:34.28,01:19:36.28,Default,,0,0,0,,连恩 她企图杀死连恩 她没得选	Lane. She tried to kill Lane. She has no choice.
+Dialogue: 0,01:19:36.28,01:19:37.28,Default,,0,0,0,,她会杀死我 	And she will kill me!
+Dialogue: 0,01:19:37.28,01:19:38.28,Default,,0,0,0,,我不会让这种事发生	I'm not gonna let that happen.
+Dialogue: 0,01:19:38.28,01:19:40.28,Default,,0,0,0,,伊森 你打算怎样阻止此事的发生	Ethan, how exactly are you not gonna let that happen?
+Dialogue: 0,01:19:42.28,01:19:44.28,Default,,0,0,0,,-我在想办法 -他在想办法	-I'm working on it. -Oh, he's working on it.
+Dialogue: 0,01:19:44.28,01:19:45.28,Default,,0,0,0,,目前 我们没时间了	Right now, we don't have a lot of time.
+Dialogue: 0,01:19:45.28,01:19:47.28,Default,,0,0,0,,我们必须为碰面做好准备	We have to get ready for this meeting.
+Dialogue: 0,01:19:47.28,01:19:48.28,Default,,0,0,0,,会面是个陷阱	The meeting is a trap.
+Dialogue: 0,01:19:50.28,01:19:52.28,Default,,0,0,0,,白寡妇跟中情局联手	The White Widow is working with the CIA.
+Dialogue: 0,01:19:52.28,01:19:53.28,Default,,0,0,0,,从一开始起 她就这样做了	She has been since the beginning.
+Dialogue: 0,01:19:54.28,01:19:57.28,Default,,0,0,0,,为了讨价还价 赦免她的各种罪行	Bargaining for immunity is her stock-in-trade.
+Dialogue: 0,01:19:57.28,01:20:00.28,Default,,0,0,0,,拿到钚弹并抓获使徒和约翰拉克	Capturing the plutonium, and the Apostles, and John Lark
+Dialogue: 0,01:20:00.28,01:20:02.28,Default,,0,0,0,,会让她从美国人那里博得不少好感	buys her a lot of goodwill with the Americans.
+Dialogue: 0,01:20:02.28,01:20:06.28,Default,,0,0,0,,如果斯隆知道这次会面是陷阱 她为何不告诉我们	But if Sloane knew the meeting was a trap, why didn't she just tell us?
+Dialogue: 0,01:20:06.28,01:20:08.28,Default,,0,0,0,,因为在她看来 任何人都有可能是约翰拉克	Because, in her mind, anybody could be John Lark,
+Dialogue: 0,01:20:08.28,01:20:09.28,Default,,0,0,0,,包括我们中的人	including one of us.
+Dialogue: 0,01:20:11.28,01:20:13.28,Default,,0,0,0,,现在她的怀疑获得了证实	And now her suspicions are confirmed.
+Dialogue: 0,01:20:15.28,01:20:16.28,Default,,0,0,0,,根据那份卷宗	According to that dossier,
+Dialogue: 0,01:20:17.28,01:20:19.28,Default,,0,0,0,,电子证据留下的蛛丝马迹将亨特	a trail of electronic evidence connects Hunt
+Dialogue: 0,01:20:19.28,01:20:22.28,Default,,0,0,0,,和疾病控制与预防中心的天花失窃案 联系起来	to the theft of smallpox from the CDC.
+Dialogue: 0,01:20:22.28,01:20:25.28,Default,,0,0,0,,也将他跟一段冗长的邮件来往 联系在一起	It also links him to a lengthy correspondence
+Dialogue: 0,01:20:25.28,01:20:27.28,Default,,0,0,0,,最终事宜是招募德尔布鲁克博士	ending with the recruitment of Dr. Delbruuk.
+Dialogue: 0,01:20:27.28,01:20:29.28,Default,,0,0,0,,当然了 亨特亲自将钚弹	And, of course, Hunt handed over the plutonium
+Dialogue: 0,01:20:29.28,01:20:31.28,Default,,0,0,0,,交给了使徒	to the Apostles himself.
+Dialogue: 0,01:20:31.28,01:20:33.28,Default,,0,0,0,,那些事实 外加	Now, those facts, coupled with
+Dialogue: 0,01:20:33.28,01:20:36.28,Default,,0,0,0,,一段长期且有犯罪嫌疑的 叛变行为历史	a long and incriminating history of rogue behavior,
+Dialogue: 0,01:20:36.28,01:20:39.28,Default,,0,0,0,,证实了中情局的说法	corroborate a CIA narrative
+Dialogue: 0,01:20:40.28,01:20:41.28,Default,,0,0,0,,亨特已经失控了	that Hunt has snapped.
+Dialogue: 0,01:20:42.28,01:20:44.28,Default,,0,0,0,,寻找拉克只是他的障眼法	And that his search for Lark is nothing but a cover
+Dialogue: 0,01:20:44.28,01:20:46.28,Default,,0,0,0,,为了隐藏这个事实 拉克	to hide the fact that Lark...
+Dialogue: 0,01:20:47.28,01:20:48.28,Default,,0,0,0,,就是我	...is me.
+Dialogue: 0,01:20:50.28,01:20:52.28,Default,,0,0,0,,我真是服了你了 伊森	I've got to hand it to you, Ethan.
+Dialogue: 0,01:20:53.28,01:20:55.28,Default,,0,0,0,,通常情况下 人们说你是你自己最大的敌人	Normally, when people refer to you as your own worst enemy,
+Dialogue: 0,01:20:55.28,01:20:57.28,Default,,0,0,0,,只是个比喻	it's just a figure of speech.
+Dialogue: 0,01:21:01.28,01:21:04.28,Default,,0,0,0,,恐怕斯隆对她也有一些疑问	I'm afraid Sloane's got some questions for her as well.
+Dialogue: 0,01:21:05.28,01:21:07.28,Default,,0,0,0,,白寡妇提出把她交给中情局 无需另行收费	The Widow offered her up at no extra charge.
+Dialogue: 0,01:21:08.28,01:21:10.28,Default,,0,0,0,,斯隆从哪里获得这条信息的	And where did Sloane get this information?
+Dialogue: 0,01:21:11.28,01:21:12.28,Default,,0,0,0,,她没说	She didn't say.
+Dialogue: 0,01:21:13.28,01:21:16.28,Default,,0,0,0,,不过 她给我机会抓你	She did, however, grant me the opportunity to bring you in,
+Dialogue: 0,01:21:16.28,01:21:18.28,Default,,0,0,0,,条件是我要终止本次任务	on the condition that I terminate this mission
+Dialogue: 0,01:21:18.28,01:21:20.28,Default,,0,0,0,,亲自交付所罗门连恩	and hand over Solomon Lane personally.
+Dialogue: 0,01:21:21.28,01:21:23.28,Default,,0,0,0,,-长官 你不能这么做 -亨特	-Sir, you can't do that. -Hunt.
+Dialogue: 0,01:21:23.28,01:21:26.28,Default,,0,0,0,,我了解连恩 他根本不想重返监狱	I know Lane. And he has no intention of going back.
+Dialogue: 0,01:21:26.28,01:21:27.28,Default,,0,0,0,,所以我们会带他回去	That's why we're taking him back.
+Dialogue: 0,01:21:27.28,01:21:30.28,Default,,0,0,0,,这表示他就想我们这么做	Which means that's exactly what he wants us to do.
+Dialogue: 0,01:21:30.28,01:21:31.28,Default,,0,0,0,,-伊森 -先生 你认为	-Ethan... -Sir, what do you
+Dialogue: 0,01:21:31.28,01:21:33.28,Default,,0,0,0,,这是怎么回事巧合吗	think this is? A coincidence?
+Dialogue: 0,01:21:33.28,01:21:34.28,Default,,0,0,0,,有人碰巧发现了这份卷宗	That someone just happened upon this?
+Dialogue: 0,01:21:34.28,01:21:37.28,Default,,0,0,0,,连恩派人送给她的 他知道她会做出怎样的反应	Lane had it sent to her. He knew how she would react.
+Dialogue: 0,01:21:37.28,01:21:39.28,Default,,0,0,0,,正如他知道 白寡妇会把我们交给中情局	Just like he knew the Widow would turn us in.
+Dialogue: 0,01:21:39.28,01:21:40.28,Default,,0,0,0,,你不明白吗	Don't you see?
+Dialogue: 0,01:21:40.28,01:21:41.28,Default,,0,0,0,,这个 长官	This, sir...
+Dialogue: 0,01:21:42.28,01:21:43.28,Default,,0,0,0,,这是陷阱	This is the trap.
+Dialogue: 0,01:21:44.28,01:21:45.28,Default,,0,0,0,,-我们被人误导了 -亨特 	-We are being directed. -Hunt!
+Dialogue: 0,01:21:45.28,01:21:48.28,Default,,0,0,0,,还有两枚钚弹下落不明 	There are still two plutonium cores in the wind!
+Dialogue: 0,01:21:48.28,01:21:50.28,Default,,0,0,0,,是你弄丢的 	And you lost them!
+Dialogue: 0,01:21:52.28,01:21:55.28,Default,,0,0,0,,说句公道话 长官 是我们弄丢的	In fairness, sir, we all lost them.
+Dialogue: 0,01:21:55.28,01:21:58.28,Default,,0,0,0,,我恭敬地说一句 长官 你当时不在场	Respectfully, sir, you weren't there.
+Dialogue: 0,01:21:58.28,01:22:01.28,Default,,0,0,0,,替他找借口 是你们现在的全职工作吗	So making excuses for him is your full-time job now?
+Dialogue: 0,01:22:02.28,01:22:05.28,Default,,0,0,0,,天哪 伊森 别雪上加霜	Good God, Ethan, don't make this any harder than it already is.
+Dialogue: 0,01:22:05.28,01:22:08.28,Default,,0,0,0,,我没法继续保护你了 你不明白吗	I can no longer protect you, don't you understand that?
+Dialogue: 0,01:22:09.28,01:22:11.28,Default,,0,0,0,,你对钚弹只能做到这一步了	This is as close as you're ever gonna get to that plutonium.
+Dialogue: 0,01:22:11.28,01:22:13.28,Default,,0,0,0,,长官 你不会真的相信吧	Sir, you don't actually believe this.
+Dialogue: 0,01:22:13.28,01:22:16.28,Default,,0,0,0,,我相信我要在保护你	I believe I've been given a choice to protect you
+Dialogue: 0,01:22:16.28,01:22:18.28,Default,,0,0,0,,或不可能任务小组之间做出选择 我会逮捕你	or the IMF, which is why I'm bringing you in.
+Dialogue: 0,01:22:19.28,01:22:21.28,Default,,0,0,0,,如果我拒绝呢	And if I refuse?
+Dialogue: 0,01:22:21.28,01:22:23.28,Default,,0,0,0,,你以为他的作用是什么	What do you think he's here for?
+Dialogue: 0,01:22:23.28,01:22:24.28,Default,,0,0,0,,你以为他只是旁观者	You think he's some observer?
+Dialogue: 0,01:22:25.28,01:22:26.28,Default,,0,0,0,,他是杀手 	He's an assassin!
+Dialogue: 0,01:22:26.28,01:22:28.28,Default,,0,0,0,,艾丽卡斯隆清理门户的头号探员	Erika Sloane's number-one plumber.
+Dialogue: 0,01:22:29.28,01:22:31.28,Default,,0,0,0,,如果你叛变 他有权追捕你	You go rogue, he's authorized to hunt you down
+Dialogue: 0,01:22:32.28,01:22:33.28,Default,,0,0,0,,然后干掉你	and kill you.
+Dialogue: 0,01:22:37.28,01:22:39.28,Default,,0,0,0,,是本职工作 别往心里去	It's the job. No hard feelings.
+Dialogue: 0,01:22:40.28,01:22:41.28,Default,,0,0,0,,接受吧 伊森	Accept it, Ethan.
+Dialogue: 0,01:22:41.28,01:22:43.28,Default,,0,0,0,,这次行动你失败了 木已成舟	You've lost this one. What's done is done.
+Dialogue: 0,01:22:45.28,01:22:47.28,Default,,0,0,0,,不 长官 不	No, sir. No.
+Dialogue: 0,01:22:48.28,01:22:51.28,Default,,0,0,0,,我不是在问你 我在直接命令你	I am not asking you. I am giving you a direct order.
+Dialogue: 0,01:22:51.28,01:22:53.28,Default,,0,0,0,,本次任务被终止了	This mission is terminated.
+Dialogue: 0,01:22:54.28,01:22:55.28,Default,,0,0,0,,立即生效 	Now!
+Dialogue: 0,01:22:58.28,01:22:59.28,Default,,0,0,0,,斯蒂克尔 他是你的朋友	Stickell, he's your friend.
+Dialogue: 0,01:22:59.28,01:23:01.28,Default,,0,0,0,,你能否开导他一下	Would you please talk some sense into...
+Dialogue: 0,01:23:04.28,01:23:06.28,Default,,0,0,0,,抱歉 长官 你让我没得选	I'm sorry, sir, but you left me no choice.
+Dialogue: 0,01:23:09.28,01:23:11.28,Default,,0,0,0,,距离我们见白寡妇 还有15分钟	There's 15 minutes before we meet the Widow.
+Dialogue: 0,01:23:11.28,01:23:12.28,Default,,0,0,0,,你想要钚弹 只有我们才能	You want the plutonium, we're the only ones
+Dialogue: 0,01:23:12.28,01:23:14.28,Default,,0,0,0,,帮你拿到 你到底要不要加入	who can get it for you. You in or out?
+Dialogue: 0,01:23:16.28,01:23:17.28,Default,,0,0,0,,我加入	In.
+Dialogue: 0,01:23:17.28,01:23:20.28,Default,,0,0,0,,-你在干什么 -班吉需要做好准备	-What are you doing? -Benji needs to get ready.
+Dialogue: 0,01:23:20.28,01:23:22.28,Default,,0,0,0,,-不 伊森 -没时间了 卢瑟	-No, Ethan... -There's no time, Luther.
+Dialogue: 0,01:23:22.28,01:23:23.28,Default,,0,0,0,,我需要你信任我	I need you to trust me.
+Dialogue: 0,01:23:40.28,01:23:41.28,Default,,0,0,0,,你没事吧	You all right?
+Dialogue: 0,01:23:42.28,01:23:43.28,Default,,0,0,0,,嗯 我只是	Yeah, I just
+Dialogue: 0,01:23:44.28,01:23:45.28,Default,,0,0,0,,对此事有不祥的预感	got a bad feeling about this one.
+Dialogue: 0,01:24:12.28,01:24:13.28,Default,,0,0,0,,如果你没有我们的消息	If you don't hear from us...
+Dialogue: 0,01:24:14.28,01:24:15.28,Default,,0,0,0,,我会自行处理	I'll do it my way.
+Dialogue: 0,01:24:19.28,01:24:21.28,Default,,0,0,0,,好好盯着他	Don't take your eyes off him.
+Dialogue: 0,01:24:58.28,01:25:00.28,Default,,0,0,0,,游戏玩够了 我带你出去	Enough games. I'm taking you out of here.
+Dialogue: 0,01:25:00.28,01:25:00.28,Default,,0,0,0,,亨特在哪	Where's Hunt?
+Dialogue: 0,01:25:02.28,01:25:03.28,Default,,0,0,0,,他带你的替身去跟人见面了	He's gone to the meeting, with a copy of you.
+Dialogue: 0,01:25:04.28,01:25:05.28,Default,,0,0,0,,冷静点	Calm down.
+Dialogue: 0,01:25:05.28,01:25:07.28,Default,,0,0,0,,打给使徒 警告他们	Call the Apostles. Warn them.
+Dialogue: 0,01:25:07.28,01:25:08.28,Default,,0,0,0,,我没办法联络他们	I have no way of contacting them.
+Dialogue: 0,01:25:08.28,01:25:10.28,Default,,0,0,0,,为了他们和我自己的安全	For their safety and mine.
+Dialogue: 0,01:25:10.28,01:25:12.28,Default,,0,0,0,,我有一支撤离小队	What I do have is an extraction team with
+Dialogue: 0,01:25:12.28,01:25:14.28,Default,,0,0,0,,有卫星监测和事先安排好的见面地点	satellite overwatch and a prearranged rendezvous.
+Dialogue: 0,01:25:14.28,01:25:16.28,Default,,0,0,0,,我们一离开大楼 他们就会知道	They'll know as soon as we leave the building.
+Dialogue: 0,01:25:16.28,01:25:18.28,Default,,0,0,0,,不 我会留在这里	No, I'm staying here.
+Dialogue: 0,01:25:18.28,01:25:20.28,Default,,0,0,0,,我跟亨特之间还没完	I haven't finished with Hunt yet.
+Dialogue: 0,01:25:24.28,01:25:28.28,Default,,0,0,0,,你干嘛把这件事搞得如此复杂	Why did you have to make this so fucking complicated?
+Dialogue: 0,01:25:28.28,01:25:30.28,Default,,0,0,0,,我不明白你的意思	I don't understand what you mean.
+Dialogue: 0,01:25:30.28,01:25:31.28,Default,,0,0,0,,交易很简单	The deal was simple.
+Dialogue: 0,01:25:32.28,01:25:35.28,Default,,0,0,0,,我帮你陷害亨特 你把钚弹给我	I help you frame Hunt, you give me the plutonium.
+Dialogue: 0,01:25:35.28,01:25:37.28,Default,,0,0,0,,你在浪费时间	You're wasting time.
+Dialogue: 0,01:25:37.28,01:25:40.28,Default,,0,0,0,,不经受巨大苦难 绝不会有和平	There cannot be peace without first a great suffering.
+Dialogue: 0,01:25:41.28,01:25:43.28,Default,,0,0,0,,苦难越深重 和平就越伟大	The greater the suffering, the greater the peace.
+Dialogue: 0,01:25:44.28,01:25:45.28,Default,,0,0,0,,我写下这些话的时候	When I wrote those words,
+Dialogue: 0,01:25:45.28,01:25:49.28,Default,,0,0,0,,意思不是你的和平或亨特的苦难	I wasn't referring to your peace or Hunt's suffering.
+Dialogue: 0,01:25:49.28,01:25:51.28,Default,,0,0,0,,旧的世界秩序需要废除	The old world order needs dismantling,
+Dialogue: 0,01:25:51.28,01:25:53.28,Default,,0,0,0,,我们有废除它的工具	and we have the tools to dismantle it.
+Dialogue: 0,01:25:53.28,01:25:55.28,Default,,0,0,0,,你好像只在乎	All you seem to care about
+Dialogue: 0,01:25:55.28,01:25:58.28,Default,,0,0,0,,亨特能活命 当替罪羔羊	is that Hunt lives to take the blame.
+Dialogue: 0,01:25:58.28,01:25:59.28,Default,,0,0,0,,那不是无政府状态	That's not anarchy.
+Dialogue: 0,01:26:00.28,01:26:01.28,Default,,0,0,0,,那是报复	That's revenge.
+Dialogue: 0,01:26:01.28,01:26:02.28,Default,,0,0,0,,没错	Yes, it is.
+Dialogue: 0,01:26:03.28,01:26:05.28,Default,,0,0,0,,当我达到自己的目的	And when I have what I want,
+Dialogue: 0,01:26:06.28,01:26:08.28,Default,,0,0,0,,使徒就会把钚弹给你	the Apostles will give you the plutonium.
+Dialogue: 0,01:26:12.28,01:26:14.28,Default,,0,0,0,,亨特是你唯一的朋友	Hunt's the only friend you've got.
+Dialogue: 0,01:26:14.28,01:26:15.28,Default,,0,0,0,,你能活到今天	You're only alive today
+Dialogue: 0,01:26:15.28,01:26:17.28,Default,,0,0,0,,是因为他没胆杀你	because he didn't have the guts to kill you.
+Dialogue: 0,01:26:17.28,01:26:20.28,Default,,0,0,0,,斯隆说得对 不可能任务小组就是万圣节闹剧	Sloane was right. The IMF is Halloween.
+Dialogue: 0,01:26:20.28,01:26:22.28,Default,,0,0,0,,只是成年人戴	Nothing but grown men wearing...
+Dialogue: 0,01:26:29.28,01:26:30.28,Default,,0,0,0,,怎么	What?
+Dialogue: 0,01:26:36.28,01:26:39.28,Default,,0,0,0,,本职工作而已 别往心里去	It's just the job. No hard feelings.
+Dialogue: 0,01:26:44.28,01:26:45.28,Default,,0,0,0,,我毁了你的好日子 不是吗	I've ruined your day, haven't I?
+Dialogue: 0,01:26:49.28,01:26:52.28,Default,,0,0,0,,到刚才之前 你表现得真好	And you were doing so well up until then.
+Dialogue: 0,01:26:52.28,01:26:54.28,Default,,0,0,0,,我觉得这把枪里才装有子弹	Now, I think this one's loaded.
+Dialogue: 0,01:26:55.28,01:26:56.28,Default,,0,0,0,,你想弄清楚吗	You want to find out?
+Dialogue: 0,01:27:38.28,01:27:41.28,Default,,0,0,0,,-我表现得怎么样 -我从未怀疑过你的能力	-So, how'd I do? -I never had a doubt.
+Dialogue: 0,01:27:43.28,01:27:45.28,Default,,0,0,0,,我开始明白你们为何乐在其中了	I'm beginning to see why you guys enjoy this so much.
+Dialogue: 0,01:27:45.28,01:27:47.28,Default,,0,0,0,,恭喜你 秘书长先生	Hats off, Mr. Secretary.
+Dialogue: 0,01:27:47.28,01:27:50.28,Default,,0,0,0,,-他是天生好手 -欢迎你加入团队 长官	-The man's a natural. -Welcome to the team, sir.
+Dialogue: 0,01:27:51.28,01:27:53.28,Default,,0,0,0,,你们在犯错	You're making a mistake.
+Dialogue: 0,01:27:53.28,01:27:57.28,Default,,0,0,0,,不 我在巴黎上空救了你一命 犯了大错	No, the mistake was mine when I saved your life over Paris.
+Dialogue: 0,01:27:58.28,01:28:00.28,Default,,0,0,0,,这没法证明任何东西 我在演戏	This proves nothing. I'm playing a role,
+Dialogue: 0,01:28:00.28,01:28:02.28,Default,,0,0,0,,跟你们一样 目的是为了重新拿回钚弹	just like you are, trying to recover that plutonium.
+Dialogue: 0,01:28:02.28,01:28:05.28,Default,,0,0,0,,这没法解释你为何将那个卷宗 交给斯隆	That doesn't explain why you gave Sloane the dossier
+Dialogue: 0,01:28:05.28,01:28:06.28,Default,,0,0,0,,企图陷害亨特	and tried to frame Hunt.
+Dialogue: 0,01:28:06.28,01:28:07.28,Default,,0,0,0,,他说得很有道理	He makes a good point,
+Dialogue: 0,01:28:08.28,01:28:09.28,Default,,0,0,0,,拉克	Lark.
+Dialogue: 0,01:28:09.28,01:28:12.28,Default,,0,0,0,,他是偏执狂 有妄想症	He's paranoid. Delusional.
+Dialogue: 0,01:28:12.28,01:28:14.28,Default,,0,0,0,,正如卷宗里所说的那样	Just like the dossier says.
+Dialogue: 0,01:28:14.28,01:28:16.28,Default,,0,0,0,,斯隆是从哪里获得那个卷宗的	So where did Sloane get the dossier from?
+Dialogue: 0,01:28:16.28,01:28:17.28,Default,,0,0,0,,我不知道	I have no idea.
+Dialogue: 0,01:28:18.28,01:28:19.28,Default,,0,0,0,,我知道	I do.
+Dialogue: 0,01:28:22.28,01:28:23.28,Default,,0,0,0,,你都看到了吗 艾丽卡	Did you get all that, Erika?
+Dialogue: 0,01:28:24.28,01:28:24.28,Default,,0,0,0,,是的	I did.
+Dialogue: 0,01:28:25.28,01:28:28.28,Default,,0,0,0,,我可不喜欢被人利用 沃克	I don't appreciate being used, Walker.
+Dialogue: 0,01:28:30.28,01:28:31.28,Default,,0,0,0,,坏小子	Bad boy.
+Dialogue: 0,01:28:32.28,01:28:34.28,Default,,0,0,0,,你想把他送去哪里	Where would you like him delivered?
+Dialogue: 0,01:28:34.28,01:28:35.28,Default,,0,0,0,,我会过来找你们	I'll come to you.
+Dialogue: 0,01:28:38.28,01:28:41.28,Default,,0,0,0,,都不许动 	Nobody move! Nobody move!
+Dialogue: 0,01:28:41.28,01:28:42.28,Default,,0,0,0,,放下武器 放下 	Weapons down! Drop 'em!
+Dialogue: 0,01:28:42.28,01:28:45.28,Default,,0,0,0,,举起手来 放下武器 	Hands in the air! Weapons down!
+Dialogue: 0,01:28:45.28,01:28:47.28,Default,,0,0,0,,放下武器 	Drop it! Drop it!
+Dialogue: 0,01:28:47.28,01:28:49.28,Default,,0,0,0,,马上放下武器 你 	Weapons down! Right now! You!
+Dialogue: 0,01:28:49.28,01:28:51.28,Default,,0,0,0,,没关系 没事的	It's okay. It's okay. It's all right.
+Dialogue: 0,01:28:52.28,01:28:53.28,Default,,0,0,0,,我以为我们说好了	I thought we had a deal.
+Dialogue: 0,01:28:54.28,01:28:56.28,Default,,0,0,0,,之前是的 现在不是了	We did. And now we don't.
+Dialogue: 0,01:28:57.28,01:29:00.28,Default,,0,0,0,,风险太大 我不能冒险	There is too much at stake here for me to take any chances.
+Dialogue: 0,01:29:00.28,01:29:03.28,Default,,0,0,0,,我会逮捕你们所有人 包括沃克	I'm bringing you all in, along with Walker.
+Dialogue: 0,01:29:03.28,01:29:05.28,Default,,0,0,0,,钚弹依然下落不明 	The plutonium is still out there!
+Dialogue: 0,01:29:05.28,01:29:07.28,Default,,0,0,0,,拿回钚弹这项任务 我不相信那个房间里的任何人	And I don't trust a living soul in that room to get it.
+Dialogue: 0,01:29:08.28,01:29:10.28,Default,,0,0,0,,我们会在华府查明谁才靠得住	We'll sort out who's who in Washington.
+Dialogue: 0,01:29:11.28,01:29:13.28,Default,,0,0,0,,-艾丽卡  -长官	-Erika! -Sir?
+Dialogue: 0,01:29:13.28,01:29:16.28,Default,,0,0,0,,没关系 照她的话做吧	It's all right. Let's just do what she says.
+Dialogue: 0,01:29:17.28,01:29:19.28,Default,,0,0,0,,唯一真正的威胁在这个房间里 他们在我们手上	The only real threats are in this room, and we have them.
+Dialogue: 0,01:29:23.28,01:29:24.28,Default,,0,0,0,,是吗	Do you?
+Dialogue: 0,01:29:25.28,01:29:26.28,Default,,0,0,0,,开始行动	Go.
+Dialogue: 0,01:29:46.28,01:29:47.28,Default,,0,0,0,,连恩到底在哪	Where the hell is Lane?
+Dialogue: 0,01:30:18.28,01:30:19.28,Default,,0,0,0,,伊森 	Ethan! Ethan!
+Dialogue: 0,01:30:43.28,01:30:45.28,Default,,0,0,0,,第一小队都死了 派增援过来	First team is down. Send backup.
+Dialogue: 0,01:30:49.28,01:30:50.28,Default,,0,0,0,,长官 	Sir!
+Dialogue: 0,01:30:51.28,01:30:53.28,Default,,0,0,0,,不 有人受伤了 	Oh, no, no, no. Man down! Man down!
+Dialogue: 0,01:30:56.28,01:30:57.28,Default,,0,0,0,,快来人帮忙 	Somebody help!
+Dialogue: 0,01:31:06.28,01:31:07.28,Default,,0,0,0,,长官	Sir.
+Dialogue: 0,01:31:12.28,01:31:14.28,Default,,0,0,0,,伊森 我在沃克身上装了追踪器 但他逃跑了	Ethan, I tagged Walker, but he's on the run.
+Dialogue: 0,01:31:14.28,01:31:16.28,Default,,0,0,0,,你得去抓他	You got to get him.
+Dialogue: 0,01:31:20.28,01:31:22.28,Default,,0,0,0,,快去	Go.
+Dialogue: 0,01:31:23.28,01:31:25.28,Default,,0,0,0,,对不起 长官	I'm sorry, sir.
+Dialogue: 0,01:31:27.28,01:31:28.28,Default,,0,0,0,,快去	Go.
+Dialogue: 0,01:31:39.28,01:31:40.28,Default,,0,0,0,,伊森	Ethan?
+Dialogue: 0,01:31:44.28,01:31:45.28,Default,,0,0,0,,等等 	Wait!
+Dialogue: 0,01:31:47.28,01:31:48.28,Default,,0,0,0,,抓到那个混蛋	Get that son of a bitch.
+Dialogue: 0,01:32:17.28,01:32:19.28,Default,,0,0,0,,快点	Come on, come on, come on.
+Dialogue: 0,01:32:19.28,01:32:20.28,Default,,0,0,0,,太好了 我找到他了	Yes! I got him.
+Dialogue: 0,01:32:32.28,01:32:33.28,Default,,0,0,0,,抱歉	I'm sorry.
+Dialogue: 0,01:32:34.28,01:32:36.28,Default,,0,0,0,,跟我说话 班吉 沃克在哪	Talk to me, Benji. Where's Walker?
+Dialogue: 0,01:32:36.28,01:32:38.28,Default,,0,0,0,,如果你向右转 他在西边约400米处	He's about a quarter mile west  if you turn right.
+Dialogue: 0,01:32:38.28,01:32:40.28,Default,,0,0,0,,我的右边	To my right?
+Dialogue: 0,01:32:42.28,01:32:44.28,Default,,0,0,0,,不行	I can't do that.
+Dialogue: 0,01:32:44.28,01:32:45.28,Default,,0,0,0,,为何不行	Why not?
+Dialogue: 0,01:32:46.28,01:32:48.28,Default,,0,0,0,,因为我被人跟踪	Because I'm being followed.
+Dialogue: 0,01:32:48.28,01:32:50.28,Default,,0,0,0,,什么意思被谁跟踪	What do you mean? By who?
+Dialogue: 0,01:32:50.28,01:32:52.28,Default,,0,0,0,,我怎么知道中情局 使徒	How do I know? CIA, Apostles...
+Dialogue: 0,01:32:52.28,01:32:53.28,Default,,0,0,0,,有何区别	What difference does it make?
+Dialogue: 0,01:32:53.28,01:32:57.28,Default,,0,0,0,,好吧 从那里出去 然后右转	Okay, okay, just get out of there and then go right.
+Dialogue: 0,01:33:04.28,01:33:06.28,Default,,0,0,0,,真的很抱歉	I am terribly sorry.
+Dialogue: 0,01:33:06.28,01:33:08.28,Default,,0,0,0,,告辞了	Excuse me.
+Dialogue: 0,01:33:25.28,01:33:26.28,Default,,0,0,0,,他干嘛在跑圈子	Why is he running in circles?
+Dialogue: 0,01:33:42.28,01:33:44.28,Default,,0,0,0,,（往上）
+Dialogue: 0,01:33:53.28,01:33:56.28,Default,,0,0,0,,好 你需要尽快穿过你左边街道	Okay, you need to cross the street on your left as soon as you can.
+Dialogue: 0,01:34:02.28,01:34:03.28,Default,,0,0,0,,伊森 你收到了吗	Ethan, did you copy?
+Dialogue: 0,01:34:03.28,01:34:05.28,Default,,0,0,0,,-左边 马上往左走  -我正在努力	-Left, go left, now! -I'm working on it.
+Dialogue: 0,01:34:17.28,01:34:19.28,Default,,0,0,0,,现在穿过你正前方的街道	Now go across the street right in front of you.
+Dialogue: 0,01:34:26.28,01:34:29.28,Default,,0,0,0,,伊森 他正离你远去 你得加快速度	Ethan, he's getting away from you! You're gonna have to go faster.
+Dialogue: 0,01:35:00.28,01:35:02.28,Default,,0,0,0,,你快追上他了 往前走	You're gaining on him! Go straight.
+Dialogue: 0,01:35:05.28,01:35:06.28,Default,,0,0,0,,往前继续往前	Straight? Keep going straight?
+Dialogue: 0,01:35:07.28,01:35:09.28,Default,,0,0,0,,往前 继续往前	Go straight, go straight, straight, straight.
+Dialogue: 0,01:35:10.28,01:35:12.28,Default,,0,0,0,,好的 现在向右转	Okay, now turn right.
+Dialogue: 0,01:35:12.28,01:35:13.28,Default,,0,0,0,,右边	Right?
+Dialogue: 0,01:35:13.28,01:35:14.28,Default,,0,0,0,,现在吗	Now?
+Dialogue: 0,01:35:15.28,01:35:16.28,Default,,0,0,0,,-对 右边  -你确信吗	-Yes, right! -Are you sure?
+Dialogue: 0,01:35:16.28,01:35:18.28,Default,,0,0,0,,是的 我	Yes, I'm...
+Dialogue: 0,01:35:19.28,01:35:20.28,Default,,0,0,0,,不 是左边 向左转 	No, it's left! Turn left!
+Dialogue: 0,01:35:20.28,01:35:22.28,Default,,0,0,0,,抱歉 我启用了屏幕锁定	Sorry, I had the screen-lock on.
+Dialogue: 0,01:35:26.28,01:35:27.28,Default,,0,0,0,,左边	Left.
+Dialogue: 0,01:35:30.28,01:35:32.28,Default,,0,0,0,,谢谢	Thank you.
+Dialogue: 0,01:35:38.28,01:35:41.28,Default,,0,0,0,,-你在等什么 -我要跳窗 	-What are you waiting for? -I'm jumping out a window!
+Dialogue: 0,01:35:41.28,01:35:43.28,Default,,0,0,0,,你说跳窗是什么意思	What do you mean, you're jumping out of a...
+Dialogue: 0,01:35:45.28,01:35:47.28,Default,,0,0,0,,抱歉 我的屏幕是2D画面	Oh, sorry. I had it in 2D.
+Dialogue: 0,01:35:47.28,01:35:48.28,Default,,0,0,0,,祝好运	Good luck.
+Dialogue: 0,01:36:23.28,01:36:25.28,Default,,0,0,0,,在桥的末端向左转 你马上就要追上他了	At the end of the bridge, turn left. You've almost got him.
+Dialogue: 0,01:36:29.28,01:36:31.28,Default,,0,0,0,,加油 伊森 抓住他 	Come on, come on, come on. Come on, Ethan, get him!
+Dialogue: 0,01:36:31.28,01:36:32.28,Default,,0,0,0,,你就在他的后面 	You're right on top of him!
+Dialogue: 0,01:36:47.28,01:36:48.28,Default,,0,0,0,,对了 他就在你的前面 	That's it, he's right in front of you!
+Dialogue: 0,01:36:49.28,01:36:50.28,Default,,0,0,0,,抓住他 	Get him! Get him! Get him!
+Dialogue: 0,01:37:26.28,01:37:29.28,Default,,0,0,0,,你不能杀我 对吗 在拿到钚弹之前不行	You can't do it, can you? Not until you get your plutonium.
+Dialogue: 0,01:37:30.28,01:37:33.28,Default,,0,0,0,,不 他对你还有计划	No. He still has plans for you.
+Dialogue: 0,01:37:35.28,01:37:38.28,Default,,0,0,0,,你要自首 承认自己是约翰拉克	You're gonna turn yourself in and admit you're John Lark,
+Dialogue: 0,01:37:38.28,01:37:41.28,Default,,0,0,0,,从你狭小黑暗的牢房里 看着旧世界瓦解	then watch the old world implode from your dark little cell.
+Dialogue: 0,01:37:41.28,01:37:43.28,Default,,0,0,0,,如果我不这样做呢	And if I don't?
+Dialogue: 0,01:37:56.28,01:37:57.28,Default,,0,0,0,,我是她的守护天使 亨特	I'm her guardian angel, Hunt.
+Dialogue: 0,01:37:59.28,01:38:02.28,Default,,0,0,0,,如果我再看到你 她会死	If I see you again, she dies.
+Dialogue: 0,01:38:02.28,01:38:04.28,Default,,0,0,0,,如果你试图警告她 她会死	If you try to warn her, she dies.
+Dialogue: 0,01:38:05.28,01:38:06.28,Default,,0,0,0,,要明白你已经失败了	Know when you're beat.
+Dialogue: 0,01:39:18.28,01:39:22.28,Default,,0,0,0,,这是我们从德尔布鲁克博士在柏林的 实验室里发现的设计图	These are the designs we recovered from Dr. Delbruuk's lab in Berlin.
+Dialogue: 0,01:39:22.28,01:39:24.28,Default,,0,0,0,,那是一个五兆吨重的核设备	That's a five-megaton nuclear device.
+Dialogue: 0,01:39:24.28,01:39:26.28,Default,,0,0,0,,比二战时释放的所有爆炸能量	That's greater than all the explosive energy
+Dialogue: 0,01:39:26.28,01:39:27.28,Default,,0,0,0,,都要强大	released in World War II.
+Dialogue: 0,01:39:27.28,01:39:30.28,Default,,0,0,0,,我们通常会剪断这里的保险丝 就可以拆除炸弹	To disarm it, normally we'd cut the fuse wire here.
+Dialogue: 0,01:39:31.28,01:39:32.28,Default,,0,0,0,,什么 通常	What, "normally"?
+Dialogue: 0,01:39:32.28,01:39:35.28,Default,,0,0,0,,沃克和连恩手上有两枚钚弹	Walker and Lane have two plutonium cores,
+Dialogue: 0,01:39:35.28,01:39:37.28,Default,,0,0,0,,也就是两枚炸弹	meaning two bombs.
+Dialogue: 0,01:39:37.28,01:39:39.28,Default,,0,0,0,,对 它们都跟一个 微波自动防故障装置相连接	Yeah. And they're both linked by a microwave fail-safe
+Dialogue: 0,01:39:39.28,01:39:41.28,Default,,0,0,0,,精确度小于十分之一秒	which is accurate to within one-tenth of a second.
+Dialogue: 0,01:39:41.28,01:39:45.28,Default,,0,0,0,,只要企图拆除一枚炸弹 都会引爆另一枚炸弹	Any attempt to defuse one bomb automatically triggers the other.
+Dialogue: 0,01:39:45.28,01:39:48.28,Default,,0,0,0,,这表示炸弹一旦做好发射准备 就不能解除	Meaning once armed, the bombs cannot be disarmed.
+Dialogue: 0,01:39:49.28,01:39:51.28,Default,,0,0,0,,倒计时由一个遥控引爆器触发	The countdown is started by a remote detonator,
+Dialogue: 0,01:39:51.28,01:39:53.28,Default,,0,0,0,,这个引爆器也是自动防故障装置	which is also a fail-safe.
+Dialogue: 0,01:39:53.28,01:39:55.28,Default,,0,0,0,,表示倒计时一旦开始	Meaning once the countdown starts,
+Dialogue: 0,01:39:56.28,01:39:57.28,Default,,0,0,0,,就没法阻止	it can't be stopped.
+Dialogue: 0,01:39:59.28,01:40:01.28,Default,,0,0,0,,那么解决方案是什么	So the solution to this is?
+Dialogue: 0,01:40:04.28,01:40:05.28,Default,,0,0,0,,我们正在想办法	We're working on it.
+Dialogue: 0,01:40:07.28,01:40:08.28,Default,,0,0,0,,那么	So,
+Dialogue: 0,01:40:08.28,01:40:11.28,Default,,0,0,0,,严格说来 这是绝命行动	technically, this is a suicide mission.
+Dialogue: 0,01:40:22.28,01:40:23.28,Default,,0,0,0,,怎么了	What is it?
+Dialogue: 0,01:40:23.28,01:40:26.28,Default,,0,0,0,,请坐	Have a seat. Please.
+Dialogue: 0,01:40:30.28,01:40:32.28,Default,,0,0,0,,我认识伊森这么多年	In all the years that I've known Ethan,
+Dialogue: 0,01:40:32.28,01:40:35.28,Default,,0,0,0,,他只对两个女人认真过	he's only been serious about two women.
+Dialogue: 0,01:40:36.28,01:40:37.28,Default,,0,0,0,,其中一个是他的妻子	One was his wife.
+Dialogue: 0,01:40:38.28,01:40:40.28,Default,,0,0,0,,他结婚了	He's married?
+Dialogue: 0,01:40:40.28,01:40:42.28,Default,,0,0,0,,不 他曾经结过婚	No, he was.
+Dialogue: 0,01:40:42.28,01:40:44.28,Default,,0,0,0,,曾经她怎么了	Was? What happened to her?
+Dialogue: 0,01:40:44.28,01:40:46.28,Default,,0,0,0,,一些想抓伊森的人	Well, she was taken
+Dialogue: 0,01:40:46.28,01:40:48.28,Default,,0,0,0,,绑架了她	by some people who wanted to get to Ethan.
+Dialogue: 0,01:40:49.28,01:40:51.28,Default,,0,0,0,,没关系 他把她平安救回来了	It's okay, he got her back in one piece.
+Dialogue: 0,01:40:52.28,01:40:54.28,Default,,0,0,0,,然后他退隐江湖	Then he quit the game.
+Dialogue: 0,01:40:55.28,01:40:57.28,Default,,0,0,0,,他们度过了一段幸福时光	They were happy for a while.
+Dialogue: 0,01:40:57.28,01:41:00.28,Default,,0,0,0,,但每次世界上发生坏事	But every time something bad happened in the world,
+Dialogue: 0,01:41:01.28,01:41:03.28,Default,,0,0,0,,伊森就觉得自己应该去那里	Ethan would think, "I should've been there."
+Dialogue: 0,01:41:03.28,01:41:06.28,Default,,0,0,0,,她会想如果伊森保护我	And she would wonder, "Who's watching the world
+Dialogue: 0,01:41:06.28,01:41:08.28,Default,,0,0,0,,谁来保护世界	while Ethan's watching me?
+Dialogue: 0,01:41:08.28,01:41:12.28,Default,,0,0,0,,内心深处 他们都知道 某一天 出于某种原因	Deep down, they both knew that someday, somehow,
+Dialogue: 0,01:41:12.28,01:41:14.28,Default,,0,0,0,,会发生真正恐怖的事情	something truly terrible was going to happen
+Dialogue: 0,01:41:16.28,01:41:18.28,Default,,0,0,0,,就是因为他们在一起	all because they were together.
+Dialogue: 0,01:41:19.28,01:41:21.28,Default,,0,0,0,,所以	So...
+Dialogue: 0,01:41:23.28,01:41:26.28,Default,,0,0,0,,-她现在在哪里 -她销声匿迹	-Where is she now? -She's a ghost.
+Dialogue: 0,01:41:26.28,01:41:27.28,Default,,0,0,0,,她也擅长此道	Good at it, too.
+Dialogue: 0,01:41:28.28,01:41:29.28,Default,,0,0,0,,我亲自教她的	Taught her myself.
+Dialogue: 0,01:41:30.28,01:41:32.28,Default,,0,0,0,,她时不时会发送信号	Every now and then, she sends up a signal
+Dialogue: 0,01:41:32.28,01:41:33.28,Default,,0,0,0,,告诉伊森她平安无事	to let Ethan know she's safe.
+Dialogue: 0,01:41:34.28,01:41:35.28,Default,,0,0,0,,这让他有不断前进的勇气	And that keeps him going.
+Dialogue: 0,01:41:37.28,01:41:39.28,Default,,0,0,0,,你为何告诉我这些	Why are you telling me this?
+Dialogue: 0,01:41:43.28,01:41:46.28,Default,,0,0,0,,我们身处这团乱麻之中 就是因为伊森不想让我丧命	We're in this mess because Ethan wouldn't let me die.
+Dialogue: 0,01:41:49.28,01:41:50.28,Default,,0,0,0,,他是个好人	He's a good man.
+Dialogue: 0,01:41:51.28,01:41:54.28,Default,,0,0,0,,他很关心你 虽然他嘴上不说	And he cares about you more than he can admit.
+Dialogue: 0,01:41:56.28,01:41:59.28,Default,,0,0,0,,他现在不能担心这件事	That's one more worry than he can handle right now.
+Dialogue: 0,01:42:02.28,01:42:04.28,Default,,0,0,0,,如果你关心他	If you care about him,
+Dialogue: 0,01:42:04.28,01:42:06.28,Default,,0,0,0,,你应该走开	you should walk away.
+Dialogue: 0,01:42:09.28,01:42:11.28,Default,,0,0,0,,卢瑟	Luther...
+Dialogue: 0,01:42:11.28,01:42:12.28,Default,,0,0,0,,一切还好吧	Is everything all right?
+Dialogue: 0,01:42:25.28,01:42:26.28,Default,,0,0,0,,我跟你一起去	I'm coming with you.
+Dialogue: 0,01:42:35.28,01:42:36.28,Default,,0,0,0,,我知道	I know.
+Dialogue: 0,01:42:41.28,01:42:42.28,Default,,0,0,0,,我们如何找到他	So how do we find him?
+Dialogue: 0,01:42:44.28,01:42:45.28,Default,,0,0,0,,微波转发器	Microwave transponder.
+Dialogue: 0,01:42:46.28,01:42:48.28,Default,,0,0,0,,在世上任何地方 通过卫星都可以追踪到	Traceable via satellite anywhere in the world.
+Dialogue: 0,01:42:49.28,01:42:51.28,Default,,0,0,0,,连恩的脖子后面有一个这样的转发器	Lane had one of these in the back of his neck.
+Dialogue: 0,01:42:51.28,01:42:53.28,Default,,0,0,0,,我们在巴黎把它拿掉了	We removed it in Paris.
+Dialogue: 0,01:42:53.28,01:42:55.28,Default,,0,0,0,,与此同时 我们放置了自己的转发器	At the same time, we put our own transponder in.
+Dialogue: 0,01:42:55.28,01:42:56.28,Default,,0,0,0,,搞定了	Got it.
+Dialogue: 0,01:42:58.28,01:43:00.28,Default,,0,0,0,,延迟36小时启动	36-hour delayed activation,
+Dialogue: 0,01:43:01.28,01:43:03.28,Default,,0,0,0,,以防连恩的使徒对他进行扫描	in case Lane's Apostles scan him.
+Dialogue: 0,01:43:04.28,01:43:06.28,Default,,0,0,0,,所以你们计划好了要放他走	So you planned on letting him go.
+Dialogue: 0,01:43:06.28,01:43:08.28,Default,,0,0,0,,不是通过这种方式 不过的确如此	Not this way, but yes.
+Dialogue: 0,01:43:08.28,01:43:10.28,Default,,0,0,0,,他会引导我们找到钚弹	He's gonna lead us to the plutonium.
+Dialogue: 0,01:43:10.28,01:43:12.28,Default,,0,0,0,,你们如何能确定	How can you be sure?
+Dialogue: 0,01:43:12.28,01:43:14.28,Default,,0,0,0,,他送我进监狱这个计划泡汤了	His plan to put me in prison went to hell.
+Dialogue: 0,01:43:15.28,01:43:17.28,Default,,0,0,0,,现在他希望我去那里看到炸弹引爆	Now he's gonna want me there for the end.
+Dialogue: 0,01:43:18.28,01:43:19.28,Default,,0,0,0,,这个转发器何时会启动	So when does this transponder activate?
+Dialogue: 0,01:43:20.28,01:43:21.28,Default,,0,0,0,,我找到他了 	I got him. I got him, I got him, I got him!
+Dialogue: 0,01:43:21.28,01:43:23.28,Default,,0,0,0,,他正以每小时500节的速度 在欧洲上空行驶	He's traveling east over Europe at 500 knots.
+Dialogue: 0,01:43:23.28,01:43:24.28,Default,,0,0,0,,他在坐飞机	He's airborne.
+Dialogue: 0,01:43:25.28,01:43:26.28,Default,,0,0,0,,我们应该通知中情局吗	Shall we inform the CIA?
+Dialogue: 0,01:43:26.28,01:43:28.28,Default,,0,0,0,,中情局被人渗透了	The CIA's been infiltrated.
+Dialogue: 0,01:43:28.28,01:43:30.28,Default,,0,0,0,,我只相信这个房间里的人	I don't trust anybody outside of this room.
+Dialogue: 0,01:43:31.28,01:43:32.28,Default,,0,0,0,,我们必须单独行动	We're gonna have to go it alone.
+Dialogue: 0,01:43:35.28,01:43:36.28,Default,,0,0,0,,那我们要去那里	So where do we go?
+Dialogue: 0,01:43:48.28,01:43:49.28,Default,,0,0,0,,（克什米尔）
+Dialogue: 0,01:43:57.28,01:43:58.28,Default,,0,0,0,,怎么样了 班吉	How we doing, Benji?
+Dialogue: 0,01:43:59.28,01:44:01.28,Default,,0,0,0,,如果有拆除炸弹的方法 我却找不到	If there's a way to defuse these bombs, I can't find it.
+Dialogue: 0,01:44:01.28,01:44:04.28,Default,,0,0,0,,你会搞清楚的 我知道你会	You'll figure it out. I know you will.
+Dialogue: 0,01:44:05.28,01:44:07.28,Default,,0,0,0,,该死 伊森 我们失去信号了	Damn. Ethan, we lost the signal.
+Dialogue: 0,01:44:08.28,01:44:09.28,Default,,0,0,0,,连恩肯定发现我们的传输器了	Lane must've found our transmitter.
+Dialogue: 0,01:44:10.28,01:44:13.28,Default,,0,0,0,,-他的最后位置在哪里 -东北方向约48公里处	-What's his last position? -About 30 miles northeast.
+Dialogue: 0,01:44:13.28,01:44:15.28,Default,,0,0,0,,那么他希望我们去那里	Then that's where he wants us to go.
+Dialogue: 0,01:44:16.28,01:44:17.28,Default,,0,0,0,,-那里是什么地方 -努布拉河河谷	-What's there? -The Nubra River Valley.
+Dialogue: 0,01:44:18.28,01:44:19.28,Default,,0,0,0,,那里只有一个医疗营	There's only a medical camp there.
+Dialogue: 0,01:44:19.28,01:44:22.28,Default,,0,0,0,,海外人道主义援助小组	Humanitarian Aid Overseas.
+Dialogue: 0,01:44:22.28,01:44:24.28,Default,,0,0,0,,连恩为何以医疗营为目标	Why would Lane target a medical camp?
+Dialogue: 0,01:44:26.28,01:44:27.28,Default,,0,0,0,,天花	Smallpox.
+Dialogue: 0,01:44:28.28,01:44:28.28,Default,,0,0,0,,什么	What?
+Dialogue: 0,01:44:29.28,01:44:32.28,Default,,0,0,0,,天花 使徒在克什米尔 引发了天花疫情的爆发	Smallpox. The Apostles triggered a smallpox outbreak in Kashmir.
+Dialogue: 0,01:44:32.28,01:44:35.28,Default,,0,0,0,,连恩以那座营地为目标 肯定有其原因	Lane must've wanted that camp there for a reason.
+Dialogue: 0,01:44:35.28,01:44:36.28,Default,,0,0,0,,不过是什么原因	But what?
+Dialogue: 0,01:44:37.28,01:44:39.28,Default,,0,0,0,,-天哪 -怎么了	-Oh, my God. -What is it?
+Dialogue: 0,01:44:40.28,01:44:43.28,Default,,0,0,0,,努布拉河位于锡亚琴冰川的底部	The Nubra River is at the base of the Siachen Glacier.
+Dialogue: 0,01:44:43.28,01:44:45.28,Default,,0,0,0,,所以如果那里发生核武器爆炸	So a nuclear blast there would irradiate
+Dialogue: 0,01:44:45.28,01:44:48.28,Default,,0,0,0,,会使世上最大的天然灌溉系统 遭受核辐射	the largest natural irrigation system in the world.
+Dialogue: 0,01:44:48.28,01:44:52.28,Default,,0,0,0,,来自中国到印度 及巴基斯坦边境的淡水	Fresh water from the border of China to India and Pakistan.
+Dialogue: 0,01:44:54.28,01:44:56.28,Default,,0,0,0,,他们会让世上三分之一的人口挨饿	They're gonna starve one-third of the world's population.
+Dialogue: 0,01:44:56.28,01:44:57.28,Default,,0,0,0,,苦难越深重	The greater the suffering...
+Dialogue: 0,01:44:58.28,01:45:00.28,Default,,0,0,0,,和平就越伟大	...the greater the peace.
+Dialogue: 0,01:45:00.28,01:45:03.28,Default,,0,0,0,,我还是不明白 连恩为何以那里的医疗营为目标	I still don't understand why Lane wants a medical camp there.
+Dialogue: 0,01:45:03.28,01:45:05.28,Default,,0,0,0,,这不重要	It doesn't matter.
+Dialogue: 0,01:45:05.28,01:45:07.28,Default,,0,0,0,,现在重要的是 找到拆除那些炸弹的方法	All that matters now is we find a way to defuse those bombs.
+Dialogue: 0,01:45:07.28,01:45:09.28,Default,,0,0,0,,我想我找到了	I think I've found it.
+Dialogue: 0,01:45:10.28,01:45:11.28,Default,,0,0,0,,或许吧	Maybe.
+Dialogue: 0,01:45:11.28,01:45:14.28,Default,,0,0,0,,看 炸弹的操作系统 好像存在一个漏洞	Look, there appears to be a flaw in the bomb's operating system.
+Dialogue: 0,01:45:14.28,01:45:16.28,Default,,0,0,0,,遥控引爆器需要那个引爆按钮	The remote detonator requires that firing key.
+Dialogue: 0,01:45:16.28,01:45:18.28,Default,,0,0,0,,如果我们除掉那个按钮 应该会	If we remove that key, then it should short out
+Dialogue: 0,01:45:19.28,01:45:21.28,Default,,0,0,0,,使自动防故障装置短路 让我们剪断两枚炸弹的保险丝	the fail-safe and allow us to cut both fuses.
+Dialogue: 0,01:45:21.28,01:45:23.28,Default,,0,0,0,,所以我们其中一人要拿到引爆器	So one of us needs to get the detonator
+Dialogue: 0,01:45:23.28,01:45:24.28,Default,,0,0,0,,移除那个按钮	and remove that key.
+Dialogue: 0,01:45:24.28,01:45:24.28,Default,,0,0,0,,对	Yeah.
+Dialogue: 0,01:45:25.28,01:45:28.28,Default,,0,0,0,,其他人要剪断两枚炸弹的保险丝 很简单	While the rest of us cut the fuses on both bombs. Simple.
+Dialogue: 0,01:45:29.28,01:45:30.28,Default,,0,0,0,,对 不过	Yeah, but...
+Dialogue: 0,01:45:30.28,01:45:31.28,Default,,0,0,0,,不过什么	But what?
+Dialogue: 0,01:45:32.28,01:45:34.28,Default,,0,0,0,,为了让这个方法成功	Well, in order to make this work,
+Dialogue: 0,01:45:34.28,01:45:36.28,Default,,0,0,0,,只有倒计时开始之后	we can't remove the key or cut the fuses
+Dialogue: 0,01:45:36.28,01:45:39.28,Default,,0,0,0,,我们才能移除按钮或剪断保险丝	until after the countdown starts.
+Dialogue: 0,01:45:40.28,01:45:41.28,Default,,0,0,0,,不过等等 让我把事情理清楚	But wait, just so I've got this clear.
+Dialogue: 0,01:45:42.28,01:45:44.28,Default,,0,0,0,,我们安全拆除两枚炸弹的唯一机会	Our only chance to safely defuse both bombs
+Dialogue: 0,01:45:44.28,01:45:46.28,Default,,0,0,0,,就是让倒计时开始	is to let the countdown start.
+Dialogue: 0,01:45:47.28,01:45:49.28,Default,,0,0,0,,然后移除那个按钮	And then remove that key.
+Dialogue: 0,01:45:58.28,01:45:59.28,Default,,0,0,0,,好	Okay.
+Dialogue: 0,01:46:17.28,01:46:20.28,Default,,0,0,0,,现在两个设备都已经与引爆器相连	Both devices are now connected to the detonator.
+Dialogue: 0,01:46:22.28,01:46:23.28,Default,,0,0,0,,15分钟应该足够让你	Fifteen minutes should give you enough time
+Dialogue: 0,01:46:23.28,01:46:25.28,Default,,0,0,0,,到达最低安全距离	to reach minimum safe distance.
+Dialogue: 0,01:46:28.28,01:46:30.28,Default,,0,0,0,,我的逃亡生涯结束了	My running days are over.
+Dialogue: 0,01:46:31.28,01:46:33.28,Default,,0,0,0,,这里是我的最终归属	This is where it ends for me.
+Dialogue: 0,01:47:02.28,01:47:04.28,Default,,0,0,0,,到处都有信号	I'm getting signals all over the place.
+Dialogue: 0,01:47:04.28,01:47:07.28,Default,,0,0,0,,我们在医疗营 到处都有X光机 电脑断层扫描仪	We're at a medical camp. X-ray machines, CAT scanners,
+Dialogue: 0,01:47:08.28,01:47:09.28,Default,,0,0,0,,和放射性信号	radiological signatures everywhere.
+Dialogue: 0,01:47:09.28,01:47:11.28,Default,,0,0,0,,就好像海底捞针	It's like a needle in a haystack.
+Dialogue: 0,01:47:11.28,01:47:13.28,Default,,0,0,0,,用排除法 逐个排除	Process of elimination, one at a time.
+Dialogue: 0,01:47:13.28,01:47:14.28,Default,,0,0,0,,分头行动 保持通讯	Let's split up. Stay on comms.
+Dialogue: 0,01:47:18.28,01:47:21.28,Default,,0,0,0,,（海外人道主义援助小组）
+Dialogue: 0,01:47:25.28,01:47:26.28,Default,,0,0,0,,伊森	Ethan?
+Dialogue: 0,01:47:32.28,01:47:33.28,Default,,0,0,0,,朱莉娅	Julia?
+Dialogue: 0,01:47:38.28,01:47:39.28,Default,,0,0,0,,那是	Is that...
+Dialogue: 0,01:47:43.28,01:47:44.28,Default,,0,0,0,,朱莉娅 	Julia!
+Dialogue: 0,01:47:46.28,01:47:47.28,Default,,0,0,0,,他知道吗	Does he know?
+Dialogue: 0,01:47:49.28,01:47:50.28,Default,,0,0,0,,嘿	Hey.
+Dialogue: 0,01:47:51.28,01:47:53.28,Default,,0,0,0,,这是我老公埃里克	This is my husband, Erik.
+Dialogue: 0,01:47:53.28,01:47:54.28,Default,,0,0,0,,这是	This is...
+Dialogue: 0,01:47:54.28,01:47:56.28,Default,,0,0,0,,罗伯 罗伯索恩 罗伯索恩医生	Rob. Rob Thorne. Dr. Rob Thorne.
+Dialogue: 0,01:47:57.28,01:47:59.28,Default,,0,0,0,,-我曾经跟朱莉娅共事 -在麻省总医院	-I worked with Julia... -At Mass General.
+Dialogue: 0,01:47:59.28,01:48:00.28,Default,,0,0,0,,在我搬去纽约之前	Before New York.
+Dialogue: 0,01:48:00.28,01:48:02.28,Default,,0,0,0,,开玩笑吧	Oh, you're kidding.
+Dialogue: 0,01:48:02.28,01:48:04.28,Default,,0,0,0,,-真巧  -我知道 我	-What a coincidence! -I know. I...
+Dialogue: 0,01:48:04.28,01:48:06.28,Default,,0,0,0,,-你大老远跑这里来干什么 -我	-What brings you all this way? -I was...
+Dialogue: 0,01:48:06.28,01:48:08.28,Default,,0,0,0,,我在离此地不远的特图克	I was in Turtuk, not far from here
+Dialogue: 0,01:48:08.28,01:48:11.28,Default,,0,0,0,,听说这里需要帮手	and heard help was needed.
+Dialogue: 0,01:48:11.28,01:48:12.28,Default,,0,0,0,,那好	Oh, well,
+Dialogue: 0,01:48:12.28,01:48:14.28,Default,,0,0,0,,事实上 我们在这里差不多完事了	actually we're just about finished here.
+Dialogue: 0,01:48:14.28,01:48:16.28,Default,,0,0,0,,整个村子的人都打了预防针 不过	The whole village is inoculated. But...
+Dialogue: 0,01:48:17.28,01:48:19.28,Default,,0,0,0,,你在特图克干什么	What were you doing out in Turtuk?
+Dialogue: 0,01:48:19.28,01:48:21.28,Default,,0,0,0,,罗伯在休假	Rob's on vacation.
+Dialogue: 0,01:48:21.28,01:48:24.28,Default,,0,0,0,,不 我我在工作	No. No, I'm... I'm working.
+Dialogue: 0,01:48:26.28,01:48:28.28,Default,,0,0,0,,你远离家园	You're a long way from home.
+Dialogue: 0,01:48:28.28,01:48:30.28,Default,,0,0,0,,对 多亏了我们的守护天使	Yeah, yeah. Thanks to our guardian angel.
+Dialogue: 0,01:48:31.28,01:48:32.28,Default,,0,0,0,,守护	Guardian?
+Dialogue: 0,01:48:32.28,01:48:34.28,Default,,0,0,0,,对 当这里爆发天花疫情时	Well, yeah. We were running a field hospital
+Dialogue: 0,01:48:34.28,01:48:36.28,Default,,0,0,0,,我们正在达尔富尔郊外 运营一家野战医院	outside of Darfur when the outbreak happened here.
+Dialogue: 0,01:48:36.28,01:48:37.28,Default,,0,0,0,,出乎意料的是	And here comes this phone call
+Dialogue: 0,01:48:37.28,01:48:39.28,Default,,0,0,0,,一位匿名捐赠人打电话给我们	from an anonymous donor, out of the blue.
+Dialogue: 0,01:48:40.28,01:48:41.28,Default,,0,0,0,,他说他愿意承担	And he says he's ready to underwrite
+Dialogue: 0,01:48:41.28,01:48:43.28,Default,,0,0,0,,整个运营的费用 有一个条件	the entire operation. One condition.
+Dialogue: 0,01:48:44.28,01:48:46.28,Default,,0,0,0,,我们负责运营	We run the whole thing.
+Dialogue: 0,01:48:46.28,01:48:48.28,Default,,0,0,0,,你相信吗	Can you believe that?
+Dialogue: 0,01:48:49.28,01:48:50.28,Default,,0,0,0,,当然了	I certainly can.
+Dialogue: 0,01:48:51.28,01:48:53.28,Default,,0,0,0,,对 真出乎意料	Yeah. Out of the blue.
+Dialogue: 0,01:48:53.28,01:48:54.28,Default,,0,0,0,,真出乎意料	Out of the blue.
+Dialogue: 0,01:48:57.28,01:48:58.28,Default,,0,0,0,,你们的人生很充实	That's quite a full life.
+Dialogue: 0,01:48:58.28,01:49:00.28,Default,,0,0,0,,对 遇到朱莉娅之前 我从未出过远门	Yeah, you know, before Julia, I never traveled.
+Dialogue: 0,01:49:00.28,01:49:02.28,Default,,0,0,0,,我甚至从未离开过纽约	I never even left New York.
+Dialogue: 0,01:49:02.28,01:49:04.28,Default,,0,0,0,,从未离开过医院	Never left the hospital.
+Dialogue: 0,01:49:04.28,01:49:06.28,Default,,0,0,0,,每周七天 从早到晚 从不休假	Seven days a week, dusk till dawn. No vacations.
+Dialogue: 0,01:49:07.28,01:49:08.28,Default,,0,0,0,,伊森 我想我有发现了	Ethan, I think I found something.
+Dialogue: 0,01:49:08.28,01:49:10.28,Default,,0,0,0,,我平步青云 50岁可以当上外科主任	I was on the fast track to be Chief of Surgery at 50.
+Dialogue: 0,01:49:10.28,01:49:12.28,Default,,0,0,0,,55岁 心脏病突发	Heart attack at 55.
+Dialogue: 0,01:49:12.28,01:49:15.28,Default,,0,0,0,,她说服我抛弃一切	And she convinced me to let it all go.
+Dialogue: 0,01:49:15.28,01:49:17.28,Default,,0,0,0,,去最需要帮助的地方伸出援助之手	Help where it's needed most.
+Dialogue: 0,01:49:17.28,01:49:19.28,Default,,0,0,0,,所以从此以后 我们一直四处奔波	So we've been on the go ever since,
+Dialogue: 0,01:49:19.28,01:49:21.28,Default,,0,0,0,,我从未感到如此满足	and I've never been more fulfilled.
+Dialogue: 0,01:49:23.28,01:49:24.28,Default,,0,0,0,,我真替你感到高兴	I'm happy for you.
+Dialogue: 0,01:49:25.28,01:49:26.28,Default,,0,0,0,,谢谢	Thank you.
+Dialogue: 0,01:49:28.28,01:49:30.28,Default,,0,0,0,,我们应该走了	Well, we should get going.
+Dialogue: 0,01:49:30.28,01:49:32.28,Default,,0,0,0,,我们要收拾行李	We have a lot of packing to do.
+Dialogue: 0,01:49:32.28,01:49:34.28,Default,,0,0,0,,不 我来吧 你们俩应该叙叙旧	Oh, no, I'll handle that. You two should catch up.
+Dialogue: 0,01:49:34.28,01:49:35.28,Default,,0,0,0,,不 我不打扰你们了	Oh, no, I should get out of your hair.
+Dialogue: 0,01:49:35.28,01:49:38.28,Default,,0,0,0,,开什么玩笑你应该留在这里	Are you kidding? You should stick around.
+Dialogue: 0,01:49:38.28,01:49:40.28,Default,,0,0,0,,你白跑了一趟 我很遗憾	I'm just sorry you came all this way for nothing.
+Dialogue: 0,01:49:42.28,01:49:45.28,Default,,0,0,0,,这样吧 我们打包	Tell you what, we'll pack,
+Dialogue: 0,01:49:45.28,01:49:47.28,Default,,0,0,0,,然后开车送你回特图克	and why don't we give you a ride back to Turtuk,
+Dialogue: 0,01:49:47.28,01:49:49.28,Default,,0,0,0,,你们俩可以在车里叙旧怎么样	you two can catch up in the car? Yeah?
+Dialogue: 0,01:49:50.28,01:49:51.28,Default,,0,0,0,,你真好心	You're very kind.
+Dialogue: 0,01:49:52.28,01:49:54.28,Default,,0,0,0,,就这么说定了 回头见	Settled. See you soon.
+Dialogue: 0,01:49:56.28,01:49:58.28,Default,,0,0,0,,真高兴见到你	It was good to see you.
+Dialogue: 0,01:49:59.28,01:50:02.28,Default,,0,0,0,,我很抱歉 朱莉娅 真的很抱歉	I am so sorry, Julia. I'm so sorry.
+Dialogue: 0,01:50:23.28,01:50:25.28,Default,,0,0,0,,把两架直升机都开走	Take both helicopters.
+Dialogue: 0,01:50:26.28,01:50:28.28,Default,,0,0,0,,其他人都不能离开	No one else leaves.
+Dialogue: 0,01:50:36.28,01:50:37.28,Default,,0,0,0,,小心点	Careful, careful, careful.
+Dialogue: 0,01:50:42.28,01:50:43.28,Default,,0,0,0,,已经做好发射准备了	It's armed.
+Dialogue: 0,01:50:43.28,01:50:45.28,Default,,0,0,0,,但倒计时尚未开始	But the countdown hasn't started yet.
+Dialogue: 0,01:50:45.28,01:50:47.28,Default,,0,0,0,,网络信号很强 这表示另一台设备	The network signal's strong, which means the other device
+Dialogue: 0,01:50:47.28,01:50:48.28,Default,,0,0,0,,和引爆器都在附近	is close by and the detonator.
+Dialogue: 0,01:50:49.28,01:50:51.28,Default,,0,0,0,,约半公里处 在那个方向	About half a K in that direction.
+Dialogue: 0,01:50:52.28,01:50:53.28,Default,,0,0,0,,他们还在这里	They're still here.
+Dialogue: 0,01:50:55.28,01:50:56.28,Default,,0,0,0,,卢瑟 你继续想办法拆除炸弹	Luther, you keep working on it.
+Dialogue: 0,01:50:56.28,01:50:57.28,Default,,0,0,0,,你们两个跟我来	You two, come with me.
+Dialogue: 0,01:50:59.28,01:51:01.28,Default,,0,0,0,,好啊 我能搞定	Oh, sure. I got this.
+Dialogue: 0,01:51:02.28,01:51:04.28,Default,,0,0,0,,别担心老伙计卢瑟	Don't worry about old Luther.
+Dialogue: 0,01:51:27.28,01:51:29.28,Default,,0,0,0,,（正在扫描）
+Dialogue: 0,01:51:38.28,01:51:39.28,Default,,0,0,0,,沃克	Walker.
+Dialogue: 0,01:51:39.28,01:51:41.28,Default,,0,0,0,,（已连接）
+Dialogue: 0,01:51:41.28,01:51:43.28,Default,,0,0,0,,（准备发射）
+Dialogue: 0,01:51:44.28,01:51:46.28,Default,,0,0,0,,（准备发射）
+Dialogue: 0,01:51:45.28,01:51:46.28,Default,,0,0,0,,该死	Damn.
+Dialogue: 0,01:51:46.28,01:51:47.28,Default,,0,0,0,,伊森 倒计时开始了	Ethan, the countdown has started!
+Dialogue: 0,01:51:47.28,01:51:48.28,Default,,0,0,0,,我们有15分钟	We have 15 minutes.
+Dialogue: 0,01:51:49.28,01:51:50.28,Default,,0,0,0,,引爆器在沃克手上	Walker has the detonator.
+Dialogue: 0,01:52:01.28,01:52:02.28,Default,,0,0,0,,快 	Come on, come on!
+Dialogue: 0,01:52:03.28,01:52:05.28,Default,,0,0,0,,我们必须让这些人撤离	We have to evacuate these people.
+Dialogue: 0,01:52:05.28,01:52:06.28,Default,,0,0,0,,没时间了	There's no time.
+Dialogue: 0,01:52:06.28,01:52:09.28,Default,,0,0,0,,整座河谷会在15分后化为灰烬	This whole valley's gonna be incinerated in 15 minutes.
+Dialogue: 0,01:52:12.28,01:52:13.28,Default,,0,0,0,,太晚了 	It's too late!
+Dialogue: 0,01:52:14.28,01:52:15.28,Default,,0,0,0,,不	No.
+Dialogue: 0,01:52:15.28,01:52:16.28,Default,,0,0,0,,我会去拿引爆器	I'm gonna get the detonator.
+Dialogue: 0,01:52:17.28,01:52:19.28,Default,,0,0,0,,-什么怎么拿 -我会想办法	-What? How? -I'll figure it out.
+Dialogue: 0,01:52:20.28,01:52:22.28,Default,,0,0,0,,找到连恩 找到另一枚炸弹 	Find Lane! Find the other bomb!
+Dialogue: 0,01:52:23.28,01:52:25.28,Default,,0,0,0,,-他到底在干什么 -我觉得不看为妙	-What the hell is he doing? -I find it best not to look.
+Dialogue: 0,01:53:01.28,01:53:02.28,Default,,0,0,0,,怎么样了 卢瑟	How we doing, Luther?
+Dialogue: 0,01:53:02.28,01:53:04.28,Default,,0,0,0,,到处都是绊线 我一个人应付不过来	Tripwires everywhere. I don't have enough hands.
+Dialogue: 0,01:53:04.28,01:53:05.28,Default,,0,0,0,,快点搞定	Just make it happen.
+Dialogue: 0,01:53:05.28,01:53:06.28,Default,,0,0,0,,伊森在哪	Where's Ethan?
+Dialogue: 0,01:53:06.28,01:53:08.28,Default,,0,0,0,,他去拿引爆器了	He's gone after the detonator.
+Dialogue: 0,01:53:08.28,01:53:09.28,Default,,0,0,0,,等等 引爆器在哪	Wait, where's the detonator?
+Dialogue: 0,01:53:47.28,01:53:48.28,Default,,0,0,0,,卢瑟	Luther.
+Dialogue: 0,01:53:49.28,01:53:51.28,Default,,0,0,0,,朱莉娅 你不应该来这里	Julia. You shouldn't be here.
+Dialogue: 0,01:53:51.28,01:53:52.28,Default,,0,0,0,,老天	Oh, my God.
+Dialogue: 0,01:53:53.28,01:53:54.28,Default,,0,0,0,,老天	Oh, my God.
+Dialogue: 0,01:53:55.28,01:53:56.28,Default,,0,0,0,,真的是炸弹吗	Is that what I think it is?
+Dialogue: 0,01:53:56.28,01:53:57.28,Default,,0,0,0,,卢瑟 让她走开 	Luther, get her out of there!
+Dialogue: 0,01:53:58.28,01:53:59.28,Default,,0,0,0,,她能去哪里	Where is she gonna go?
+Dialogue: 0,01:54:02.28,01:54:03.28,Default,,0,0,0,,我可以做些什么	What can I do?
+Dialogue: 0,01:54:05.28,01:54:07.28,Default,,0,0,0,,工具箱里有一把红色手柄钳子	In the kit, the pliers with the red grip.
+Dialogue: 0,01:54:07.28,01:54:10.28,Default,,0,0,0,,-你疯了 -管好你自己的事 班吉	-Are you insane? -Mind your business, Benji.
+Dialogue: 0,01:54:10.28,01:54:11.28,Default,,0,0,0,,这就是我的事 	This is my business!
+Dialogue: 0,01:55:54.28,01:55:55.28,Default,,0,0,0,,班吉 你收到了吗	Benji, do you copy?
+Dialogue: 0,01:55:56.28,01:55:58.28,Default,,0,0,0,,伊森 伊森 你在哪	Ethan! Ethan, where are you?
+Dialogue: 0,01:55:58.28,01:56:00.28,Default,,0,0,0,,我在直升机里 正在追沃克	I'm in a helicopter going after Walker.
+Dialogue: 0,01:56:00.28,01:56:00.28,Default,,0,0,0,,等等	Hold on.
+Dialogue: 0,01:56:01.28,01:56:02.28,Default,,0,0,0,,你怎么会进去直升机里	How did you get in the helicopter?
+Dialogue: 0,01:56:02.28,01:56:03.28,Default,,0,0,0,,什么你会开直升机	What, you can fly a helicopter?
+Dialogue: 0,01:56:03.28,01:56:05.28,Default,,0,0,0,,你说直升机吗	Did you say helicopter?
+Dialogue: 0,01:56:05.28,01:56:07.28,Default,,0,0,0,,你在直升机里干什么	What the hell are you doing in a helicopter?
+Dialogue: 0,01:56:07.28,01:56:10.28,Default,,0,0,0,,就嘿你们找到另一枚炸弹了吗	Just... Hey, hey... Did you find the other bomb?
+Dialogue: 0,01:56:10.28,01:56:12.28,Default,,0,0,0,,我们还在找 但除非我们拿到引爆器	We're still looking, but finding the bomb
+Dialogue: 0,01:56:12.28,01:56:14.28,Default,,0,0,0,,否则找到炸弹根本不重要	is not gonna matter unless we have the detonator.
+Dialogue: 0,01:56:14.28,01:56:16.28,Default,,0,0,0,,我知道 我会拿到引爆器的 	I know. I know. I'll get it. I'll get it!
+Dialogue: 0,01:56:16.28,01:56:18.28,Default,,0,0,0,,如果他在另一架直升机里	If he's in another helicopter,
+Dialogue: 0,01:56:19.28,01:56:21.28,Default,,0,0,0,,-你怎么去拿引爆器 -我会想办法	-how are you gonna get it? -I'll figure it out.
+Dialogue: 0,01:56:21.28,01:56:23.28,Default,,0,0,0,,你们去找炸弹 我会拿到引爆器	You find the bomb, I'll get the detonator.
+Dialogue: 0,01:56:23.28,01:56:24.28,Default,,0,0,0,,我不会让你们失望	I won't let you down.
+Dialogue: 0,01:56:25.28,01:56:27.28,Default,,0,0,0,,我不会让你们失望	I won't let you down.
+Dialogue: 0,01:56:27.28,01:56:30.28,Default,,0,0,0,,-做好准备 -听着 伊森 	-Be ready. -Look, Ethan. Ethan!
+Dialogue: 0,01:56:30.28,01:56:31.28,Default,,0,0,0,,伊森 请回答 	Ethan, come in!
+Dialogue: 0,01:56:32.28,01:56:34.28,Default,,0,0,0,,班吉卢瑟	Benji? Benji? Luther?
+Dialogue: 0,01:56:35.28,01:56:37.28,Default,,0,0,0,,有人吗	Anybody?
+Dialogue: 0,01:56:38.28,01:56:40.28,Default,,0,0,0,,我能办到	I can do this. I can do this.
+Dialogue: 0,01:56:40.28,01:56:41.28,Default,,0,0,0,,这里有什么东西	What do we got here?
+Dialogue: 0,01:56:41.28,01:56:42.28,Default,,0,0,0,,有空速	We've got airspeed.
+Dialogue: 0,01:56:43.28,01:56:44.28,Default,,0,0,0,,空速	Airspeed.
+Dialogue: 0,01:56:45.28,01:56:47.28,Default,,0,0,0,,好 动力 这是动力	Okay, power. This is power.
+Dialogue: 0,01:56:53.28,01:56:56.28,Default,,0,0,0,,有效载荷 我如何卸掉这个有效载荷	Payload. How do I get rid of this payload?
+Dialogue: 0,01:57:05.28,01:57:06.28,Default,,0,0,0,,动力	Power.
+Dialogue: 0,01:57:21.28,01:57:22.28,Default,,0,0,0,,电线退皮钳	Wire strippers.
+Dialogue: 0,01:57:22.28,01:57:23.28,Default,,0,0,0,,我是医生 不是电工	I'm a doctor, not an electrician.
+Dialogue: 0,01:57:24.28,01:57:25.28,Default,,0,0,0,,抱歉 有绿色手柄那玩意	Sorry, the thing with the green grip.
+Dialogue: 0,01:57:26.28,01:57:27.28,Default,,0,0,0,,-拿到了 -我左手里的电线	-Got it. -The wire in my left hand.
+Dialogue: 0,01:57:28.28,01:57:29.28,Default,,0,0,0,,-黑色的 -我的左手	-The black one? -My left hand.
+Dialogue: 0,01:57:30.28,01:57:32.28,Default,,0,0,0,,-那是你的左手 -抱歉 另外一根电线	-That's your left hand. -Sorry, the other wire.
+Dialogue: 0,01:57:32.28,01:57:33.28,Default,,0,0,0,,红色的	The red one?
+Dialogue: 0,01:57:33.28,01:57:35.28,Default,,0,0,0,,是的 我右手里的红色电线	Yes, the red one in my right hand.
+Dialogue: 0,01:57:35.28,01:57:36.28,Default,,0,0,0,,核对一下	Just checking.
+Dialogue: 0,01:57:36.28,01:57:37.28,Default,,0,0,0,,我喜欢她	Oh, I like her.
+Dialogue: 0,01:57:51.28,01:57:52.28,Default,,0,0,0,,稳住 好吗	Hold this for me, will you?
+Dialogue: 0,01:57:55.28,01:57:56.28,Default,,0,0,0,,老天爷 	Holy shit!
+Dialogue: 0,01:58:01.28,01:58:02.28,Default,,0,0,0,,可恶 	Damn it!
+Dialogue: 0,01:58:03.28,01:58:04.28,Default,,0,0,0,,飞高一点 	Get up there!
+Dialogue: 0,01:58:13.28,01:58:14.28,Default,,0,0,0,,没错	That's right,
+Dialogue: 0,01:58:15.28,01:58:16.28,Default,,0,0,0,,混蛋	prick.
+Dialogue: 0,01:58:24.28,01:58:26.28,Default,,0,0,0,,该死 	Oh, shit!
+Dialogue: 0,01:58:33.28,01:58:34.28,Default,,0,0,0,,王八蛋	Son of a bitch.
+Dialogue: 0,01:58:37.28,01:58:38.28,Default,,0,0,0,,好	All right.
+Dialogue: 0,01:58:47.28,01:58:48.28,Default,,0,0,0,,太过了	Whoa, whoa, too much. Too much.
+Dialogue: 0,01:58:49.28,01:58:50.28,Default,,0,0,0,,该死 	Oh, shit!
+Dialogue: 0,01:58:51.28,01:58:53.28,Default,,0,0,0,,往上拉升	Pull up. Pull up.
+Dialogue: 0,01:58:54.28,01:58:57.28,Default,,0,0,0,,接近地面 往上拉升	Terrain. Terrain. Pull up.
+Dialogue: 0,01:58:57.28,01:58:59.28,Default,,0,0,0,,-往上拉升 -我正在努力 	-Pull up. -I'm trying, I'm trying!
+Dialogue: 0,01:58:59.28,01:59:01.28,Default,,0,0,0,,接近地面	Terrain. Terrain.
+Dialogue: 0,01:59:19.28,01:59:20.28,Default,,0,0,0,,班吉 我什么都找不到	Benji, I'm not finding anything.
+Dialogue: 0,01:59:21.28,01:59:22.28,Default,,0,0,0,,我觉得我们找错地方了	I think we're looking in the wrong place.
+Dialogue: 0,01:59:23.28,01:59:24.28,Default,,0,0,0,,到处都有信号	Signatures everywhere.
+Dialogue: 0,01:59:24.28,01:59:25.28,Default,,0,0,0,,这是藏炸弹的绝佳地方	This is the perfect place to hide it.
+Dialogue: 0,01:59:25.28,01:59:28.28,Default,,0,0,0,,我就是这个意思 我了解连恩 如果我们在这里找	That's the point. I know Lane. If we're looking here,
+Dialogue: 0,01:59:29.28,01:59:31.28,Default,,0,0,0,,这是因为他希望我们这样做	it's because he wants us to.
+Dialogue: 0,01:59:34.28,01:59:35.28,Default,,0,0,0,,我去村子那里	I'm heading to the village.
+Dialogue: 0,01:59:35.28,01:59:37.28,Default,,0,0,0,,等等我 好吗	Just wait for me, all right?
+Dialogue: 0,01:59:41.28,01:59:42.28,Default,,0,0,0,,艾尔莎 我有发现了	Ilsa, I think I've found something.
+Dialogue: 0,01:59:46.28,01:59:49.28,Default,,0,0,0,,剪断这里这根电线	Cut this wire right here.
+Dialogue: 0,01:59:50.28,01:59:54.28,Default,,0,0,0,,朝逆时针方向慢慢旋转那个螺丝钉	Turn that screw counterclockwise, very slowly.
+Dialogue: 0,01:59:54.28,01:59:54.28,Default,,0,0,0,,好的	Got it.
+Dialogue: 0,01:59:57.28,01:59:58.28,Default,,0,0,0,,那么	So...
+Dialogue: 0,02:00:00.28,02:00:01.28,Default,,0,0,0,,他还好吗	How is he?
+Dialogue: 0,02:00:01.28,02:00:04.28,Default,,0,0,0,,你知道的 伊森还是老样子	Oh, you know. Same old Ethan.
+Dialogue: 0,02:00:13.28,02:00:14.28,Default,,0,0,0,,老天 	Jesus!
+Dialogue: 0,02:00:18.28,02:00:20.28,Default,,0,0,0,,该死 	Oh, shit!
+Dialogue: 0,02:00:20.28,02:00:22.28,Default,,0,0,0,,不要	No, no, no, no, no, no.
+Dialogue: 0,02:00:30.28,02:00:33.28,Default,,0,0,0,,-班吉 我看见连恩了 -什么在哪里	-Benji, I see Lane. -What? Where?
+Dialogue: 0,02:00:33.28,02:00:34.28,Default,,0,0,0,,他在村子边缘的一栋房子里	He's in a house at the edge of the village.
+Dialogue: 0,02:00:34.28,02:00:36.28,Default,,0,0,0,,好 等等我 好吗	All right, just wait for me, okay?
+Dialogue: 0,02:00:37.28,02:00:38.28,Default,,0,0,0,,艾尔莎 等等我 	Ilsa, wait for me!
+Dialogue: 0,02:00:48.28,02:00:49.28,Default,,0,0,0,,不	No.
+Dialogue: 0,02:00:54.28,02:00:56.28,Default,,0,0,0,,核炸弹	Nuclear bomb.
+Dialogue: 0,02:01:05.28,02:01:07.28,Default,,0,0,0,,（X光辐射）
+Dialogue: 0,02:01:07.28,02:01:08.28,Default,,0,0,0,,可恶 	Damn it!
+Dialogue: 0,02:01:51.28,02:01:53.28,Default,,0,0,0,,班吉 我找到另外一枚炸弹了	Benji, I found the other bomb.
+Dialogue: 0,02:01:54.28,02:01:55.28,Default,,0,0,0,,艾尔莎 你在哪	Ilsa, where are you?
+Dialogue: 0,02:01:55.28,02:01:56.28,Default,,0,0,0,,我在一栋屋子里	I'm in a house...
+Dialogue: 0,02:02:19.28,02:02:21.28,Default,,0,0,0,,嘿 你到底在干什么	Hey! What the hell are you doing?
+Dialogue: 0,02:02:21.28,02:02:23.28,Default,,0,0,0,,你疯了 	You're out of your mind!
+Dialogue: 0,02:02:23.28,02:02:24.28,Default,,0,0,0,,我不知道下面有什么东西	I don't know what's down there.
+Dialogue: 0,02:02:29.28,02:02:30.28,Default,,0,0,0,,往上拉升 	Pull up, pull up!
+Dialogue: 0,02:02:40.28,02:02:42.28,Default,,0,0,0,,这个疯狂的王八蛋想撞我们 	This crazy son of a bitch is trying to ram us!
+Dialogue: 0,02:02:42.28,02:02:44.28,Default,,0,0,0,,快 	Go!
+Dialogue: 0,02:03:01.28,02:03:02.28,Default,,0,0,0,,可恶 	Shit!
+Dialogue: 0,02:03:02.28,02:03:04.28,Default,,0,0,0,,班吉 请回答	Benji, come in.
+Dialogue: 0,02:03:04.28,02:03:05.28,Default,,0,0,0,,我们马上就要搞定保险丝了	We're almost at the fuse.
+Dialogue: 0,02:03:05.28,02:03:07.28,Default,,0,0,0,,我们需要找到另一枚炸弹	We need to find that other bomb now.
+Dialogue: 0,02:03:08.28,02:03:10.28,Default,,0,0,0,,你刚刚说另一枚炸弹	Did you just say "other bomb"?
+Dialogue: 0,02:03:10.28,02:03:13.28,Default,,0,0,0,,-班吉 收到了吗 -我正在想办法 	-Benji, do you read me? -I'm working on it!
+Dialogue: 0,02:03:13.28,02:03:15.28,Default,,0,0,0,,艾尔莎 你在哪	Ilsa, where are you?
+Dialogue: 0,02:03:33.28,02:03:35.28,Default,,0,0,0,,你没法阻止此事	You can't stop it.
+Dialogue: 0,02:03:35.28,02:03:38.28,Default,,0,0,0,,明白吗他无能为力	Do you understand? There's nothing he can do.
+Dialogue: 0,02:03:39.28,02:03:40.28,Default,,0,0,0,,定时器跑完之后	When the clock runs out,
+Dialogue: 0,02:03:40.28,02:03:42.28,Default,,0,0,0,,伊森亨特会失去他关爱的	Ethan Hunt will lose everything
+Dialogue: 0,02:03:43.28,02:03:44.28,Default,,0,0,0,,所有东西	and everyone
+Dialogue: 0,02:03:46.28,02:03:47.28,Default,,0,0,0,,和所有人	he ever cared about.
+Dialogue: 0,02:03:49.28,02:03:50.28,Default,,0,0,0,,艾尔莎 	Ilsa!
+Dialogue: 0,02:03:50.28,02:03:51.28,Default,,0,0,0,,班吉 	Benji!
+Dialogue: 0,02:03:52.28,02:03:52.28,Default,,0,0,0,,班吉 	Benji!
+Dialogue: 0,02:03:53.28,02:03:54.28,Default,,0,0,0,,艾尔莎 你在哪	Ilsa, where are you?
+Dialogue: 0,02:03:56.28,02:03:57.28,Default,,0,0,0,,你可不想看到这一幕	You don't want to see this.
+Dialogue: 0,02:03:59.28,02:04:00.28,Default,,0,0,0,,班吉 	Benji!
+Dialogue: 0,02:04:00.28,02:04:02.28,Default,,0,0,0,,-艾尔莎  -班吉 	-Ilsa! -Benji!
+Dialogue: 0,02:04:02.28,02:04:04.28,Default,,0,0,0,,班吉 班吉 别过来 	Benji! Benji, stop!
+Dialogue: 0,02:04:34.28,02:04:35.28,Default,,0,0,0,,班吉 	Benji!
+Dialogue: 0,02:05:01.28,02:05:02.28,Default,,0,0,0,,（引擎机油 温度95-97度）
+Dialogue: 0,02:05:01.28,02:05:03.28,Default,,0,0,0,,不 不要 	Oh, no, no, no!
+Dialogue: 0,02:05:36.28,02:05:38.28,Default,,0,0,0,,（引擎机油 温度155-165度）
+Dialogue: 0,02:05:42.28,02:05:43.28,Default,,0,0,0,,稳住	Stay with me. Stay with me.
+Dialogue: 0,02:05:46.28,02:05:48.28,Default,,0,0,0,,不 成功就在眼前 不能失败	No, no. Not when I'm this close.
+Dialogue: 0,02:05:48.28,02:05:50.28,Default,,0,0,0,,成功就在眼前 不能失败 快 	Not when I'm this close. Come on, come on!
+Dialogue: 0,02:07:36.28,02:07:37.28,Default,,0,0,0,,谢谢	Thank you.
+Dialogue: 0,02:07:37.28,02:07:38.28,Default,,0,0,0,,把他绑起来	Tie him up.
+Dialogue: 0,02:08:42.28,02:08:44.28,Default,,0,0,0,,你为何就是死不了	Why won't you just die?
+Dialogue: 0,02:09:07.28,02:09:09.28,Default,,0,0,0,,你已经尽力了	There's nothing else you can do.
+Dialogue: 0,02:09:10.28,02:09:12.28,Default,,0,0,0,,去陪你老公吧	Go be with your husband.
+Dialogue: 0,02:09:14.28,02:09:15.28,Default,,0,0,0,,卢瑟	Luther...
+Dialogue: 0,02:09:15.28,02:09:16.28,Default,,0,0,0,,快去	Go.
+Dialogue: 0,02:09:30.28,02:09:31.28,Default,,0,0,0,,班吉 你在哪	Benji, where are you?
+Dialogue: 0,02:09:31.28,02:09:33.28,Default,,0,0,0,,好 卢瑟 我们进来了 告诉我们该怎么办	Okay, Luther, we're inside. Tell us what to do.
+Dialogue: 0,02:09:33.28,02:09:35.28,Default,,0,0,0,,你应该会看到 连接到主板上的红色电线	You should see the red wire attached to the motherboard.
+Dialogue: 0,02:09:36.28,02:09:36.28,Default,,0,0,0,,看到了	Yeah.
+Dialogue: 0,02:09:36.28,02:09:38.28,Default,,0,0,0,,你需要同时剪断那一根	You need to cut that and the green wire
+Dialogue: 0,02:09:38.28,02:09:40.28,Default,,0,0,0,,和旁边的绿色电线	next to it simultaneously.
+Dialogue: 0,02:09:40.28,02:09:42.28,Default,,0,0,0,,好 就位	Okay, ready?
+Dialogue: 0,02:09:42.28,02:09:43.28,Default,,0,0,0,,预备	Set?
+Dialogue: 0,02:09:43.28,02:09:44.28,Default,,0,0,0,,剪	Cut.
+Dialogue: 0,02:09:45.28,02:09:48.28,Default,,0,0,0,,我说过了 没法阻止	I told you. It can't be stopped.
+Dialogue: 0,02:09:48.28,02:09:50.28,Default,,0,0,0,,你们无能为力	There's nothing you can do.
+Dialogue: 0,02:13:08.28,02:13:11.28,Default,,0,0,0,,班吉 听着 朝逆时针方向旋转那个螺丝钉	Benji, listen. Turn the screw counterclockwise.
+Dialogue: 0,02:13:11.28,02:13:12.28,Default,,0,0,0,,好	Yep.
+Dialogue: 0,02:13:13.28,02:13:15.28,Default,,0,0,0,,拿开那个主板 你会看到	Remove that panel and you'll see
+Dialogue: 0,02:13:15.28,02:13:17.28,Default,,0,0,0,,保险丝的电源和接地电线	the power and ground wires for the fuse.
+Dialogue: 0,02:13:17.28,02:13:18.28,Default,,0,0,0,,看到了	Got it.
+Dialogue: 0,02:13:18.28,02:13:20.28,Default,,0,0,0,,到那个时候 剪断绿色电线	When the time comes, cut the green wire.
+Dialogue: 0,02:13:20.28,02:13:22.28,Default,,0,0,0,,现在不要剪	Do not cut it yet.
+Dialogue: 0,02:13:22.28,02:13:23.28,Default,,0,0,0,,好 我们收到了	Okay. We copy.
+Dialogue: 0,02:13:28.28,02:13:31.28,Default,,0,0,0,,伊森 如果你能听见 我们要准备剪电线了	Ethan, if you can hear me, we're ready to make the cut.
+Dialogue: 0,02:13:32.28,02:13:33.28,Default,,0,0,0,,伊森 请回答	Ethan, come in.
+Dialogue: 0,02:13:33.28,02:13:36.28,Default,,0,0,0,,班吉 我们如何知道 他能否拿到按钮	Benji, how do we know if he's got the key?
+Dialogue: 0,02:13:36.28,02:13:38.28,Default,,0,0,0,,他会拿到的	He'll get it.
+Dialogue: 0,02:13:38.28,02:13:40.28,Default,,0,0,0,,-对 但我们如何知道 -他会搞定 	-Yeah, but how do we know? -He'll get it done!
+Dialogue: 0,02:13:46.28,02:13:48.28,Default,,0,0,0,,没时间了 我们只能希望他会拿到	We're out of time. We just have to hope he has it.
+Dialogue: 0,02:13:49.28,02:13:51.28,Default,,0,0,0,,-好 我们准备好了 -还剩两秒时剪断电线	-Okay, we're ready. -At two seconds we cut.
+Dialogue: 0,02:13:51.28,02:13:52.28,Default,,0,0,0,,等等 为何是两秒为何不是一秒	Wait, wait, wait! Why two? Why not one?
+Dialogue: 0,02:13:53.28,02:13:54.28,Default,,0,0,0,,你想距离最终时间这么近才剪	You want to cut it that close?
+Dialogue: 0,02:13:54.28,02:13:55.28,Default,,0,0,0,,我们玩不起这一秒钟 	It's a second we'll never get back.
+Dialogue: 0,02:13:55.28,02:13:56.28,Default,,0,0,0,,我们能决定吗	Can we make a decision on this?
+Dialogue: 0,02:13:56.28,02:13:58.28,Default,,0,0,0,,好 我们还剩一秒钟时剪	All right, all right! We'll do it on one.
+Dialogue: 0,02:13:58.28,02:13:58.28,Default,,0,0,0,,还剩一秒钟时剪	Cutting on one?
+Dialogue: 0,02:13:58.28,02:14:00.28,Default,,0,0,0,,对 一秒 好 准备	Yes, one. All right, stand by.
+Dialogue: 0,02:14:03.28,02:14:03.28,Default,,0,0,0,,三	Three...
+Dialogue: 0,02:14:04.28,02:14:06.28,Default,,0,0,0,,-二 -一	-Two... -One.
+Dialogue: 0,02:14:06.28,02:14:07.28,Default,,0,0,0,,动手 	Now!
+Dialogue: 0,02:14:45.28,02:14:47.28,Default,,0,0,0,,好了	Okay.
+Dialogue: 0,02:14:58.28,02:14:59.28,Default,,0,0,0,,好样的	My man.
+Dialogue: 0,02:15:46.28,02:15:47.28,Default,,0,0,0,,伊森	Ethan?
+Dialogue: 0,02:15:50.28,02:15:51.28,Default,,0,0,0,,伊森	Ethan?
+Dialogue: 0,02:15:52.28,02:15:53.28,Default,,0,0,0,,你能听见我吗	Can you hear me?
+Dialogue: 0,02:15:57.28,02:15:58.28,Default,,0,0,0,,你能听见我吗	Can you hear me?
+Dialogue: 0,02:16:02.28,02:16:04.28,Default,,0,0,0,,不 不要	No. Don't, don't, don't.
+Dialogue: 0,02:16:05.28,02:16:06.28,Default,,0,0,0,,不要动	Don't try to move.
+Dialogue: 0,02:16:06.28,02:16:09.28,Default,,0,0,0,,别动 你伤得很厉害	Don't move. You're pretty banged up.
+Dialogue: 0,02:16:12.28,02:16:13.28,Default,,0,0,0,,你可真幸运	You're a lucky man.
+Dialogue: 0,02:16:14.28,02:16:16.28,Default,,0,0,0,,你坠机后得以生还 真是奇迹 索恩医生	It's a miracle that crash didn't kill you, Dr. Thorne.
+Dialogue: 0,02:16:17.28,02:16:18.28,Default,,0,0,0,,如果你的朋友没在一小时后找到你	If your friend didn't find you an hour later,
+Dialogue: 0,02:16:18.28,02:16:20.28,Default,,0,0,0,,你会死于冻伤	you would've died of exposure.
+Dialogue: 0,02:16:20.28,02:16:22.28,Default,,0,0,0,,-我的朋友 -是的	-My friends? -Yeah.
+Dialogue: 0,02:16:24.28,02:16:26.28,Default,,0,0,0,,你才刚离开 她就来了	She got here not long after you left.
+Dialogue: 0,02:16:27.28,02:16:29.28,Default,,0,0,0,,还带来了很多印度士兵	Right in front of half the Indian Army.
+Dialogue: 0,02:16:30.28,02:16:32.28,Default,,0,0,0,,能让我们单独谈谈吗	Can you give us a few minutes, please?
+Dialogue: 0,02:16:35.28,02:16:36.28,Default,,0,0,0,,回头见 医生	See you later, Doc.
+Dialogue: 0,02:16:43.28,02:16:44.28,Default,,0,0,0,,朱莉娅	Julia...
+Dialogue: 0,02:16:46.28,02:16:47.28,Default,,0,0,0,,对不起	I'm sorry.
+Dialogue: 0,02:16:48.28,02:16:49.28,Default,,0,0,0,,根本用不着道歉	There's no reason to be sorry.
+Dialogue: 0,02:16:49.28,02:16:50.28,Default,,0,0,0,,不是的	No.
+Dialogue: 0,02:16:51.28,02:16:52.28,Default,,0,0,0,,对于发生的一切	I'm sorry
+Dialogue: 0,02:16:54.28,02:16:56.28,Default,,0,0,0,,我都很抱歉 我	for everything. I...
+Dialogue: 0,02:16:57.28,02:16:58.28,Default,,0,0,0,,看着我	Look at me.
+Dialogue: 0,02:16:59.28,02:17:01.28,Default,,0,0,0,,看着我	Look at me.
+Dialogue: 0,02:17:01.28,02:17:03.28,Default,,0,0,0,,看看我的人生	Look at my life.
+Dialogue: 0,02:17:05.28,02:17:08.28,Default,,0,0,0,,我热爱自己的事业 如果我没遇到你	I love what I do, and I never would have
+Dialogue: 0,02:17:08.28,02:17:10.28,Default,,0,0,0,,就不会找到这一切	found this if I hadn't met you.
+Dialogue: 0,02:17:11.28,02:17:13.28,Default,,0,0,0,,发生的一切	And everything that happened,
+Dialogue: 0,02:17:14.28,02:17:17.28,Default,,0,0,0,,让我了解真实的自己 让我明白	it taught me who I am. It showed me
+Dialogue: 0,02:17:17.28,02:17:20.28,Default,,0,0,0,,自己的能力 而且我	what I am capable of, and I...
+Dialogue: 0,02:17:20.28,02:17:22.28,Default,,0,0,0,,我会活下去	I am a survivor.
+Dialogue: 0,02:17:22.28,02:17:24.28,Default,,0,0,0,,但这里发生的一切	But what happened here,
+Dialogue: 0,02:17:26.28,02:17:27.28,Default,,0,0,0,,-是我的 -平安无事	-it was my... -Nothing happened.
+Dialogue: 0,02:17:28.28,02:17:29.28,Default,,0,0,0,,因为你守候着我	Because you were here.
+Dialogue: 0,02:17:32.28,02:17:35.28,Default,,0,0,0,,知道你永远都会与我相守 我便能每夜安眠	And I sleep soundly at night knowing you always will be.
+Dialogue: 0,02:17:44.28,02:17:46.28,Default,,0,0,0,,你幸福吗	You're happy?
+Dialogue: 0,02:17:46.28,02:17:47.28,Default,,0,0,0,,非常幸福	Very.
+Dialogue: 0,02:17:50.28,02:17:52.28,Default,,0,0,0,,我身处自己的归属地	I'm exactly where I should be.
+Dialogue: 0,02:17:55.28,02:17:56.28,Default,,0,0,0,,你也一样	And so are you.
+Dialogue: 0,02:18:36.28,02:18:37.28,Default,,0,0,0,,根据你的要求	Per your request,
+Dialogue: 0,02:18:39.28,02:18:43.28,Default,,0,0,0,,我会把所罗门连恩交给军情六处	I'm handing Solomon Lane back to MI6.
+Dialogue: 0,02:18:47.28,02:18:49.28,Default,,0,0,0,,当然是通过中间人	Through a broker, of course.
+Dialogue: 0,02:18:51.28,02:18:54.28,Default,,0,0,0,,这是日前安排的一部分	Part of our ongoing arrangement.
+Dialogue: 0,02:18:59.28,02:19:01.28,Default,,0,0,0,,巴黎事件之后	After what happened in Paris,
+Dialogue: 0,02:19:02.28,02:19:05.28,Default,,0,0,0,,我们更倾向于保持低调	we prefer to keep a low profile.
+Dialogue: 0,02:19:07.28,02:19:11.28,Default,,0,0,0,,你的朋友无需 再跟英国秘密情报局打交道了	And that closes your friend's account with British Intelligence.
+Dialogue: 0,02:19:13.28,02:19:15.28,Default,,0,0,0,,肋骨 小心我的肋骨	The ribs. Watch the ribs.
+Dialogue: 0,02:19:16.28,02:19:19.28,Default,,0,0,0,,我现在明白了汉利为何信任你	I understand now why Hunley believed in you.
+Dialogue: 0,02:19:20.28,02:19:22.28,Default,,0,0,0,,世界需要不可能任务小组	The world needs the IMF.
+Dialogue: 0,02:19:23.28,02:19:25.28,Default,,0,0,0,,我们需要像你这样的人	We need people like you
+Dialogue: 0,02:19:26.28,02:19:27.28,Default,,0,0,0,,你在乎一个人的性命	who care about the one life
+Dialogue: 0,02:19:28.28,02:19:31.28,Default,,0,0,0,,也在乎无数人的性命	as much as they care about the millions.
+Dialogue: 0,02:19:33.28,02:19:34.28,Default,,0,0,0,,这样一来	That way
+Dialogue: 0,02:19:34.28,02:19:36.28,Default,,0,0,0,,我就永远无需担忧	I never have to.
+Dialogue: 0,02:19:37.28,02:19:38.28,Default,,0,0,0,,你没事吧	You okay?
+Dialogue: 0,02:19:39.28,02:19:41.28,Default,,0,0,0,,你从未像现在这么帅	You've never looked better.
+Dialogue: 0,02:19:41.28,02:19:43.28,Default,,0,0,0,,别这样 拜托	Don't. Please.
+Dialogue: 0,02:19:44.28,02:19:46.28,Default,,0,0,0,,我们有多险	How close were we?
+Dialogue: 0,02:19:49.28,02:19:50.28,Default,,0,0,0,,跟往常一样	The usual.
+Dialogue: 0,02:19:54.28,02:19:55.28,Default,,0,0,0,,跟往常一样	The usual?
+Dialogue: 0,02:19:57.28,02:19:59.28,Default,,0,0,0,,请别逗我笑	Please don't make me laugh.
