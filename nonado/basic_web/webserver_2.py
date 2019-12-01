@@ -3,11 +3,11 @@
 """
 @author: mxh @time:2019/11/30 17:24
 """
-
-
+import datetime
 import socket
 import StringIO
 import sys
+from middleware import TestMiddle
 
 
 class WSGIServer(object):
@@ -49,23 +49,29 @@ class WSGIServer(object):
         self.request_data = request_data = self.client_connection.recv(1024)
         # Print formatted request data a la "curl -v"
         print "".join('< %s \n' % line for line in request_data.splitlines())
+        try:
+            self.parse_request(request_data)
 
-        self.parse_request(request_data)
+            # Construct environment dictionary using request data
+            # 使用请求数据构造 环境字典
+            env = self.get_environ()
 
-        # Construct environment dictionary using request data
-        # 使用请求数据构造 环境字典
-        env = self.get_environ()
+            # It's time to call our callable and get back a result that will become HTTP request body
+            # print env, self.start_response()
+            result = self.application(env, self.start_response)
 
-        # It's time to call our callable and get back a result that will become HTTP request body
-        # print env, self.start_response()
-        result = self.application(env, self.start_response)
-
-        # Construct a response and send it back to the client
-        self.finish_response(result)
+            # Construct a response and send it back to the client
+            self.finish_response(result)
+        except Exception as e:
+            print "@@@@@@@  %s" % e
 
     def parse_request(self, text=" GET /index HTTP/1.1"):
         request_line = text.splitlines()[0]
         request_line = request_line.rstrip("\r\n")
+        self.request_dict = {}
+        for itm in text.splitlines()[1:]:
+            if ':' in itm:
+                self.request_dict[itm.split(':')[0]] = itm.split(':')[1]
         # Break down the request line into components 将请求分解
         (self.request_method, self.path, self.request_version) = request_line.split()
 
@@ -81,21 +87,24 @@ class WSGIServer(object):
         env["wsgi.run_once"] = False
 
         # CGI 必须的变量
-        env["REQUEST_METHOD"] = self.request_method # GET
-        env["PATH_INFO"] = self.path # /index
-        env["SERVER_NAME"] = self.server_name # localhost
-        env["SERVER_PORT"] = str(self.server_port) # 8889
-        return  env
+        env["REQUEST_METHOD"] = self.request_method  # GET
+        env["PATH_INFO"] = self.path  # /index
+        env["SERVER_NAME"] = self.server_name  # localhost
+        env["SERVER_PORT"] = str(self.server_port)  # 8889
+        env["USER_AGENT"] = self.request_dict.get('User-Agent')
+        return env
 
     def start_response(self, status, response_headers, exc_info=None):
         # Add Necessary server headers 添加需要的请求头
-        server_headers = [('Date',  '2019年11月30日18:01:53'),
+        # server_headers = [('Date',  '2019年11月30日18:01:53'),
+        # 'ascii' codec can't decode byte 0xe5 in position 10: ordinal not in range(128)
+        print "response_headers===", response_headers
+        server_headers = [('Date',  datetime.datetime.now().strftime('%a, %d %b %Y %H:%M:%S GMT')),
                           ('Server', 'Base WSGIServer 0.2')]
         self.headers_set = [status, response_headers + server_headers]
         # To adhere to WSGI specification the start_response must return a 'write' callable. We simplicity sake we'll
         # ignore that detail for now
         # return finish_response
-
 
     def finish_response(self, result):
         try:
@@ -112,12 +121,13 @@ class WSGIServer(object):
         finally:
             self.client_connection.close()
 
+
 SERVER_ADDRESS = (HOST, PORT) = "", 8888
 
 
 def make_server(server_address, application):
     server = WSGIServer(server_address)
-    server.set_app(application)
+    server.set_app(TestMiddle(application))
     return server
 
 

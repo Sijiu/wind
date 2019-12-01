@@ -63,7 +63,6 @@ class IOLoop(object):
             self._set_close_exec(w)
             self._waker_reader = os.fdopen(r, "r", 0)
             self._waker_writer = os.fdopen(w, "w", 0)
-            print "===", os.name
         else:
             self._waker_reader = self._waker_writer = win32_support.Pipe()
             r = self._waker_writer.reader_fd

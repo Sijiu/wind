@@ -111,8 +111,8 @@ class RequestHandler(object):
             if headers: self.request.write(headers)
             return
 
-        if headers or chunk:
-            self.request.write(headers + chunk)
+        # if headers or chunk:
+        #     self.request.write(headers + chunk)
 
     def finish(self, chunk=None):
         """Finishes this response, ending the HTTP request."""
@@ -153,9 +153,19 @@ class RequestHandler(object):
         self._log()
         self._finished = True
 
+    def _log(self):
+        if self._status_code < 400:
+            log_method = logging.info
+        elif self._status_code < 500:
+            log_method = logging.warning
+        else:
+            log_method = logging.error
+        request_time = 1000.0 * self.request.request_time()
+        log_method("%d %s %.2fms", self._status_code,
+                   self._request_summary(), request_time)
+
     def _request_summary(self):
-        return self.request.method + " " + self.request.uri + " (" + \
-            self.request.remote_ip + ")"
+        return self.request.method + " " + self.request.uri + " (" + self.request.remote_ip + ")"
 
     def _handle_request_exception(self, e):
         if isinstance(e, HTTPError):

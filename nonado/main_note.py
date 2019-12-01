@@ -48,10 +48,8 @@ class Note(MyClass):
 
         self.note += "\n HttpConnection. _on_headers -> httputil.HTTPHeaders "
 
-
     def iostream(self):
         self.note += "\n"
-
 
     def httputil(self):
         self.note += "\n"
@@ -71,6 +69,19 @@ class Note(MyClass):
         """
         print think
 
+
+class MiddleWare(object):
+    """ 这个地方帮助解决了 tornado 运行在 web server 上的问题,
+    https://www.v2ex.com/t/283059
+
+    其实一个 wsgi server 的重要之处就在于用environ去跑 web app 得到返回结果这一步，
+    这一步和前面的 application 实现相辅相成，然后框架和服务器都根据这套标准，大家就可以愉快的一起工作了。
+    """
+
+    def __init__(self):
+        print "middleware"
+        """ 中间件可以提前拦截一些东西, 通过请求中的字符戳, 比如反扒, IP 过滤等等
+        """
 
 
 if __name__ == '__main__':

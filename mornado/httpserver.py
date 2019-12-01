@@ -117,6 +117,12 @@ class HTTPConnection(object):
         self._request_finished = False
         self.stream.read_until("\r\n\r\n", self._on_headers)
 
+    def finish(self):
+        assert self._request, "Request closed"
+        self._request_finished = True
+        if not self.stream.writing():
+            self._finish_request()
+
     def _on_write_complete(self):
         if self._request_finished:
             self._finish_request()

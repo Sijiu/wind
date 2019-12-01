@@ -7,6 +7,7 @@
 
 import tornado.web, tornado.ioloop
 import tornado.httpserver
+import tornado.wsgi
 from tornado.options import define, options
 
 
@@ -32,22 +33,25 @@ def main(application):
     http_server.listen(options.port)
     tornado.ioloop.IOLoop.instance().start()
 
-app = tornado.web.Application([
+
+tornado_app = tornado.web.Application([
             (r'/', MainHandler),
             (r'/index', IndexHandler)
         ]
     )
 
+app = tornado.wsgi.WSGIAdapter(tornado_app)
 
-# if __name__ == '__main__':
-#     # main()
-#
-#     # all = [u"房子", u"车子", u"孩子", u"票子"]
-#     # cut = True
-#     # if cut:
-#     #     print "pain"
-#     #     pass
-#     # else:
-#     #     # print "-".join(all[:2]), "-".join(all[2:])
-#     #     print all[:2], "or", all[2:]
-#     main(app)
+
+if __name__ == '__main__':
+    # main()
+
+    # all = [u"房子", u"车子", u"孩子", u"票子"]
+    # cut = True
+    # if cut:
+    #     print "pain"
+    #     pass
+    # else:
+    #     # print "-".join(all[:2]), "-".join(all[2:])
+    #     print all[:2], "or", all[2:]
+    main(tornado_app)
