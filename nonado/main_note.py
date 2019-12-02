@@ -85,6 +85,11 @@ class MiddleWare(object):
         """
 
 
+class WSGIRef(object):
+
+    def __init__(self):
+        print "https://www.liaoxuefeng.com/wiki/897692888725344/923057027806560"
+
 if __name__ == '__main__':
     note = Note()
     note.web()
