@@ -141,6 +141,7 @@ class IOLoop(object):
 
     @classmethod
     def initialized(cls):
+        print "Hello ---- initialized"
         return hasattr(cls, "_instance")
 
     def add_handler(self, fd, handler, events):
@@ -190,7 +191,7 @@ class IOLoop(object):
         self._running = True
         while True:
             # Never use an infinite timeout here - it can stall epoll
-            poll_timeout = 0.2
+            poll_timeout = 5
 
             # Prevent IO event starvation by delaying new callbacks
             # to the next iteration of the event loop.
@@ -494,6 +495,7 @@ class _Select(object):
         readable, writeable, errors = select.select(
             self.read_fds, self.write_fds, self.error_fds, timeout)
         events = {}
+        print "read %s, write %s error %s " % (readable, writeable, errors)
         for fd in readable:
             events[fd] = events.get(fd, 0) | IOLoop.READ
         for fd in writeable:
@@ -521,4 +523,5 @@ else:
         import sys
         if "linux" in sys.platform:
             logging.warning("epoll module not found; using select()")
+        print "___nt"
         _poll = _Select
