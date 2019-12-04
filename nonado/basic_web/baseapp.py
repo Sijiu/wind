@@ -16,23 +16,25 @@ def app(environ, start_response):
     """
     status = "200 OK"
     response_headers = [("Content-Type", "text/plain")]
+    print "environ %s" % environ
+    # path = environ["PATH_INFO"]
     if "?" in environ["PATH_INFO"]:
         path, param = environ["PATH_INFO"].split("?")
     else:
         path, param = environ["PATH_INFO"], environ["QUERY_STRING"]
     tmp, tmp_str = {}, ""
     for p in param.split("&"):
-        k, v = p.split("=")
-        tmp_str += "%s_%s#"
+        k, v = p.split("=") if "=" in p else "QUERY_STRING", None
+        tmp_str += "%s: %s\n" % (k, v)
         tmp[k]=v
-    param = json.dumps(tmp)
+    param = json.dumps(param)
     param = tmp_str
     if path == "/index":
         start_response(status, response_headers)
-        return {"Index \n" % param}
+        return {"Index %s \n" % param}
     elif path == "/home":
-        start_response("404, None", response_headers)
-        return {"Welcome HomePage % \n" % param}
+        start_response("996 ICU", response_headers)
+        return {"Welcome HomePage %s \n" % param}
     else:
         start_response(status, response_headers)
         return {"Hello webServer from a simple WSGI application\n %s " % param}

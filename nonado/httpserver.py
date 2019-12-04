@@ -32,7 +32,7 @@ class HTTPServer(object):
 
     def __init__(self, request_callback, no_keep_alive=False, io_loop=None, xheaders=False, ssl_options=None):
         """
-        用请求的毁掉函数初始化服务
+        用请求的回调函数初始化服务
         如果你用 pre-forking/start() 来替代 listen() 方法启动你的服务, 你不用传递IOLoop接口 到改构造器
         在forking进程之后 每一个提前fork的子进程会创建他们自己的IOLoop接口
         :param request_callback:
