@@ -233,10 +233,12 @@ class IOStream(object):
         return result
 
     def _check_closed(self):
+        print "===== check_closed"
         if not self.socket:
             raise IOError("Stream is closed")
 
     def _add_io_state(self, state):
+        print "===== add_io_state"
         if not self._state & state:
             self._state = self._state | state
             self.io_loop.update_handler(self.socket.fileno(), self._state)

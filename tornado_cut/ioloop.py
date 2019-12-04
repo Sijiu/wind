@@ -151,6 +151,7 @@ class IOLoop(object):
 
     def update_handler(self, fd, events):
         """Changes the events we listen for fd."""
+        print "update_handler === %s %s " % (fd, events)
         self._impl.modify(fd, events | self.ERROR)
 
     def remove_handler(self, fd):
@@ -203,6 +204,7 @@ class IOLoop(object):
                     self._run_callback(callback)
 
             if self._callbacks:
+                print "self_callback===%s " % self._callbacks
                 poll_timeout = 0.0
 
             if self._timeouts:
@@ -249,8 +251,10 @@ class IOLoop(object):
             print "event_pairs== ", event_pairs
             self._events.update(event_pairs)
             while self._events:
+
                 fd, events = self._events.popitem()
                 try:
+                    print "%s \n _handlers %s " % (events, type(self._handlers[fd]))
                     self._handlers[fd](fd, events)
                 except (KeyboardInterrupt, SystemExit):
                     raise
@@ -265,6 +269,7 @@ class IOLoop(object):
                     logging.error("Exception in I/O handler for fd %d",
                                   fd, exc_info=True)
         # reset the stopped flag so another start/stop pair can be issued
+        print "=======stopped False"
         self._stopped = False
         if self._blocking_log_threshold is not None:
             signal.setitimer(signal.ITIMER_REAL, 0, 0)
@@ -301,6 +306,7 @@ class IOLoop(object):
 
     def add_callback(self, callback):
         """Calls the given callback on the next I/O loop iteration."""
+        print "add_callback ", callback
         self._callbacks.add(callback)
         self._wake()
 
@@ -416,6 +422,7 @@ class _EPoll(object):
         epoll.epoll_ctl(self._epoll_fd, self._EPOLL_CTL_DEL, fd, 0)
 
     def poll(self, timeout):
+        print "timeout---%s ", timeout
         return epoll.epoll_wait(self._epoll_fd, int(timeout * 1000))
 
 
@@ -455,6 +462,7 @@ class _KQueue(object):
             self._kqueue.control([kevent], 0)
 
     def poll(self, timeout):
+        print self.__class__, timeout
         kevents = self._kqueue.control(None, 1000, timeout)
         events = {}
         for kevent in kevents:

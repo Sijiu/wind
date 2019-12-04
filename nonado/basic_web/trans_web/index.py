@@ -3,6 +3,8 @@
 """
 @author: mxh @time:2019/12/3 15:32
 """
+
+
 from transwarp import get, view
 import os
 from transwarp import WSGIApplication,Jinja2TemplateEngine
@@ -22,3 +24,4 @@ wsgi.add_module(urls)
 
 if __name__ == '__main__':
     wsgi.run()
+    print "why error with liao'xue'feng's framework"

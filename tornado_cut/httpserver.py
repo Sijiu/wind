@@ -201,9 +201,12 @@ class HTTPServer(object):
       self._socket.close()
 
     def _handle_events(self, fd, events):
+        print  "fd %s, events %s " % (fd, events)
         while True:
             try:
+                print "=============== loop all callback ?"
                 connection, address = self._socket.accept()
+                print "=== connection %s , address %s   " % (connection, address)
             except socket.error, e:
                 if e[0] in (errno.EWOULDBLOCK, errno.EAGAIN):
                     return
@@ -213,6 +216,7 @@ class HTTPServer(object):
                 connection = ssl.wrap_socket(
                     connection, server_side=True, **self.ssl_options)
             try:
+                print "request_callback---- %s" % self.request_callback
                 stream = iostream.IOStream(connection, io_loop=self.io_loop)
                 HTTPConnection(stream, address, self.request_callback,
                                self.no_keep_alive, self.xheaders)
@@ -235,6 +239,7 @@ class HTTPConnection(object):
         self.xheaders = xheaders
         self._request = None
         self._request_finished = False
+        print "=====  real request  HTTPConnection"
         self.stream.read_until("\r\n\r\n", self._on_headers)
 
     def write(self, chunk):
@@ -253,6 +258,7 @@ class HTTPConnection(object):
             self._finish_request()
 
     def _finish_request(self):
+        print "====   finish request "
         if self.no_keep_alive:
             disconnect = True
         else:
@@ -267,11 +273,13 @@ class HTTPConnection(object):
         self._request = None
         self._request_finished = False
         if disconnect:
+            print "==== disconnect ", disconnect
             self.stream.close()
             return
         self.stream.read_until("\r\n\r\n", self._on_headers)
 
     def _on_headers(self, data):
+        print "---------- _on_headers"
         eol = data.find("\r\n")
         start_line = data[:eol]
         method, uri, version = start_line.split(" ")
@@ -289,9 +297,10 @@ class HTTPConnection(object):
                 raise Exception("Content-Length too long")
             if headers.get("Expect") == "100-continue":
                 self.stream.write("HTTP/1.1 100 (Continue)\r\n\r\n")
+            print "read_bytes=== "
             self.stream.read_bytes(content_length, self._on_request_body)
             return
-
+        print "====  request_callback %s  _request %s " % (self.request_callback, self._request)
         self.request_callback(self._request)
 
     def _on_request_body(self, data):
@@ -307,7 +316,7 @@ class HTTPConnection(object):
                             values)
             elif content_type.startswith("multipart/form-data"):
                 if 'boundary=' in content_type:
-                    boundary = content_type.split('boundary=',1)[1]
+                    boundary = content_type.split('boundary=', 1)[1]
                     if boundary: self._parse_mime_body(boundary, data)
                 else:
                     logging.warning("Invalid multipart/form-data")
@@ -404,6 +413,7 @@ class HTTPRequest(object):
         for name, values in arguments.iteritems():
             values = [v for v in values if v]
             if values: self.arguments[name] = values
+        print "Request-------", self.path
 
     def supports_http_1_1(self):
         """Returns True if this request supports HTTP/1.1 semantics"""
@@ -416,6 +426,7 @@ class HTTPRequest(object):
 
     def finish(self):
         """Finishes this HTTP request on the open connection."""
+        print "==== request_finish"
         self.connection.finish()
         self._finish_time = time.time()
 
@@ -431,8 +442,7 @@ class HTTPRequest(object):
             return self._finish_time - self._start_time
 
     def __repr__(self):
-        attrs = ("protocol", "host", "method", "uri", "version", "remote_ip",
-                 "remote_ip", "body")
+        attrs = ("protocol", "host", "method", "uri", "version",  "remote_ip", "body")
         args = ", ".join(["%s=%r" % (n, getattr(self, n)) for n in attrs])
         return "%s(%s, headers=%s)" % (
             self.__class__.__name__, args, dict(self.headers))

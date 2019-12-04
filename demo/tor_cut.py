@@ -33,11 +33,18 @@ class IndexHandler(tornado_cut.web.RequestHandler):
     def get(self):
         self.write("Index Page-_-_-")
 
+
+class HomeHandler(tornado_cut.web.RequestHandler):
+    def get(self):
+        self.write("Index Page-_-_-")
+
+
 def main():
     tornado_cut.options.parse_command_line()
     application = tornado_cut.web.Application([
         (r"/", MainHandler),
         (r"/index", IndexHandler),
+        (r"/home", HomeHandler),
     ])
     http_server = tornado_cut.httpserver.HTTPServer(application)
     http_server.listen(options.port)
