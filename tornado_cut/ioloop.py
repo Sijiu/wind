@@ -151,7 +151,7 @@ class IOLoop(object):
 
     def update_handler(self, fd, events):
         """Changes the events we listen for fd."""
-        print "update_handler === %s %s " % (fd, events)
+        print "====  change fd update_handler === %s %s " % (fd, events)
         self._impl.modify(fd, events | self.ERROR)
 
     def remove_handler(self, fd):

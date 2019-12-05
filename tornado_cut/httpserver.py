@@ -201,12 +201,12 @@ class HTTPServer(object):
       self._socket.close()
 
     def _handle_events(self, fd, events):
-        print  "fd %s, events %s " % (fd, events)
+        print  "_handle_events fd %s, events %s " % (fd, events)
         while True:
             try:
-                print "=============== loop all callback ?"
+                print "     =============== loop all callback ?"
                 connection, address = self._socket.accept()
-                print "=== connection %s , address %s   " % (connection, address)
+                print "     === connection %s , address %s   " % (connection._sock, address)
             except socket.error, e:
                 if e[0] in (errno.EWOULDBLOCK, errno.EAGAIN):
                     return
@@ -216,12 +216,13 @@ class HTTPServer(object):
                 connection = ssl.wrap_socket(
                     connection, server_side=True, **self.ssl_options)
             try:
-                print "request_callback---- %s" % self.request_callback
+                print "request_callback---- %s" % self.request_callback.__dict__
                 stream = iostream.IOStream(connection, io_loop=self.io_loop)
                 HTTPConnection(stream, address, self.request_callback,
                                self.no_keep_alive, self.xheaders)
             except:
                 logging.error("Error in connection callback", exc_info=True)
+        print "==== why loop?"
 
 
 class HTTPConnection(object):
@@ -239,7 +240,7 @@ class HTTPConnection(object):
         self.xheaders = xheaders
         self._request = None
         self._request_finished = False
-        print "=====  real request  HTTPConnection"
+        print "=====  HTTPConnection"
         self.stream.read_until("\r\n\r\n", self._on_headers)
 
     def write(self, chunk):

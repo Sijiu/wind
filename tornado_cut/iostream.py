@@ -137,6 +137,7 @@ class IOStream(object):
         return self.socket is None
 
     def _handle_events(self, fd, events):
+        print "==== iostream _handle_events fd %s events %s" % (fd, events)
         if not self.socket:
             logging.warning("Got events for closed stream %d", fd)
             return
