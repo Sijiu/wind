@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
     container = wsgi.WSGIContainer(application)
     http_server = httpserver.HTTPServer(container)
-    http_server.listen(8889, "")
+    http_server.listen(8888, "")
     ioloop.IOLoop.instance().start()
 
     print('Press Ctrl+C')

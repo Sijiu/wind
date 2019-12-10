@@ -146,12 +146,13 @@ class IOLoop(object):
 
     def add_handler(self, fd, handler, events):
         """Registers the given handler to receive the given events for fd."""
+        print "==== 2 add_handler %s %s %s" % (fd, handler, events)
         self._handlers[fd] = handler
         self._impl.register(fd, events | self.ERROR)
 
     def update_handler(self, fd, events):
         """Changes the events we listen for fd."""
-        print "====  change fd update_handler === %s %s " % (fd, events)
+        print "==== 5 change fd update_handler === %s %s " % (fd, events)
         self._impl.modify(fd, events | self.ERROR)
 
     def remove_handler(self, fd):
@@ -204,7 +205,6 @@ class IOLoop(object):
                     self._run_callback(callback)
 
             if self._callbacks:
-                print "self_callback===%s " % self._callbacks
                 poll_timeout = 0.0
 
             if self._timeouts:
@@ -254,7 +254,6 @@ class IOLoop(object):
 
                 fd, events = self._events.popitem()
                 try:
-                    print "%s \n _handlers %s " % (events, type(self._handlers[fd]))
                     self._handlers[fd](fd, events)
                 except (KeyboardInterrupt, SystemExit):
                     raise
@@ -503,7 +502,6 @@ class _Select(object):
         readable, writeable, errors = select.select(
             self.read_fds, self.write_fds, self.error_fds, timeout)
         events = {}
-        print "read %s, write %s error %s " % (readable, writeable, errors)
         for fd in readable:
             events[fd] = events.get(fd, 0) | IOLoop.READ
         for fd in writeable:

@@ -8,7 +8,7 @@ import signal
 
 from wsgiref.simple_server import make_server
 
-SERVER_ADDRESS = (HOST, PORT) = "", 8889
+SERVER_ADDRESS = (HOST, PORT) = "", 8888
 
 
 def signal_handler(sig, frame):

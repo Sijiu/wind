@@ -201,14 +201,15 @@ class HTTPServer(object):
       self._socket.close()
 
     def _handle_events(self, fd, events):
-        print  "_handle_events fd %s, events %s " % (fd, events)
+        print  "==== 1  _handle_events fd %s, events %s " % (fd, events)
         while True:
             try:
-                print "     =============== loop all callback ?"
                 connection, address = self._socket.accept()
-                print "     === connection %s , address %s   " % (connection._sock, address)
+                print "------ connection %s  address %s" % (connection, address)
             except socket.error, e:
+                print "return --- e: ", e
                 if e[0] in (errno.EWOULDBLOCK, errno.EAGAIN):
+                    print "errno.EWOULDBLOCK== 10035, errno.EAGAIN == 11 "
                     return
                 raise
             if self.ssl_options is not None:
@@ -222,7 +223,7 @@ class HTTPServer(object):
                                self.no_keep_alive, self.xheaders)
             except:
                 logging.error("Error in connection callback", exc_info=True)
-        print "==== why loop?"
+
 
 
 class HTTPConnection(object):
@@ -240,7 +241,7 @@ class HTTPConnection(object):
         self.xheaders = xheaders
         self._request = None
         self._request_finished = False
-        print "=====  HTTPConnection"
+        print "===== 3  HTTPConnection"
         self.stream.read_until("\r\n\r\n", self._on_headers)
 
     def write(self, chunk):
@@ -274,13 +275,11 @@ class HTTPConnection(object):
         self._request = None
         self._request_finished = False
         if disconnect:
-            print "==== disconnect ", disconnect
             self.stream.close()
             return
         self.stream.read_until("\r\n\r\n", self._on_headers)
 
     def _on_headers(self, data):
-        print "---------- _on_headers"
         eol = data.find("\r\n")
         start_line = data[:eol]
         method, uri, version = start_line.split(" ")
@@ -298,10 +297,8 @@ class HTTPConnection(object):
                 raise Exception("Content-Length too long")
             if headers.get("Expect") == "100-continue":
                 self.stream.write("HTTP/1.1 100 (Continue)\r\n\r\n")
-            print "read_bytes=== "
             self.stream.read_bytes(content_length, self._on_request_body)
             return
-        print "====  request_callback %s  _request %s " % (self.request_callback, self._request)
         self.request_callback(self._request)
 
     def _on_request_body(self, data):
@@ -414,7 +411,7 @@ class HTTPRequest(object):
         for name, values in arguments.iteritems():
             values = [v for v in values if v]
             if values: self.arguments[name] = values
-        print "Request-------", self.path
+        print "==== 6 request self.path %s ", self.path
 
     def supports_http_1_1(self):
         """Returns True if this request supports HTTP/1.1 semantics"""

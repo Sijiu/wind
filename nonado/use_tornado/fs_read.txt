@@ -1,0 +1,2 @@
+Hello, Python and fd.
+the os.fdopen() is end.

@@ -755,7 +755,8 @@ class RequestHandler(object):
         return self.application.reverse_url(name, *args)
 
     def _execute(self, transforms, *args, **kwargs):
-        print "==== 处理transforms 其实就是执行 Handler 函数的开始"
+        print "==== 7 execute transforms is Handler start " \
+              "transforms== %s  args=== %s kwargs== %s" % (transforms, args, kwargs)
         """Executes this request with the given output transforms."""
         self._transforms = transforms
         try:
