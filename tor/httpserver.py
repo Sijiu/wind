@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 @author: mxh @time:2019/12/10 15:55
+http://www.nowamagic.net/academy/detail/13321023
 """
 import cgi
 import errno
