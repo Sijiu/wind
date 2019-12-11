@@ -1,34 +1,31 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-@author: mxh @time:2019/12/10 15:45
+@author: mxh @time:2019/12/11 9:04
 """
+
 
 import sys
 import signal
 from wsgiref.simple_server import make_server
 
-import tor.web, tor.ioloop, tor.wsgi
-import tor.httpserver
-from tor.options import define, options
+import tornado_cut.web, tor.wsgi
+import tornado_cut.httpserver
+from tornado_cut.options import define, options
 
 
 define("port", default=8001, help="run on the given port", type=int)
 
 
-class MainHandler(tor.web.RequestHandler):
+class MainHandler(tornado_cut.web.RequestHandler):
     def get(self):
         self.write("Hello, world! Happy, Labour day!")
 
 
-class IndexHandler(tor.web.RequestHandler):
+class IndexHandler(tornado_cut.web.RequestHandler):
 
-    def get(self, args):
-        name = self.get_argument("name", "/")
-        if args:
-            self.write("I Have Path! %s " % args)
-        else:
-            self.write("Hello, Index Page! %s " % name)
+    def get(self):
+        self.write("Hello, Index Page!")
 
 
 def test_join():
@@ -51,10 +48,10 @@ def signal_handler(sig, frame):
 def start_tor(application):
     print options.port
 
-    http_server = tor.httpserver.HTTPServer(application)
+    http_server = tornado_cut.httpserver.HTTPServer(application)
 
     http_server.listen(options.port)
-    tor.ioloop.IOLoop.instance().start()
+    tornado_cut.ioloop.IOLoop.instance().start()
 
 def start_built_serve(application):
     httpd = make_server("", options.port, application)
@@ -64,21 +61,19 @@ def start_built_serve(application):
     signal.pause()
     sys.exit(0)
 
-    wsgiref.handlers.CGIHandler().run(application)
 
-
-# tornado_app = tor.web.Application([
-#             (r'/', MainHandler),
-#             (r'/index/', IndexHandler)
-#         ]
-#     )
+tornado_app = tornado_cut.web.Application([
+            (r'/', MainHandler),
+            (r'/index', IndexHandler)
+        ]
+    )
 
 signal.signal(signal.SIGINT, signal_handler)
 
 # app = tornado.wsgi.WSGIAdapter(tornado_app)
 app = tor.wsgi.WSGIApplication([
             (r'/', MainHandler),
-            (r'/index/([a-z]*)', IndexHandler)
+            (r'/index', IndexHandler)
         ])
 
 

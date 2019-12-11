@@ -101,17 +101,53 @@ class RequestHandler(object):
                 raise HTTPError(405)
             # If XSRF cookies are turned on, reject form submissions without
             # the proper cookie
-            if self.request.method == "POST" and \
-               self.application.settings.get("xsrf_cookies"):
+            if self.request.method == "POST" and self.application.settings.get("xsrf_cookies"):
                 pass
                 # self.check_xsrf_cookie()
             self.prepare()
             if not self._finished:
                 getattr(self, self.request.method.lower())(*args, **kwargs)
+                print "execute Handler???"
                 if self._auto_finish and not self._finished:
+                    print "execute Handler"
                     self.finish()
         except Exception, e:
             self._handle_request_exception(e)
+
+    _ARG_DEFAULT = []
+
+    def get_argument(self, name, default=_ARG_DEFAULT, strip=True):
+        """Returns the value of the argument with the given name.
+
+        If default is not provided, the argument is considered to be
+        required, and we throw an HTTP 404 exception if it is missing.
+
+        If the argument appears in the url more than once, we return the
+        last value.
+
+        The returned value is always unicode.
+        """
+        args = self.get_arguments(name, strip=strip)
+        if not args:
+            if default is self._ARG_DEFAULT:
+                raise HTTPError(404, "Missing argument %s" % name)
+            return default
+        return args[-1]
+
+    def get_arguments(self, name, strip=True):
+        """Returns a list of the arguments with the given name.
+
+        If the argument is not present, returns an empty list.
+
+        The returned values are always unicode.
+        """
+        values = self.request.arguments.get(name, [])
+        # Get rid of any weird control chars
+        values = [re.sub(r"[\x00-\x08\x0e-\x1f]", " ", x) for x in values]
+        values = [_unicode(x) for x in values]
+        if strip:
+            values = [x.strip() for x in values]
+        return values
 
     def _log(self):
         if self._status_code < 400:
@@ -275,11 +311,22 @@ def _utf8(s):
     return s
 
 
+def _unicode(s):
+    if isinstance(s, str):
+        try:
+            return s.decode("utf-8")
+        except UnicodeDecodeError:
+            raise HTTPError(400, "Non-utf8 argument")
+    assert isinstance(s, unicode)
+    return s
+
+
 class Application(object):
 
     def __init__(self, handlers=None, default_host="", transforms=None,
                  wsgi=False, **settings):
         if transforms is None:
+            # 分块, 压缩等转换
             self.transforms = []
             # if settings.get("gzip"):
             #     self.transforms.append(GZipContentEncoding)
