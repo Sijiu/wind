@@ -56,22 +56,23 @@ def start_tor(application):
     http_server.listen(options.port)
     tor.ioloop.IOLoop.instance().start()
 
+
 def start_built_serve(application):
     httpd = make_server("", options.port, application)
     print "WSGIServer: serving HTTP on port %s ...\n" % options.port
     httpd.serve_forever()
     print('Press Ctrl+C')
-    signal.pause()
-    sys.exit(0)
+    # signal.pause()
+    # sys.exit(0)
 
-    wsgiref.handlers.CGIHandler().run(application)
+    # wsgiref.handlers.CGIHandler().run(application)
 
 
-# tornado_app = tor.web.Application([
-#             (r'/', MainHandler),
-#             (r'/index/', IndexHandler)
-#         ]
-#     )
+tor_app = tor.web.Application([
+            (r'/', MainHandler),
+            (r'/index/', IndexHandler)
+        ]
+    )
 
 signal.signal(signal.SIGINT, signal_handler)
 
@@ -84,6 +85,6 @@ app = tor.wsgi.WSGIApplication([
 
 if __name__ == '__main__':
 
-    # start_tor(app)
+    # start_tor(tor_app)
     start_built_serve(app)
 

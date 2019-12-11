@@ -79,6 +79,6 @@ app = tor.wsgi.WSGIApplication([
 
 if __name__ == '__main__':
 
-    # start_tor(app)
-    start_built_serve(app)
+    start_tor(tornado_app)
+    # start_built_serve(app)
 
